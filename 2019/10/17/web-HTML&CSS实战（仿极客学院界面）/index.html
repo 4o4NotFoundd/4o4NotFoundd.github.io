@@ -165,6 +165,8 @@
                 
 
                 
+                <!---cloud阅读量统计系统-->
+                阅读数量:<span id="4o4NotFoundd.github.io/2019/10/17/web-HTML&amp;CSS%E5%AE%9E%E6%88%98%EF%BC%88%E4%BB%BF%E6%9E%81%E5%AE%A2%E5%AD%A6%E9%99%A2%E7%95%8C%E9%9D%A2%EF%BC%89/" class="leancloud_visitors" data-flag-title="web-HTML&CSS实战（仿极客学院界面）"></span>次
                 
 
                 
@@ -183,7 +185,7 @@
 
 
 
-    <a data-url="https://4o4notfoundd.github.io/2019/10/17/web-HTML&CSS%E5%AE%9E%E6%88%98%EF%BC%88%E4%BB%BF%E6%9E%81%E5%AE%A2%E5%AD%A6%E9%99%A2%E7%95%8C%E9%9D%A2%EF%BC%89/" data-id="ck3ya3yug0000ocjy63yg7gkq" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://4o4notfoundd.github.io/2019/10/17/web-HTML&CSS%E5%AE%9E%E6%88%98%EF%BC%88%E4%BB%BF%E6%9E%81%E5%AE%A2%E5%AD%A6%E9%99%A2%E7%95%8C%E9%9D%A2%EF%BC%89/" data-id="ck3yd31650001osjy0jrta1xv" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -268,7 +270,7 @@
 </script>
 
 </article>
-
+<!--
     <section id="comments">
     
         
@@ -280,7 +282,26 @@
     
     </section>
 
+-->
+<!--来比力评论系统，在commetn/livebe.ejs中-->
+<!-- 来必力City版安装代码 -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC80Nzg3Mi8yNDM2OQ==">
+    <script type="text/javascript">
+        (function(d, s) {
+            var j, e = d.getElementsByTagName(s)[0];
 
+            if (typeof LivereTower === 'function') { return; }
+
+            j = d.createElement(s);
+            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+            j.async = true;
+
+            e.parentNode.insertBefore(j, e);
+        })(document, 'script');
+    </script>
+    <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+</div>
+<!-- City版安装代码已完成 -->
 
                         </div>
                     </section>
@@ -498,9 +519,14 @@
                     <a href="4o4NotFoundd.github.io/" class="logo"></a>
                 </h1>
                 <p>&copy; 2019 贺兆祥</p>
-                
-                <p>Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="https://github.com/ppoffice" target="_blank">PPOffice</a></p>
-                
+
+                <p>本站由hzx小朋友在hexo的大力帮助下实现</p>
+                <!--这一段是不蒜子的访问量统计脚本-->
+                <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+                <span id="busuanzi_container_site_pv">一共被访问了<span id="busuanzi_value_site_pv"></span>次 &nbsp; </span>
+                <span id="busuanzi_container_site_uv">
+                    一共有<span id="busuanzi_value_site_uv"></span>个小朋友来过
+                </span>
             </div>
             <div class="footer-plugins">
               
@@ -512,6 +538,48 @@
     </div>
 </footer>
 
+
+<!--往下是cloud的文章阅读量系统-->
+<script src="//cdn1.lncld.net/static/js/2.5.0/av-min.js"></script>
+<script>
+    var APP_ID = 'YVSE8R91f8Qc6d6FwMTnwytk-gzGzoHsz';
+    var APP_KEY = 'ajFB9Ueh08Y5pIvkDsXSOW56';
+    AV.init({
+        appId: APP_ID,
+        appKey: APP_KEY
+    });
+    // 显示次数
+    function showTime(Counter) {
+        var query = new AV.Query("Counter");
+        if($(".leancloud_visitors").length > 0){
+            var url = $(".leancloud_visitors").attr('id').trim();
+            // where field
+            query.equalTo("words", url);
+            // count
+            query.count().then(function (number) {
+                // There are number instances of MyClass where words equals url.
+                $(document.getElementById(url)).text(number?  number : '--');
+            }, function (error) {
+                // error is an instance of AVError.
+            });
+        }
+    }
+    // 追加pv
+    function addCount(Counter) {
+        var url = $(".leancloud_visitors").length > 0 ? $(".leancloud_visitors").attr('id').trim() : 'icafebolger.com';
+        var Counter = AV.Object.extend("Counter");
+        var query = new Counter;
+        query.save({
+            words: url
+        }).then(function (object) {
+        })
+    }
+    $(function () {
+        var Counter = AV.Object.extend("Counter");
+        addCount(Counter);
+        showTime(Counter);
+    });
+</script>
         
     
     <script>
