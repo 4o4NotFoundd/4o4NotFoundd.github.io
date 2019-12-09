@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+
+    
+
+    
+    <title>web前端--HTML入门学习（一） | Welcome to hzx 的博客，随便看~</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="keywords" content="" />
+    
+    <meta name="description" content="HTML入门学习 前言推荐使用IDEA，webstorm等编辑器，运行时在谷歌浏览器中打开推荐学习视频：https:&#x2F;&#x2F;www.bilibili.com&#x2F;video&#x2F;av5862916 一、了解html结构1&amp;lt;!DOCTYPE html&amp;gt;2&amp;lt;html lang&amp;#x3D;&amp;quot;en&amp;quot;&amp;gt;3&amp;lt;head&amp;gt;4    &amp;lt;meta charset&amp;#x">
+<meta property="og:type" content="article">
+<meta property="og:title" content="web前端--HTML入门学习（一）">
+<meta property="og:url" content="https:&#x2F;&#x2F;4o4notfoundd.github.io&#x2F;2019&#x2F;09&#x2F;10&#x2F;web%E5%89%8D%E7%AB%AF--HTML%E5%85%A5%E9%97%A8%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89&#x2F;index.html">
+<meta property="og:site_name" content="Welcome to hzx 的博客，随便看~">
+<meta property="og:description" content="HTML入门学习 前言推荐使用IDEA，webstorm等编辑器，运行时在谷歌浏览器中打开推荐学习视频：https:&#x2F;&#x2F;www.bilibili.com&#x2F;video&#x2F;av5862916 一、了解html结构1&amp;lt;!DOCTYPE html&amp;gt;2&amp;lt;html lang&amp;#x3D;&amp;quot;en&amp;quot;&amp;gt;3&amp;lt;head&amp;gt;4    &amp;lt;meta charset&amp;#x">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20190910173152259.png">
+<meta property="og:updated_time" content="2019-12-08T11:34:02.283Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20190910173152259.png">
+    
+
+    
+        <link rel="alternate" href="/" title="Welcome to hzx 的博客，随便看~" type="application/atom+xml" />
+    
+
+    
+
+    <link rel="stylesheet" href="4o4NotFoundd.github.io/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="4o4NotFoundd.github.io/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="4o4NotFoundd.github.io/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="4o4NotFoundd.github.io/css/style.css">
+
+    <script src="4o4NotFoundd.github.io/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="4o4NotFoundd.github.io/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="4o4NotFoundd.github.io/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="4o4NotFoundd.github.io/" class="logo"></a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="4o4NotFoundd.github.io/">主页</a>
+                                </li>
+                            
+                                        
+                                    
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="4o4NotFoundd.github.io/about/index.html">关于</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="想要查找什么..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '4o4NotFoundd.github.io/',
+        CONTENT_URL: '4o4NotFoundd.github.io/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="4o4NotFoundd.github.io/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    未分类
+    </h1>
+</div>
+
+                        <div class="main-body-content">
+                            <article id="post-web前端--HTML入门学习（一）" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        web前端--HTML入门学习（一）
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+      <i class="fa fa-calendar"></i>
+      <a href="4o4NotFoundd.github.io/2019/09/10/web%E5%89%8D%E7%AB%AF--HTML%E5%85%A5%E9%97%A8%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/" class="article-date">
+         <time datetime="2019-09-10T11:23:32.000Z" itemprop="datePublished">2019-09-10</time>
+      </a>
+    </div>
+
+
+                
+
+                
+                
+
+                
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <p>HTML入门学习</p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>推荐使用IDEA，webstorm等编辑器，运行时在谷歌浏览器中打开<br>推荐学习视频：<a href="https://www.bilibili.com/video/av5862916" target="_blank" rel="noopener">https://www.bilibili.com/video/av5862916</a></p>
+<h2 id="一、了解html结构"><a href="#一、了解html结构" class="headerlink" title="一、了解html结构"></a>一、了解html结构</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">&lt;html lang&#x3D;&quot;en&quot;&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">    &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;&lt;!-- 编码方式--&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">    &lt;title&gt; biaoti &lt;&#x2F;title&gt;&lt;!--head中必须有title，标题--&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">&lt;&#x2F;head&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">&lt;h1&gt;标题元素&lt;&#x2F;h1&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">body内容</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">&lt;&#x2F;body&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">&lt;&#x2F;html&gt;</span></pre></td></tr></table></figure>
+
+
+<p>运行结果：<br><img src="https://img-blog.csdnimg.cn/20190910173152259.png" alt=""></p>
+<h2 id="二、插入超链接，改变字体等"><a href="#二、插入超链接，改变字体等" class="headerlink" title="二、插入超链接，改变字体等"></a>二、插入超链接，改变字体等</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">&lt;!--&lt;!DOCTYPE html&gt;--&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">&lt;html lang&#x3D;&quot;en&quot;&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">    &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">    &lt;title&gt;table&lt;&#x2F;title&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">&lt;&#x2F;head&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">title</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">&lt;!--超链接  --&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">&lt;a href&#x3D;&quot;01.html&quot; target&#x3D;&quot;_blank&quot;&gt;1&lt;&#x2F;a&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">&lt;!--保留原有页面，跳到新页面--&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">&lt;a href&#x3D;&quot;01.html&quot;&gt;2&lt;&#x2F;a&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">&lt;!--直接跳到新页面，原有页面消失--&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">&lt;a href&#x3D;&quot;01.html&quot; target&#x3D;&quot;_self&quot;&gt;3&lt;&#x2F;a&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">&lt;em&gt;斜体&lt;&#x2F;em&gt;&lt;u&gt;下划线&lt;&#x2F;u&gt;&lt;s&gt;划去效果&lt;&#x2F;s&gt;&lt;b&gt;加黑效果&lt;&#x2F;b&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">&lt;!--&lt;img src&#x3D;&quot;&#x2F;404.png&quot; width&#x3D;&quot;412&quot; height&#x3D;&quot;235&quot; &#x2F;&gt;--&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">&lt;&#x2F;body&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">&lt;&#x2F;html&gt;</span></pre></td></tr></table></figure>
+<p>运行：<br><img src="https://img-blog.csdnimg.cn/2019091017340684.png" alt=""></p>
+<h2 id="三、表格（行，列，合并，表头，表内容，表脚）"><a href="#三、表格（行，列，合并，表头，表内容，表脚）" class="headerlink" title="三、表格（行，列，合并，表头，表内容，表脚）"></a>三、表格（行，列，合并，表头，表内容，表脚）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">&lt;html lang&#x3D;&quot;en&quot;&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">    &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">    &lt;title&gt;table&lt;&#x2F;title&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">&lt;&#x2F;head&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">&lt;table border&#x3D;&quot;5px&quot; align&#x3D;&quot;center&quot;&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">&lt;!-- 边框，表格居中--&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">    &lt;!-- thead，tbody，tfoot，表头，表内容，表脚--&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">    &lt;thead&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">    &lt;tr&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">        &lt;th&gt;姓名&lt;&#x2F;th&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">        &lt;th&gt;性别&lt;&#x2F;th&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">        &lt;th&gt;年龄&lt;&#x2F;th&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">    &lt;&#x2F;tr&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">    &lt;&#x2F;thead&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">    &lt;tbody&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">    &lt;tr&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">        &lt;td rowspan&#x3D;&quot;2&quot;&gt;Bob&lt;&#x2F;td&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">        &lt;td&gt;man&lt;&#x2F;td&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line">        &lt;td&gt;23&lt;&#x2F;td&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line">    &lt;&#x2F;tr&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line">    &lt;tr&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">25</span></pre></td><td class="code"><pre><span class="line">&lt;!--        &lt;td&gt;Jerry&lt;&#x2F;td&gt;--&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">26</span></pre></td><td class="code"><pre><span class="line">        &lt;td colspan&#x3D;&quot;2&quot;&gt;未知&lt;&#x2F;td&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">27</span></pre></td><td class="code"><pre><span class="line">    &lt;&#x2F;tr&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">28</span></pre></td><td class="code"><pre><span class="line">    &lt;&#x2F;tbody&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">29</span></pre></td><td class="code"><pre><span class="line">    &lt;tfoot&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">30</span></pre></td><td class="code"><pre><span class="line">    &lt;tr&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">31</span></pre></td><td class="code"><pre><span class="line">        &lt;th&gt;总计&lt;&#x2F;th&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">32</span></pre></td><td class="code"><pre><span class="line">        &lt;th colspan&#x3D;&quot;2&quot;&gt;2&lt;&#x2F;th&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">33</span></pre></td><td class="code"><pre><span class="line">&lt;!--        &lt;th&gt;43&lt;&#x2F;th&gt;--&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">34</span></pre></td><td class="code"><pre><span class="line">    &lt;&#x2F;tr&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">35</span></pre></td><td class="code"><pre><span class="line">    &lt;&#x2F;tfoot&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">36</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">37</span></pre></td><td class="code"><pre><span class="line">&lt;&#x2F;table&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">38</span></pre></td><td class="code"><pre><span class="line">&lt;&#x2F;body&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">39</span></pre></td><td class="code"><pre><span class="line">&lt;&#x2F;html&gt;</span></pre></td></tr></table></figure>
+<p>运行：<br><img src="https://img-blog.csdnimg.cn/20190910173548296.png" alt=""></p>
+<h2 id="四、表单（文字框的几种形式）"><a href="#四、表单（文字框的几种形式）" class="headerlink" title="四、表单（文字框的几种形式）"></a>四、表单（文字框的几种形式）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">&lt;html lang&#x3D;&quot;en&quot;&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">    &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">    &lt;title&gt;7表单shang&lt;&#x2F;title&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">&lt;&#x2F;head&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">&lt;form&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">    &lt;input  type&#x3D;&quot;text&quot; size&#x3D;&quot;50&quot;&gt;&lt;br&gt;&lt;!--文本框长度50--&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">    &lt;input  type&#x3D;&quot;text&quot; value&#x3D;&quot;占位符，可修改&quot;&gt;&lt;br&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">    &lt;input  type&#x3D;&quot;text&quot;  placeholder&#x3D;&quot;不占位置&quot;&gt;&lt;br&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">    &lt;input  type&#x3D;&quot;text&quot;  placeholder&#x3D;&quot;最多输入5位&quot; maxlength&#x3D;&quot;5&quot;&gt;&lt;br&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">&lt;&#x2F;form&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">&lt;&#x2F;body&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">&lt;&#x2F;html&gt;</span></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20190910173722819.png" alt=""></p>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="https://4o4notfoundd.github.io/2019/09/10/web%E5%89%8D%E7%AB%AF--HTML%E5%85%A5%E9%97%A8%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/" data-id="ck3y8o4bu0003ikjyel574790" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "author": {
+            "@type": "Person",
+            "name": "贺兆祥"
+        },
+        "headline": "web前端--HTML入门学习（一）",
+        "image": "https://4o4NotFoundd.github.iohttps://img-blog.csdnimg.cn/20190910173152259.png",
+        "keywords": "",
+        "genre": "",
+        "datePublished": "2019-09-10",
+        "dateCreated": "2019-09-10",
+        "dateModified": "2019-12-08",
+        "url": "4o4NotFoundd.github.io/https:/4o4NotFoundd.github.io/2019/09/10/web%E5%89%8D%E7%AB%AF--HTML%E5%85%A5%E9%97%A8%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/",
+        "description": "HTML入门学习
+前言推荐使用IDEA，webstorm等编辑器，运行时在谷歌浏览器中打开推荐学习视频：https://www.bilibili.com/video/av5862916
+一、了解html结构1&lt;!DOCTYPE html&gt;2&lt;html lang&#x3D;&quot;en&quot;&gt;3&lt;head&gt;4    &lt;meta charset&#x",
+        "wordCount": 616
+    }
+</script>
+
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+
+    
+    </section>
+
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>关注我 :</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="twitter" href="4o4NotFoundd.github.io/" target="_blank" rel="noopener">
+                        <i class="icon fa fa-twitter"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="facebook" href="4o4NotFoundd.github.io/" target="_blank" rel="noopener">
+                        <i class="icon fa fa-facebook"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="stack-overflow" href="4o4NotFoundd.github.io/" target="_blank" rel="noopener">
+                        <i class="icon fa fa-stack-overflow"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/ppoffice/hexo-theme-hueman" target="_blank" rel="noopener">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="weibo" href="4o4NotFoundd.github.io/" target="_blank" rel="noopener">
+                        <i class="icon fa fa-weibo"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="4o4NotFoundd.github.io/" target="_blank" rel="noopener">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="4o4NotFoundd.github.io/2019/09/17/web%E5%89%8D%E7%AB%AF--HTML%E5%85%A5%E9%97%A8%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%BA%8C%EF%BC%89/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">下一篇</strong>
+        <p class="article-nav-title">
+        
+            web前端--HTML入门学习（二）
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">最新文章</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="4o4NotFoundd.github.io/2019/10/17/web-HTML&CSS%E5%AE%9E%E6%88%98%EF%BC%88%E4%BB%BF%E6%9E%81%E5%AE%A2%E5%AD%A6%E9%99%A2%E7%95%8C%E9%9D%A2%EF%BC%89/" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://img-blog.csdnimg.cn/20191017201926638.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDEwNTQ1OQ==,size_16,color_FFFFFF,t_70)" alt="web-HTML&amp;CSS实战（仿极客学院界面）" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="4o4NotFoundd.github.io/2019/10/17/web-HTML&CSS%E5%AE%9E%E6%88%98%EF%BC%88%E4%BB%BF%E6%9E%81%E5%AE%A2%E5%AD%A6%E9%99%A2%E7%95%8C%E9%9D%A2%EF%BC%89/" class="title">web-HTML&amp;CSS实战（仿极客学院界面）</a></p>
+                            <p class="item-date"><time datetime="2019-10-17T11:23:32.000Z" itemprop="datePublished">2019-10-17</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="4o4NotFoundd.github.io/2019/10/08/web%E5%89%8D%E7%AB%AF--CSS/" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://img-blog.csdnimg.cn/20191014210724821.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDEwNTQ1OQ==,size_16,color_FFFFFF,t_70)" alt="web前端--CSS" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="4o4NotFoundd.github.io/2019/10/08/web%E5%89%8D%E7%AB%AF--CSS/" class="title">web前端--CSS</a></p>
+                            <p class="item-date"><time datetime="2019-10-08T11:23:32.000Z" itemprop="datePublished">2019-10-08</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="4o4NotFoundd.github.io/2019/09/18/web%E5%89%8D%E7%AB%AF--HTML%E5%85%A5%E9%97%A8%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%89%EF%BC%89/" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://img-blog.csdnimg.cn/2019091812003255.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDEwNTQ1OQ==,size_16,color_FFFFFF,t_70)" alt="web前端--HTML入门学习（三）" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="4o4NotFoundd.github.io/2019/09/18/web%E5%89%8D%E7%AB%AF--HTML%E5%85%A5%E9%97%A8%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%89%EF%BC%89/" class="title">web前端--HTML入门学习（三）</a></p>
+                            <p class="item-date"><time datetime="2019-09-18T11:23:32.000Z" itemprop="datePublished">2019-09-18</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="4o4NotFoundd.github.io/2019/09/17/web%E5%89%8D%E7%AB%AF--HTML%E5%85%A5%E9%97%A8%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%BA%8C%EF%BC%89/" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://img-blog.csdnimg.cn/20190917204648187.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDEwNTQ1OQ==,size_16,color_FFFFFF,t_70)" alt="web前端--HTML入门学习（二）" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="4o4NotFoundd.github.io/2019/09/17/web%E5%89%8D%E7%AB%AF--HTML%E5%85%A5%E9%97%A8%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%BA%8C%EF%BC%89/" class="title">web前端--HTML入门学习（二）</a></p>
+                            <p class="item-date"><time datetime="2019-09-17T07:01:06.000Z" itemprop="datePublished">2019-09-17</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="4o4NotFoundd.github.io/2019/09/10/web%E5%89%8D%E7%AB%AF--HTML%E5%85%A5%E9%97%A8%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://img-blog.csdnimg.cn/20190910173152259.png)" alt="web前端--HTML入门学习（一）" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="4o4NotFoundd.github.io/2019/09/10/web%E5%89%8D%E7%AB%AF--HTML%E5%85%A5%E9%97%A8%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/" class="title">web前端--HTML入门学习（一）</a></p>
+                            <p class="item-date"><time datetime="2019-09-10T11:23:32.000Z" itemprop="datePublished">2019-09-10</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">归档</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="4o4NotFoundd.github.io/archives/2019/10/">十月 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="4o4NotFoundd.github.io/archives/2019/09/">九月 2019</a><span class="archive-list-count">3</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+
+            
+                
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">链接</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://hexo.io" target="_blank" rel="noopener">Hexo</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;" target="_blank" rel="noopener"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="4o4NotFoundd.github.io/" class="logo"></a>
+                </h1>
+                <p>&copy; 2019 贺兆祥</p>
+                
+                <p>Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="https://github.com/ppoffice" target="_blank">PPOffice</a></p>
+                
+            </div>
+            <div class="footer-plugins">
+              
+    
+
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'hexo-theme-hueman';
+    
+    
+    var disqus_url = 'https://4o4notfoundd.github.io/2019/09/10/web%E5%89%8D%E7%AB%AF--HTML%E5%85%A5%E9%97%A8%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+
+    
+        <script src="4o4NotFoundd.github.io/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="4o4NotFoundd.github.io/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="4o4NotFoundd.github.io/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="4o4NotFoundd.github.io/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="4o4NotFoundd.github.io/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="4o4NotFoundd.github.io/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="4o4NotFoundd.github.io/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="4o4NotFoundd.github.io/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="4o4NotFoundd.github.io/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="4o4NotFoundd.github.io/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="4o4NotFoundd.github.io/js/main.js"></script>
+
+    </div>
+</body>
+</html>
