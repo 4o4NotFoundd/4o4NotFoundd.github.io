@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+
+    
+
+    
+    <title>web前端--JavaScript（三）对象、函数、DOM&amp;BOM | Welcome to hzx 的博客，随便看~</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="keywords" content="JavaScript" />
+    
+    <meta name="description" content="根据上一篇博客思路，js从对象、函数、DOM和BOM再到jQuery入手。今天总结前三者，最后的DOM还没学完，再更。 一、js对象(一)js对象创建方法：1、使用对象文字–属性：值(最常用)2、使用关键词new3、对象构造器，创建构造类型的对象4、ECMAScript5中函数Object.create() （二）访问对象属性person.nameperson[“name”]x&#x3D;name;pers">
+<meta name="keywords" content="JavaScript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="web前端--JavaScript（三）对象、函数、DOM&amp;BOM">
+<meta property="og:url" content="https:&#x2F;&#x2F;hezhaoxiang.work&#x2F;2019&#x2F;learnjs03-DOM&#x2F;index.html">
+<meta property="og:site_name" content="Welcome to hzx 的博客，随便看~">
+<meta property="og:description" content="根据上一篇博客思路，js从对象、函数、DOM和BOM再到jQuery入手。今天总结前三者，最后的DOM还没学完，再更。 一、js对象(一)js对象创建方法：1、使用对象文字–属性：值(最常用)2、使用关键词new3、对象构造器，创建构造类型的对象4、ECMAScript5中函数Object.create() （二）访问对象属性person.nameperson[“name”]x&#x3D;name;pers">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20191021193952337.png?x-oss-process&#x3D;image&#x2F;watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDEwNTQ1OQ&#x3D;&#x3D;,size_16,color_FFFFFF,t_70">
+<meta property="og:updated_time" content="2019-12-10T07:11:37.950Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20191021193952337.png?x-oss-process&#x3D;image&#x2F;watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDEwNTQ1OQ&#x3D;&#x3D;,size_16,color_FFFFFF,t_70">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="Welcome to hzx 的博客，随便看~" type="application/atom+xml" />
+    
+
+    
+        <link rel="icon" href="/css/images/favicon.ico" />
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">Do what u want, love what u do.</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">主页</a>
+                                </li>
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/archives">归档</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Demo/">Demo</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Demo/2048%E5%B0%8F%E6%B8%B8%E6%88%8F/">2048小游戏</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Demo/todoList/">todoList</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Vue%E5%AD%A6%E4%B9%A0/">Vue学习</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Vue%E5%AD%A6%E4%B9%A0/Vue/">Vue</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/">web前端</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/HTML-CSS/">HTML&CSS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/JavaScript/">JavaScript</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E5%AF%B9%E6%8A%97%E6%A0%B7%E6%9C%AC/">对抗样本</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E5%AF%B9%E6%8A%97%E6%A0%B7%E6%9C%AC/%E8%AE%BA%E6%96%87/">论文</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E7%AB%9E%E8%B5%9B/">竞赛</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E7%AB%9E%E8%B5%9B/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">数学建模</a></li></ul></li></ul>
+                                    
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/board">小秘密</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="想要查找什么..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/web%E5%89%8D%E7%AB%AF/">web前端</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/web%E5%89%8D%E7%AB%AF/JavaScript/">JavaScript</a>
+    </h1>
+</div>
+
+                        <div class="main-body-content">
+                            <article id="post-web-JavaScript（三）对象函数DOM等" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        web前端--JavaScript（三）对象、函数、DOM&amp;BOM
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+      <i class="fa fa-calendar"></i>
+      <a href="/2019/learnjs03-DOM/" class="article-date">
+         <time datetime="2019-10-21T11:36:00.000Z" itemprop="datePublished">2019-10-21</time>
+      </a>
+    </div>
+
+
+                
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/JavaScript/" rel="tag">JavaScript</a>
+    </div>
+
+                <!---cloud阅读量统计系统-->
+                阅读数量:<span id="/2019/learnjs03-DOM/" class="leancloud_visitors" data-flag-title="web前端--JavaScript（三）对象、函数、DOM&BOM"></span>次
+                
+
+                
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <p>根据上一篇博客思路，js从对象、函数、DOM和BOM再到jQuery入手。今天总结前三者，最后的DOM还没学完，再更。</p>
+<h2 id="一、js对象"><a href="#一、js对象" class="headerlink" title="一、js对象"></a>一、js对象</h2><p>(一)js对象创建方法：<br>1、使用对象文字–属性：值(最常用)<br>2、使用关键词new<br>3、对象构造器，创建构造类型的对象<br>4、ECMAScript5中函数Object.create()</p>
+<p>（二）访问对象属性<br>person.name<br>person[“name”]<br>x=name;person[x]<br>person.nationality = “English”;添加属性<br>delete person.age;删除属性和值<br>（三）方法<br>构造器函数，即在对象中，使用函数来创建属性<br>language: function(){ return this.age}<br>（四）对象访问器get和set<br>get lang() {<br>return this.language;<br>}</p>
+<p>set先在对象中创建属性，值为空<br>在对象外赋值<br>language : “”,<br>set lang(lang) {<br>this.language = lang;<br>};<br>// 使用 setter 来设置对象属性：<br>person.lang = “en”;<br>（五）对象构造器<br>先定义function函数作为对象构造器函数（一般函数名首字母大写），再创建对象的时候，调用function方法 function Person{}<br>使用new来创建对象， bob=new Person{}; alice=new person{}<br>注意：不能为已有的对象构造器添加新属性（报错undefined）；<br>如需向构造器添加一个新属性，则必须把它添加到构造器函数，或者使用prototype，即Person.prototype.nationality = “English”;<br>了解：ECMAScript添加或更改对象属性值Object.defineProperty(person, “year”, {value:”2008”});</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">&lt;html lang&#x3D;&quot;en&quot;&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">    &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">    &lt;title&gt;Title&lt;&#x2F;title&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">&lt;&#x2F;head&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">&lt;p id&#x3D;&quot;demo&quot;&gt;&lt;&#x2F;p&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">    var person&#x3D;new Object();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">    person.name &#x3D; &quot;bob&quot;;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">    var person2 &#x3D; &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">        name:&quot;Alice&quot;,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">        language:&quot;en&quot;,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">        get lang () &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">            return this.language;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">    document.getElementById(&quot;demo&quot;).innerHTML&#x3D; &quot;His name is &quot;+person.name;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">    &#x2F;&#x2F;document.write(&quot;His name is &quot;+person.name);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line">    var obj &#x3D; &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line">        counter : 0,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">25</span></pre></td><td class="code"><pre><span class="line">        get reset() &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">26</span></pre></td><td class="code"><pre><span class="line">            this.counter &#x3D; 3;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">27</span></pre></td><td class="code"><pre><span class="line">        &#125;,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">28</span></pre></td><td class="code"><pre><span class="line">        get increment() &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">29</span></pre></td><td class="code"><pre><span class="line">            this.counter++;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">30</span></pre></td><td class="code"><pre><span class="line">        &#125;,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">31</span></pre></td><td class="code"><pre><span class="line">        get decrement() &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">32</span></pre></td><td class="code"><pre><span class="line">            this.counter--;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">33</span></pre></td><td class="code"><pre><span class="line">        &#125;,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">34</span></pre></td><td class="code"><pre><span class="line">        set add(value) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">35</span></pre></td><td class="code"><pre><span class="line">            this.counter +&#x3D; value;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">36</span></pre></td><td class="code"><pre><span class="line">        &#125;,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">37</span></pre></td><td class="code"><pre><span class="line">        set subtract(value) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">38</span></pre></td><td class="code"><pre><span class="line">            this.counter -&#x3D; value;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">39</span></pre></td><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">40</span></pre></td><td class="code"><pre><span class="line">    &#125;;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">41</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">42</span></pre></td><td class="code"><pre><span class="line">    &#x2F;&#x2F; 操作计数器：</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">43</span></pre></td><td class="code"><pre><span class="line">    obj.reset;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">44</span></pre></td><td class="code"><pre><span class="line">    obj.add &#x3D; 5;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">45</span></pre></td><td class="code"><pre><span class="line">    obj.subtract &#x3D; 1;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">46</span></pre></td><td class="code"><pre><span class="line">    obj.increment;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">47</span></pre></td><td class="code"><pre><span class="line">    obj.decrement;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">48</span></pre></td><td class="code"><pre><span class="line">    document.getElementById(&quot;demo&quot;).innerHTML&#x3D;obj.counter;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">49</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">50</span></pre></td><td class="code"><pre><span class="line">&lt;&#x2F;script&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">51</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">52</span></pre></td><td class="code"><pre><span class="line">&lt;&#x2F;body&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">53</span></pre></td><td class="code"><pre><span class="line">&lt;&#x2F;html&gt;</span></pre></td></tr></table></figure>
+<h2 id="二、函数"><a href="#二、函数" class="headerlink" title="二、函数"></a>二、函数</h2><p>(一)声明函数的几种方式：<br>1、函数声明function myf{return a<em>b；} 最常见，常用，结尾一般不加分号<br>2、函数表达式，匿名函数  var myf= function(a,b){return a</em>b}； 在结尾加分号<br>3、Function() 构造器 通过new    var myF = new Function(“a”, “b”, “return a * b”); 一般不用new<br>4、箭头函数（ES6）  const x=(x,y) =&gt;x*y;</p>
+<p>（二）函数参数<br>函数不对参数进行检查<br>如果调用参数时省略了参数（少于被声明的数量），则丢失的值被设置为：undefined。<br>如果参数太多，使用argument来调用</p>
+<p>（三）函数call()方法，使一个对象能调用另一个对象的方法<br>var person = {<br>fullName: function() {<br>return this.firstName + “ “ + this.lastName;<br>}<br>};<br>var person1 = {<br>firstName:”Bill”,<br>lastName: “Gates”,<br>};<br>person.fullName.call(person1);  // 将返回 “Bill Gates”  person的方法用于person1<br>person.fullName.call(person1, “Seattle”, “USA”); call带的参数根据方法来</p>
+<p>（四）apply（）方法同call，区别：apply带参数时以数组形式带<br>person.fullName.apply(person1, [“Oslo”, “Norway”]);<br>注：js中对数组没有max(),采用Math.max()<br>闭包：嵌套函数中的子函数可以访问父函数的变量 ，子函数的变量相当于是私有的</p>
+<h2 id="三、DOM（文档对象模型）-amp-BOM"><a href="#三、DOM（文档对象模型）-amp-BOM" class="headerlink" title="三、DOM（文档对象模型）&amp;BOM"></a>三、DOM（文档对象模型）&amp;BOM</h2><p>（一）简介<br>DOM文档对象模型，通过DOM，js能创建动态html。简单说，HTML DOM能增删改查HTML元素。<br>DOM方法：在HTML上执行的动作，各种函数；DOM属性，改变元素的值。<br>如getElementById方法，innerHTML属性。</p>
+<p>（二）document<br>DOM文档对象，通过document的方法对元素增删改查。<br>增：<br>document.createElement(“demo2”)创建 HTML 元素<br>document.appendChild(element)    添加 HTML 元素<br>document.write(text)    HTML 输出显示<br>document.getElementById(id).onclick = function(){code}    向 onclick 事件添加事件处理程序<br>删：<br>document.removeChild(element)    删除 HTML 元素<br>改：<br>element.attribute = new value    改变 HTML 元素的属性值<br>document.replaceChild(element)    替换 HTML 元素<br>查：<br>document.getElementById(id)    通过元素 id 来查找元素，（最常用）<br>document.getElementsByTagName(name)    通过标签名来查找元素（a，p，h这些）<br>document.getElementsByClassName(name)    通过类名来查找元素<br>document.querySelectorAll(“p.class1”);  通过 CSS 选择器查找元素，</p>
+<p>（三）修改HTML元素<br>document.write()，千万不要在文档加载后使用 document.write()，这么做会覆盖文档；<br>document.getElementById(id).innerHTML = 新内容<br>document.getElementById(id).attribute = 新值，<br>如document.getElementById(“myImage”).src = “landscape.jpg”;<br>document.getElementById(“p2”).style.color = “blue”;</p>
+<p>（四）事件<br>onclick点击按钮，可以字体颜色变化等<br>onmouseover和onmouseout：鼠标移到、移开该位置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">&lt;html lang&#x3D;&quot;en&quot;&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">    &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">    &lt;title&gt;DOM&lt;&#x2F;title&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">    &lt;style type&#x3D;&quot;text&#x2F;css&quot;&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">        #container&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">            width:400px;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">            height: 400px;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">            position: relative;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">            background-color: darkcyan;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">        #small&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">            width: 50px;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">            height: 50px;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">            position: absolute;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">            background-color: coral;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">    &lt;&#x2F;style&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">&lt;&#x2F;head&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line">&lt;h1 id&#x3D;&quot;id1&quot;&gt;我是标题&lt;&#x2F;h1&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line">&lt;button type&#x3D;&quot;button&quot;  onclick&#x3D;document.getElementById(&quot;id1&quot;).style.color&#x3D;&quot;red&quot;&gt;点我变色&lt;&#x2F;button&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line">&lt;button type&#x3D;&quot;button&quot;  onclick&#x3D;&quot;move()&quot;&gt;点我移动&lt;&#x2F;button&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">25</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">26</span></pre></td><td class="code"><pre><span class="line">&lt;div id&#x3D;&quot;container&quot;&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">27</span></pre></td><td class="code"><pre><span class="line">    &lt;div id&#x3D;&quot;small&quot;&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">28</span></pre></td><td class="code"><pre><span class="line">    &lt;&#x2F;div&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">29</span></pre></td><td class="code"><pre><span class="line">&lt;&#x2F;div&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">30</span></pre></td><td class="code"><pre><span class="line">&lt;p id&#x3D;&quot;time1&quot;&gt;&lt;&#x2F;p&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">31</span></pre></td><td class="code"><pre><span class="line">&lt;button type&#x3D;&quot;button&quot; onclick&#x3D;&quot;displayDate()&quot;&gt;点我显示时间&lt;&#x2F;button&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">32</span></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">33</span></pre></td><td class="code"><pre><span class="line">    function move() &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">34</span></pre></td><td class="code"><pre><span class="line">        var elem&#x3D;document.getElementById(&quot;small&quot;);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">35</span></pre></td><td class="code"><pre><span class="line">        var pos&#x3D;0;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">36</span></pre></td><td class="code"><pre><span class="line">        var id&#x3D;setInterval(frame, 5);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">37</span></pre></td><td class="code"><pre><span class="line">        function frame() &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">38</span></pre></td><td class="code"><pre><span class="line">            if (pos &#x3D;&#x3D; 150)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">39</span></pre></td><td class="code"><pre><span class="line">                clearInterval(id);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">40</span></pre></td><td class="code"><pre><span class="line">            &#125;else&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">41</span></pre></td><td class="code"><pre><span class="line">                pos++;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">42</span></pre></td><td class="code"><pre><span class="line">                elem.style.top &#x3D; pos+ &quot;px&quot;;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">43</span></pre></td><td class="code"><pre><span class="line">                elem.style.left &#x3D; pos+ &quot;px&quot;;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">44</span></pre></td><td class="code"><pre><span class="line">            &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">45</span></pre></td><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">46</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">47</span></pre></td><td class="code"><pre><span class="line">    function displayDate() &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">48</span></pre></td><td class="code"><pre><span class="line">            document.getElementById(&quot;time1&quot;).innerHTML &#x3D; Date();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">49</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">50</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">51</span></pre></td><td class="code"><pre><span class="line">&lt;&#x2F;script&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">52</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">53</span></pre></td><td class="code"><pre><span class="line">&lt;&#x2F;body&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">54</span></pre></td><td class="code"><pre><span class="line">&lt;&#x2F;html&gt;</span></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdnimg.cn/20191021193952337.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDEwNTQ1OQ==,size_16,color_FFFFFF,t_70" alt=""><br>（五）节点<br>DOM中元素节点不包含文本<title id="demo">教程</title> 节点为title，教程要通过innerHTML访问<br>var x= document.getElementById(“demo”).innerHTML;innerHTML=firstChild.nodeValue,<br>childNodes[0].nodeValue第一个子节点<br>对节点的操作：增删改查<br>增：var element = document.getElementById(“div1”);<br>element.appendChild(para);在div1中增加一个p节点<br>element.insertBefore(para, child);在div中，前面插入一个p<br>删：parent.removeChild(child);parent是div1，child是一个p<br>child.parentNode.removeChild(child);利用parentNode属性找到父，再删子<br>改：parent.replaceChild(para, child);<br>查：document.getElementById()<br>节点列表 var myNodeList = document.querySelectorAll(“p”);<br>通过querySelectorAll()  chileNodes得到节点列表情况<br>for (i = 0; i &lt; myNodelist.length; i++) {<br>myNodelist[i].style.backgroundColor = “red”;<br>}改变所有p节点颜色</p>
+<p>（六）BOM<br>Browser Object Model浏览器对象模型：允许js与浏览器对话<br>获取浏览器宽和高，适用所有浏览器<br>var w = window.innerWidth<br>|| document.documentElement.clientWidth<br>|| document.body.clientWidth;</p>
+<p>var h = window.innerHeight<br>|| document.documentElement.clientHeight<br>|| document.body.clientHeight;</p>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="https://hezhaoxiang.work/2019/learnjs03-DOM/" data-id="ck3zhi6go0004xkjyea4uh147" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "author": {
+            "@type": "Person",
+            "name": "He Zhaoxiang"
+        },
+        "headline": "web前端--JavaScript（三）对象、函数、DOM&amp;BOM",
+        "image": "https://hezhaoxiang.workhttps://img-blog.csdnimg.cn/20191021193952337.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDEwNTQ1OQ==,size_16,color_FFFFFF,t_70",
+        "keywords": "JavaScript",
+        "genre": "web前端 JavaScript",
+        "datePublished": "2019-10-21",
+        "dateCreated": "2019-10-21",
+        "dateModified": "2019-12-10",
+        "url": "/https:/hezhaoxiang.work/2019/learnjs03-DOM/",
+        "description": "根据上一篇博客思路，js从对象、函数、DOM和BOM再到jQuery入手。今天总结前三者，最后的DOM还没学完，再更。
+一、js对象(一)js对象创建方法：1、使用对象文字–属性：值(最常用)2、使用关键词new3、对象构造器，创建构造类型的对象4、ECMAScript5中函数Object.create()
+（二）访问对象属性person.nameperson[“name”]x=name;pers",
+        "wordCount": 1313
+    }
+</script>
+
+</article>
+<!--
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+
+    
+    </section>
+
+-->
+
+
+<!--来比力评论系统，在commetn/livebe.ejs中-->
+<!-- 来必力City版安装代码 -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC80Nzg3Mi8yNDM2OQ==">
+    <script type="text/javascript">
+        (function(d, s) {
+            var j, e = d.getElementsByTagName(s)[0];
+
+            if (typeof LivereTower === 'function') { return; }
+
+            j = d.createElement(s);
+            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+            j.async = true;
+
+            e.parentNode.insertBefore(j, e);
+        })(document, 'script');
+    </script>
+    <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+</div>
+<!-- City版安装代码已完成 -->
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>关注我 :</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/ppoffice/hexo-theme-hueman" target="_blank" rel="noopener">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="weibo" href="https://weibo.com/5379927249/profile?topnav=1&wvr=6&is_all=1" target="_blank" rel="noopener">
+                        <i class="icon fa fa-weibo"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/atom.xml" target="_blank" rel="noopener">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2019/learnjs04-jquery/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">下一篇</strong>
+        <p class="article-nav-title">
+        
+            web--JavaScript（四）jQuery
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2019/learnjs03/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">上一篇</strong>
+        <p class="article-nav-title">web前端--JavaScript（一）入门</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">最新文章</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2019/learn-vue-todoList/" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://img-blog.csdnimg.cn/20191129104133441.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDEwNTQ1OQ==,size_16,color_FFFFFF,t_70)" alt="Vue.js小Demo--todoList待办事项清单" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Demo/">Demo</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Demo/todoList/">todoList</a></p>
+                            <p class="item-title"><a href="/2019/learn-vue-todoList/" class="title">Vue.js小Demo--todoList待办事项清单</a></p>
+                            <p class="item-date"><time datetime="2019-11-29T13:38:00.000Z" itemprop="datePublished">2019-11-29</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2019/huawei-jianmo/" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://img-blog.csdnimg.cn/20191113142801552.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDEwNTQ1OQ==,size_16,color_FFFFFF,t_70)" alt="2019年“华为杯”研究生数学建模竞赛--E题（全球变暖）思路&amp;感想" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/%E7%AB%9E%E8%B5%9B/">竞赛</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/%E7%AB%9E%E8%B5%9B/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">数学建模</a></p>
+                            <p class="item-title"><a href="/2019/huawei-jianmo/" class="title">2019年“华为杯”研究生数学建模竞赛--E题（全球变暖）思路&amp;感想</a></p>
+                            <p class="item-date"><time datetime="2019-11-13T06:53:00.000Z" itemprop="datePublished">2019-11-13</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2019/howtodo-2048demo/" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://img-blog.csdnimg.cn/20191102193244964.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDEwNTQ1OQ==,size_16,color_FFFFFF,t_70)" alt="web--2048小游戏复现（慕课网）" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Demo/">Demo</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Demo/2048%E5%B0%8F%E6%B8%B8%E6%88%8F/">2048小游戏</a></p>
+                            <p class="item-title"><a href="/2019/howtodo-2048demo/" class="title">web--2048小游戏复现（慕课网）</a></p>
+                            <p class="item-date"><time datetime="2019-11-01T13:06:00.000Z" itemprop="datePublished">2019-11-01</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2019/learn-vue01/" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://img-blog.csdnimg.cn/20191128212909590.png)" alt="Vue入门&amp;注意事项" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Vue%E5%AD%A6%E4%B9%A0/">Vue学习</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Vue%E5%AD%A6%E4%B9%A0/Vue/">Vue</a></p>
+                            <p class="item-title"><a href="/2019/learn-vue01/" class="title">Vue入门&amp;注意事项</a></p>
+                            <p class="item-date"><time datetime="2019-11-01T13:06:00.000Z" itemprop="datePublished">2019-11-01</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2019/learnjs04-jquery/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/web%E5%89%8D%E7%AB%AF/">web前端</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/web%E5%89%8D%E7%AB%AF/JavaScript/">JavaScript</a></p>
+                            <p class="item-title"><a href="/2019/learnjs04-jquery/" class="title">web--JavaScript（四）jQuery</a></p>
+                            <p class="item-date"><time datetime="2019-10-22T11:48:00.000Z" itemprop="datePublished">2019-10-22</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">分类</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Demo/">Demo</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Demo/2048%E5%B0%8F%E6%B8%B8%E6%88%8F/">2048小游戏</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Demo/todoList/">todoList</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Vue%E5%AD%A6%E4%B9%A0/">Vue学习</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Vue%E5%AD%A6%E4%B9%A0/Vue/">Vue</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/">web前端</a><span class="category-list-count">10</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/HTML-CSS/">HTML&CSS</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/JavaScript/">JavaScript</a><span class="category-list-count">6</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AF%B9%E6%8A%97%E6%A0%B7%E6%9C%AC/">对抗样本</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AF%B9%E6%8A%97%E6%A0%B7%E6%9C%AC/%E8%AE%BA%E6%96%87/">论文</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AB%9E%E8%B5%9B/">竞赛</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AB%9E%E8%B5%9B/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">数学建模</a><span class="category-list-count">1</span></li></ul></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">归档</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">十月 2019</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">九月 2019</a><span class="archive-list-count">3</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">标签</h3>
+        <div class="widget">
+            <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML-CSS/" rel="tag">HTML&CSS</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript-Demo/" rel="tag">JavaScript Demo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue/" rel="tag">Vue</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue-Demo/" rel="tag">Vue Demo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AF%B9%E6%8A%97%E6%A0%B7%E6%9C%AC/" rel="tag">对抗样本</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1-2019%E7%A0%94%E7%A9%B6%E7%94%9FE%E9%A2%98/" rel="tag">数学建模 2019研究生E题</a><span class="tag-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">标签云</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/HTML-CSS/" style="font-size: 15px;">HTML&CSS</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/JavaScript-Demo/" style="font-size: 10px;">JavaScript Demo</a> <a href="/tags/Vue/" style="font-size: 10px;">Vue</a> <a href="/tags/Vue-Demo/" style="font-size: 10px;">Vue Demo</a> <a href="/tags/%E5%AF%B9%E6%8A%97%E6%A0%B7%E6%9C%AC/" style="font-size: 10px;">对抗样本</a> <a href="/tags/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1-2019%E7%A0%94%E7%A9%B6%E7%94%9FE%E9%A2%98/" style="font-size: 10px;">数学建模 2019研究生E题</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">友情链接</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="https://blog.csdn.net/weixin_44105459" target="_blank" rel="noopener">CSDN</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://www.cnblogs.com/4o4ErroR/" target="_blank" rel="noopener">博客园</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://weibo.com/5379927249/profile?topnav=1&wvr=6&is_all=1" target="_blank" rel="noopener">哈哈哈</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;" target="_blank" rel="noopener"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2019 author by：贺兆祥</p>
+
+                <p>本站由hzx小朋友在hexo的大力帮助下实现</p>
+                <!--这一段是不蒜子的访问量统计脚本-->
+                <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+                <span id="busuanzi_container_site_pv">一共被访问了<span id="busuanzi_value_site_pv"></span>次 &nbsp; </span>
+                <span id="busuanzi_container_site_uv">
+                    一共有<span id="busuanzi_value_site_uv"></span>个小朋友来过
+                </span>
+            </div>
+            <div class="footer-plugins">
+              
+    
+
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!--往下是cloud的文章阅读量系统-->
+<script src="//cdn1.lncld.net/static/js/2.5.0/av-min.js"></script>
+<script>
+    var APP_ID = 'YVSE8R91f8Qc6d6FwMTnwytk-gzGzoHsz';
+    var APP_KEY = 'ajFB9Ueh08Y5pIvkDsXSOW56';
+    AV.init({
+        appId: APP_ID,
+        appKey: APP_KEY
+    });
+    // 显示次数
+    function showTime(Counter) {
+        var query = new AV.Query("Counter");
+        if($(".leancloud_visitors").length > 0){
+            var url = $(".leancloud_visitors").attr('id').trim();
+            // where field
+            query.equalTo("words", url);
+            // count
+            query.count().then(function (number) {
+                // There are number instances of MyClass where words equals url.
+                $(document.getElementById(url)).text(number?  number : '--');
+            }, function (error) {
+                // error is an instance of AVError.
+            });
+        }
+    }
+    // 追加pv
+    function addCount(Counter) {
+        var url = $(".leancloud_visitors").length > 0 ? $(".leancloud_visitors").attr('id').trim() : 'icafebolger.com';
+        var Counter = AV.Object.extend("Counter");
+        var query = new Counter;
+        query.save({
+            words: url
+        }).then(function (object) {
+        })
+    }
+    $(function () {
+        var Counter = AV.Object.extend("Counter");
+        addCount(Counter);
+        showTime(Counter);
+    });
+</script>
+        
+    
+    <script>
+    var disqus_shortname = 'hexo-theme-hueman';
+    
+    
+    var disqus_url = 'https://hezhaoxiang.work/2019/learnjs03-DOM/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>

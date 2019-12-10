@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+
+    
+
+    
+    <title>2019年“华为杯”研究生数学建模竞赛--E题（全球变暖）思路&amp;感想 | Welcome to hzx 的博客，随便看~</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="keywords" content="数学建模 2019研究生E题" />
+    
+    <meta name="description" content="11月11日，公布成绩得了二等，欣喜若狂，毕竟三个人建模经历并不丰富。在此，首先感谢两位厉害的小姐姐一起交流、合作、查资料、编程、统计作图、合作分工、熬夜，才最后完成了论文。不论最后的结果如何，每个人的付出都是大于三分之一的。 目录一、研一参加数模情况二、研二开始前的准备三、比赛过程（周四~周一上午，四天四夜）四、注意事项 一、研一参加数模情况 研一刚开学的时候，导员在年级大会上就说起了“华为杯”">
+<meta name="keywords" content="数学建模 2019研究生E题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2019年“华为杯”研究生数学建模竞赛--E题（全球变暖）思路&amp;感想">
+<meta property="og:url" content="https:&#x2F;&#x2F;hezhaoxiang.work&#x2F;2019&#x2F;huawei-jianmo&#x2F;index.html">
+<meta property="og:site_name" content="Welcome to hzx 的博客，随便看~">
+<meta property="og:description" content="11月11日，公布成绩得了二等，欣喜若狂，毕竟三个人建模经历并不丰富。在此，首先感谢两位厉害的小姐姐一起交流、合作、查资料、编程、统计作图、合作分工、熬夜，才最后完成了论文。不论最后的结果如何，每个人的付出都是大于三分之一的。 目录一、研一参加数模情况二、研二开始前的准备三、比赛过程（周四~周一上午，四天四夜）四、注意事项 一、研一参加数模情况 研一刚开学的时候，导员在年级大会上就说起了“华为杯”">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20191113142801552.png?x-oss-process&#x3D;image&#x2F;watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDEwNTQ1OQ&#x3D;&#x3D;,size_16,color_FFFFFF,t_70">
+<meta property="og:updated_time" content="2019-12-10T07:06:44.830Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20191113142801552.png?x-oss-process&#x3D;image&#x2F;watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDEwNTQ1OQ&#x3D;&#x3D;,size_16,color_FFFFFF,t_70">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="Welcome to hzx 的博客，随便看~" type="application/atom+xml" />
+    
+
+    
+        <link rel="icon" href="/css/images/favicon.ico" />
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">Do what u want, love what u do.</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">主页</a>
+                                </li>
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/archives">归档</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Demo/">Demo</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Demo/2048%E5%B0%8F%E6%B8%B8%E6%88%8F/">2048小游戏</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Demo/todoList/">todoList</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Vue%E5%AD%A6%E4%B9%A0/">Vue学习</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Vue%E5%AD%A6%E4%B9%A0/Vue/">Vue</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/">web前端</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/HTML-CSS/">HTML&CSS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/JavaScript/">JavaScript</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E5%AF%B9%E6%8A%97%E6%A0%B7%E6%9C%AC/">对抗样本</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E5%AF%B9%E6%8A%97%E6%A0%B7%E6%9C%AC/%E8%AE%BA%E6%96%87/">论文</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E7%AB%9E%E8%B5%9B/">竞赛</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E7%AB%9E%E8%B5%9B/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">数学建模</a></li></ul></li></ul>
+                                    
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/board">小秘密</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="想要查找什么..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/%E7%AB%9E%E8%B5%9B/">竞赛</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/%E7%AB%9E%E8%B5%9B/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">数学建模</a>
+    </h1>
+</div>
+
+                        <div class="main-body-content">
+                            <article id="post-2019年“华为杯”研究生数学建模竞赛--E题（全球变暖）思路&amp;感想" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        2019年“华为杯”研究生数学建模竞赛--E题（全球变暖）思路&amp;感想
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+      <i class="fa fa-calendar"></i>
+      <a href="/2019/huawei-jianmo/" class="article-date">
+         <time datetime="2019-11-13T06:53:00.000Z" itemprop="datePublished">2019-11-13</time>
+      </a>
+    </div>
+
+
+                
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1-2019%E7%A0%94%E7%A9%B6%E7%94%9FE%E9%A2%98/" rel="tag">数学建模 2019研究生E题</a>
+    </div>
+
+                <!---cloud阅读量统计系统-->
+                阅读数量:<span id="/2019/huawei-jianmo/" class="leancloud_visitors" data-flag-title="2019年“华为杯”研究生数学建模竞赛--E题（全球变暖）思路&感想"></span>次
+                
+
+                
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <p>11月11日，公布成绩得了二等，欣喜若狂，毕竟三个人建模经历并不丰富。在此，首先感谢两位厉害的小姐姐一起交流、合作、查资料、编程、统计作图、合作分工、熬夜，才最后完成了论文。不论最后的结果如何，每个人的付出都是大于三分之一的。</p>
+<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><p>一、研一参加数模情况<br>二、研二开始前的准备<br>三、比赛过程（周四~周一上午，四天四夜）<br>四、注意事项</p>
+<h2 id="一、研一参加数模情况"><a href="#一、研一参加数模情况" class="headerlink" title="一、研一参加数模情况"></a>一、研一参加数模情况</h2><p> <strong>研一刚开学的时候</strong>，导员在年级大会上就说起了“华为杯”研究生数学建模，现在对这项比赛比较认可吧，一般当成研究生数学建模的国赛。本科期间对数学建模了解的并不是很多，没有系统的学习过各种模型，参加过一次美赛，无果。研一当时作为队长找了一位室友和一位经济类专业的小姐姐，在开赛前的前一周，我们一起练了两套题，交流了方法，室友（编程大佬）实现了部分内容，当时主要练了飞行轨迹最优化、遗传相关这两个方面，准备比赛时从这两方面入手。</p>
+<p><strong>正式比赛时</strong>，在第一天的上午我们就确定了要做E题–“多无人机对组网雷达的协同干扰”，随着理解一点点深入，发现E题看似入门容易，但是做起来并不简单，不过已经过去一两天，改题目也来不及了，就硬着头皮做下去。当时前三天都是在图书馆里，早上八点到，晚上十点回，中午不睡也无困意，毕竟思路像一条条绳索把自己的全身缚住，动弹不得。最后，我们把问题简化，忽略了很多干扰因素，以最简单的方式解决。</p>
+<p><strong>最后一天的夜里</strong>，我们转战学校提供的教室，三人通宵赶论文。解决方式简化，导致论文里的内容也少，写到最后没有太多东西可写。不过还是尽可能加一些图表，丰富一下内容。在夜里十二点半左右，点了外卖，吃完接着干。大概在夜里三四点，觉得整体内容基本完成，在早上六点多，提交了论文的<strong>MD5码（重要，后面着重说明）</strong>，踏着清晨的曙光，奔向食堂，吃了早饭就回宿舍躺着了。</p>
+<p><strong>最后结果</strong>并不理想，只能说自己经验和知识储备不足吧。室友和那个小姐姐都很认真的准备，作为队长没有给队员一个好结果，也挺遗憾的。</p>
+<h2 id="二、研二开始前的准备"><a href="#二、研二开始前的准备" class="headerlink" title="二、研二开始前的准备"></a>二、研二开始前的准备</h2><p><strong>1、阅读优秀论文</strong><br>自己看一遍往年的建模题目，自己思考，然后去读优秀论文真的挺重要。每个类型的题目看四五篇左右，看论文里的建模方法就去查，关于这个方法的思路，如何实现。这样再看到一个新的题目自己也就有想法了。<br>特别是对同一个题目，看几篇论文，他们用了不同的方法实现，其实也说明了建模的开放性，自己在做题的时候思路要开阔。<br>优秀论文去官网上找吧，资源还是挺多的。</p>
+<p><strong>2、三人交流</strong><br>不可否认，三个人之间的交流、合作真的很重要。这次队长是一位小姐姐W，另一位队友小姐姐J。队长W和我主要负责建模和编程，小姐姐J主要负责写论文，作统计图表，查资料、提供思路和修正我们的思路。</p>
+<p><strong>3、开始的前一天–2019年9月18号周三</strong><br>去超市买了饼干，面包，咖啡备用，准备好论文模板和几篇格式较好的论文，参照他们的格式来写。我们三人在同一个专业，这几天都在实验室进行，队友J和老板请了假，我实验室在队长W隔壁，就趁着老板不在悄悄过去。</p>
+<h2 id="三、比赛过程（周四-周一上午，四天四夜）"><a href="#三、比赛过程（周四-周一上午，四天四夜）" class="headerlink" title="三、比赛过程（周四~周一上午，四天四夜）"></a>三、比赛过程（周四~周一上午，四天四夜）</h2><p><strong>1、第一天：9月19号-周四</strong><br>第一天上午拿到题目，我们三人分开看题目，看完交流想法和难度，然后每个人把其他题目看一下，再决定选哪一道题。</p>
+<ul>
+<li>A题：无线智能传播模型</li>
+<li>B题：天文导航中的星图识别</li>
+<li>C题： 视觉情报信息分析</li>
+<li>D题：汽车行驶工况构建</li>
+<li>E题：全球变暖？</li>
+<li>F题：多约束条件下飞行器航迹快速规划</li>
+</ul>
+<p>A题华为题，前几年都是信号模型一类，今年有所变化，在信号这些理论基础上，改为深度学习，在华为云上跑深度模型，以分类那些为主，不适合我们三人，作罢。<br>B题看完整个人有点懵，各种运动把我们绕晕了，也没深入考虑，pass。<br>C题是cv方向，根据图像测车辆之间的实际距离，基本上是纯算法题，pass。<br>D题仔细读一读感觉不难，留作备选，在最后三人讨论中觉得E题更好写，答案更开放。<br>E题四小问都很开放，在中午饭前就决定选E。<br>F题也是规划相关，吸取去年经验没选，后来听室友说选了这题，做起来像是高中物理题，最后他们也得了国二。</p>
+<p><strong>这是E题：</strong></p>
+<ul>
+<li>（1）你们能否从加拿大各地天气变化的历史数据中挖掘出该地区温度的时空变化趋势？<br>海洋表面温度历史数据中蕴含着什么样的规律？</li>
+<li>（2）请你们建立一个刻画气候变化的模型对未来 25 年的气候变化进行预测，该模型<br>至少需要考虑地球的吸热、散热以及海洋的温度变化【7】 等要素。</li>
+<li>（3）“极寒天气”是某地的天气现象，这种极端气象的出现，与气候变化有无关系？请建<br>立相应的模型，并利用题目所提供的数据以及你能收集的数据说明：全球变暖和局地极寒现象的出现之间是否矛盾？</li>
+<li>（4）请用通俗易懂的文字解释：“全球变暖了，某地今年的冬天特别冷”之间的关系。 请<br>用一个新概念替代“全球变暖”，来反映气候变化的趋势和复杂性？并给予解释。</li>
+</ul>
+<p>第一天下午，所有的E题群里基本上都在问同一个问题，数据在哪里，到了晚上群里逐渐有人发网站链接，最后我们在加拿大的官网上找到了气象站的温度数据。气象站温度数据很多很多，而且年份不齐，有的还是缺省，我们就决定按照省份和方位来选点，并在气象站位置地图上标注。选点后下载数据，十点余回宿舍。</p>
+<p><strong>2、第二天：9月20号-周五</strong><br><strong>上午，</strong>在知网上搜了几篇论文看他们是对温度数据如何处理的，做了参考。然后对温度数据选择，筛选，统计，作图。（1）的前一小问基本完成，论文未写。跟着第一天的思路来找，在各种网站之间来回穿梭，也找到了一个统计全球海洋表面温度的网站，队友J对这个网站的数据结果做了整理，中午她开始写（1）问的论文，队长W编程来统计，我开始看第二问。<br><strong>下午和晚上，</strong>我先找到了几篇内容贴切的论文，准备改用他们的方法，队长W在github上找到了类似的代码，不过调试还有问题，跑不通，最终作罢。<br>时间过的很快，查资料，交流方法，不知不觉间就到了晚上，今天大家交流明显变少，查资料的效率也高很多，在第一天的时候三个人思想碰撞最为热烈，思路一旦敲定，大家就分工各自完成自己的部分。</p>
+<p><strong>3、第三天：9月21号-周六</strong><br>周六<strong>一早上</strong>开始有些焦灼，（2）问还没完成，还有（3）（4）问。我就主要负责（2）问，开始写（2）的论文，队长W开始看（3）问，队友J把（1）问完善的差不多了。<br><strong>下午</strong>，根据论文和博客上的方法，我对SDSM（统计降尺度模型）进行改进，对常见的气候模型做了统计和整合，并对RCP（气体浓度路径 ，当时记得贼6，脑子里全是这几个词，现在都忘了哈哈哈）建立子模型。<br><strong>晚上通宵</strong>，在周日凌晨三点左右把（2）问写完了，然后跟着队长看（3）问。两位队友小姐姐很拼，硬是通宵一点儿没睡，我四点多开始睡了两个小时。</p>
+<p><strong>4、第四天：9月22号-周日</strong><br>七点左右，我去买了早餐。饭后，关于（3）问我和队长有了分歧，队友J和我想法相似，不过我俩都没能说服队长，最后队长一人完成（3），我和队友J继续做（4）。<br>（4）问是开放性的，开始是队友J在写，然后我作修改。（4）的给全球变暖提一个新概念，队友J提出的“<strong>全球生态环境紊乱</strong>”我感觉挺好，气候变暖不仅仅是温度提高，对应的生态环境也发生变化，涉及到各个方面，具体表现形式可分为海平面上升、影响农业、臭氧层破坏、土地荒漠化以及大气污染与海洋污染等方面。<br>第四天晚上，（1）、（2）（4）问基本完成，剩下的时间就是继续修改、完善。（3）问队长持续fighting。</p>
+<p><strong>5、第五天：9月23号-周一</strong><br>此处的周一是要从零点开始算了，这段时间显得格外宝贵。队长在凌晨五点左右完成（3），然后我们一起调格式，论文从头到尾看了几遍（论文修改三五遍都是很正常的，尽量美观），改改格式，加上参考文献、代码和数据。说实话，这个时候我们三个人都已经脑袋懵了，眼睛睁着但是脑袋转的很慢。<br>九点左右，队长提交了MD5码，她俩各自回宿舍了。交MD5码的那一刻，整个人真的有一种大石头落地的感觉，不管论文有多少不足之处，都不用再改，<strong>长舒一口气，能睡觉真好！！</strong><br>中午十二点多，提交了论文原文和数据压缩包，一切结束！</p>
+<h2 id="四、注意事项"><a href="#四、注意事项" class="headerlink" title="四、注意事项"></a>四、注意事项</h2><p><strong>1、MD5码</strong><br>用软件生成MD5码之后，论文一定不要动，不要打开，不要重命名，路径最好也不要动。防止码和论文对应不上。我们学校每年都有因为MD5码问题没交上论文的情况。这是我们学校参加建模的情况，大佬还是多啊，作为菜鸡唯有佩服。<br><img src="https://img-blog.csdnimg.cn/20191113142801552.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDEwNTQ1OQ==,size_16,color_FFFFFF,t_70" alt=""><br><strong>2、三人之间交流合作</strong><br>交流，真的真的太重要了，三个人分好工，会节省很多时间，别人几句话可能就解决了你想一两个小时的问题。还有，交流的时候不要怕意见不合，说出来总比自己一个人闷头苦干的好。</p>
+<p><strong>3、摘要&amp;格式</strong><br>摘要一定写的简洁干练，把你的思想方法和结果用几句话说出来，摘要里别说空话。我们是每个人写自己负责的那部分。如果仔细追究，其中不当之处可能很多，不过这也是我们三人在这四天四夜里展现最好的了。<br><img src="https://img-blog.csdnimg.cn/20191113143724346.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDEwNTQ1OQ==,size_16,color_FFFFFF,t_70" alt="">)<img src="https://img-blog.csdnimg.cn/20191113143750821.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDEwNTQ1OQ==,size_16,color_FFFFFF,t_70" alt=""><br><strong>4、建模</strong><br>宣讲会的时候老师讲：参加数学建模，95%的学生都不是数学专业的，<strong>重在思路</strong>，重在解决问题的方法（所以，不会建模不要紧，三个人一起查资料，想办法）。而评阅的老师，95%都是数学专业的（所以<strong>论文很重要</strong>，要写的完善，让人看起来舒服，我们都是尽量用流程图，图表代替大段的文字描述）。<br>最后，说两点最重要的吧——<strong>论文写好，三人合作</strong></p>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="https://hezhaoxiang.work/2019/huawei-jianmo/" data-id="ck3zhqz8a000wxkjy0n99bl1t" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "author": {
+            "@type": "Person",
+            "name": "He Zhaoxiang"
+        },
+        "headline": "2019年“华为杯”研究生数学建模竞赛--E题（全球变暖）思路&amp;感想",
+        "image": "https://hezhaoxiang.workhttps://img-blog.csdnimg.cn/20191113142801552.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDEwNTQ1OQ==,size_16,color_FFFFFF,t_70",
+        "keywords": "数学建模 2019研究生E题",
+        "genre": "竞赛 数学建模",
+        "datePublished": "2019-11-13",
+        "dateCreated": "2019-11-13",
+        "dateModified": "2019-12-10",
+        "url": "/https:/hezhaoxiang.work/2019/huawei-jianmo/",
+        "description": "11月11日，公布成绩得了二等，欣喜若狂，毕竟三个人建模经历并不丰富。在此，首先感谢两位厉害的小姐姐一起交流、合作、查资料、编程、统计作图、合作分工、熬夜，才最后完成了论文。不论最后的结果如何，每个人的付出都是大于三分之一的。
+目录一、研一参加数模情况二、研二开始前的准备三、比赛过程（周四~周一上午，四天四夜）四、注意事项
+一、研一参加数模情况 研一刚开学的时候，导员在年级大会上就说起了“华为杯”",
+        "wordCount": 34
+    }
+</script>
+
+</article>
+<!--
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+
+    
+    </section>
+
+-->
+
+
+<!--来比力评论系统，在commetn/livebe.ejs中-->
+<!-- 来必力City版安装代码 -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC80Nzg3Mi8yNDM2OQ==">
+    <script type="text/javascript">
+        (function(d, s) {
+            var j, e = d.getElementsByTagName(s)[0];
+
+            if (typeof LivereTower === 'function') { return; }
+
+            j = d.createElement(s);
+            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+            j.async = true;
+
+            e.parentNode.insertBefore(j, e);
+        })(document, 'script');
+    </script>
+    <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+</div>
+<!-- City版安装代码已完成 -->
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>关注我 :</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/ppoffice/hexo-theme-hueman" target="_blank" rel="noopener">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="weibo" href="https://weibo.com/5379927249/profile?topnav=1&wvr=6&is_all=1" target="_blank" rel="noopener">
+                        <i class="icon fa fa-weibo"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/atom.xml" target="_blank" rel="noopener">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2019/learn-vue-todoList/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">下一篇</strong>
+        <p class="article-nav-title">
+        
+            Vue.js小Demo--todoList待办事项清单
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2019/howtodo-2048demo/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">上一篇</strong>
+        <p class="article-nav-title">web--2048小游戏复现（慕课网）</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">最新文章</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2019/learn-vue-todoList/" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://img-blog.csdnimg.cn/20191129104133441.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDEwNTQ1OQ==,size_16,color_FFFFFF,t_70)" alt="Vue.js小Demo--todoList待办事项清单" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Demo/">Demo</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Demo/todoList/">todoList</a></p>
+                            <p class="item-title"><a href="/2019/learn-vue-todoList/" class="title">Vue.js小Demo--todoList待办事项清单</a></p>
+                            <p class="item-date"><time datetime="2019-11-29T13:38:00.000Z" itemprop="datePublished">2019-11-29</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2019/huawei-jianmo/" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://img-blog.csdnimg.cn/20191113142801552.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDEwNTQ1OQ==,size_16,color_FFFFFF,t_70)" alt="2019年“华为杯”研究生数学建模竞赛--E题（全球变暖）思路&amp;感想" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/%E7%AB%9E%E8%B5%9B/">竞赛</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/%E7%AB%9E%E8%B5%9B/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">数学建模</a></p>
+                            <p class="item-title"><a href="/2019/huawei-jianmo/" class="title">2019年“华为杯”研究生数学建模竞赛--E题（全球变暖）思路&amp;感想</a></p>
+                            <p class="item-date"><time datetime="2019-11-13T06:53:00.000Z" itemprop="datePublished">2019-11-13</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2019/howtodo-2048demo/" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://img-blog.csdnimg.cn/20191102193244964.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDEwNTQ1OQ==,size_16,color_FFFFFF,t_70)" alt="web--2048小游戏复现（慕课网）" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Demo/">Demo</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Demo/2048%E5%B0%8F%E6%B8%B8%E6%88%8F/">2048小游戏</a></p>
+                            <p class="item-title"><a href="/2019/howtodo-2048demo/" class="title">web--2048小游戏复现（慕课网）</a></p>
+                            <p class="item-date"><time datetime="2019-11-01T13:06:00.000Z" itemprop="datePublished">2019-11-01</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2019/learn-vue01/" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://img-blog.csdnimg.cn/20191128212909590.png)" alt="Vue入门&amp;注意事项" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Vue%E5%AD%A6%E4%B9%A0/">Vue学习</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Vue%E5%AD%A6%E4%B9%A0/Vue/">Vue</a></p>
+                            <p class="item-title"><a href="/2019/learn-vue01/" class="title">Vue入门&amp;注意事项</a></p>
+                            <p class="item-date"><time datetime="2019-11-01T13:06:00.000Z" itemprop="datePublished">2019-11-01</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2019/learnjs04-jquery/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/web%E5%89%8D%E7%AB%AF/">web前端</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/web%E5%89%8D%E7%AB%AF/JavaScript/">JavaScript</a></p>
+                            <p class="item-title"><a href="/2019/learnjs04-jquery/" class="title">web--JavaScript（四）jQuery</a></p>
+                            <p class="item-date"><time datetime="2019-10-22T11:48:00.000Z" itemprop="datePublished">2019-10-22</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">分类</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Demo/">Demo</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Demo/2048%E5%B0%8F%E6%B8%B8%E6%88%8F/">2048小游戏</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Demo/todoList/">todoList</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Vue%E5%AD%A6%E4%B9%A0/">Vue学习</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Vue%E5%AD%A6%E4%B9%A0/Vue/">Vue</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/">web前端</a><span class="category-list-count">10</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/HTML-CSS/">HTML&CSS</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/JavaScript/">JavaScript</a><span class="category-list-count">6</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AF%B9%E6%8A%97%E6%A0%B7%E6%9C%AC/">对抗样本</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AF%B9%E6%8A%97%E6%A0%B7%E6%9C%AC/%E8%AE%BA%E6%96%87/">论文</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AB%9E%E8%B5%9B/">竞赛</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AB%9E%E8%B5%9B/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">数学建模</a><span class="category-list-count">1</span></li></ul></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">归档</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">十月 2019</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">九月 2019</a><span class="archive-list-count">3</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">标签</h3>
+        <div class="widget">
+            <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML-CSS/" rel="tag">HTML&CSS</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript-Demo/" rel="tag">JavaScript Demo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue/" rel="tag">Vue</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue-Demo/" rel="tag">Vue Demo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AF%B9%E6%8A%97%E6%A0%B7%E6%9C%AC/" rel="tag">对抗样本</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1-2019%E7%A0%94%E7%A9%B6%E7%94%9FE%E9%A2%98/" rel="tag">数学建模 2019研究生E题</a><span class="tag-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">标签云</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/HTML-CSS/" style="font-size: 15px;">HTML&CSS</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/JavaScript-Demo/" style="font-size: 10px;">JavaScript Demo</a> <a href="/tags/Vue/" style="font-size: 10px;">Vue</a> <a href="/tags/Vue-Demo/" style="font-size: 10px;">Vue Demo</a> <a href="/tags/%E5%AF%B9%E6%8A%97%E6%A0%B7%E6%9C%AC/" style="font-size: 10px;">对抗样本</a> <a href="/tags/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1-2019%E7%A0%94%E7%A9%B6%E7%94%9FE%E9%A2%98/" style="font-size: 10px;">数学建模 2019研究生E题</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">友情链接</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="https://blog.csdn.net/weixin_44105459" target="_blank" rel="noopener">CSDN</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://www.cnblogs.com/4o4ErroR/" target="_blank" rel="noopener">博客园</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://weibo.com/5379927249/profile?topnav=1&wvr=6&is_all=1" target="_blank" rel="noopener">哈哈哈</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;" target="_blank" rel="noopener"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2019 author by：贺兆祥</p>
+
+                <p>本站由hzx小朋友在hexo的大力帮助下实现</p>
+                <!--这一段是不蒜子的访问量统计脚本-->
+                <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+                <span id="busuanzi_container_site_pv">一共被访问了<span id="busuanzi_value_site_pv"></span>次 &nbsp; </span>
+                <span id="busuanzi_container_site_uv">
+                    一共有<span id="busuanzi_value_site_uv"></span>个小朋友来过
+                </span>
+            </div>
+            <div class="footer-plugins">
+              
+    
+
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!--往下是cloud的文章阅读量系统-->
+<script src="//cdn1.lncld.net/static/js/2.5.0/av-min.js"></script>
+<script>
+    var APP_ID = 'YVSE8R91f8Qc6d6FwMTnwytk-gzGzoHsz';
+    var APP_KEY = 'ajFB9Ueh08Y5pIvkDsXSOW56';
+    AV.init({
+        appId: APP_ID,
+        appKey: APP_KEY
+    });
+    // 显示次数
+    function showTime(Counter) {
+        var query = new AV.Query("Counter");
+        if($(".leancloud_visitors").length > 0){
+            var url = $(".leancloud_visitors").attr('id').trim();
+            // where field
+            query.equalTo("words", url);
+            // count
+            query.count().then(function (number) {
+                // There are number instances of MyClass where words equals url.
+                $(document.getElementById(url)).text(number?  number : '--');
+            }, function (error) {
+                // error is an instance of AVError.
+            });
+        }
+    }
+    // 追加pv
+    function addCount(Counter) {
+        var url = $(".leancloud_visitors").length > 0 ? $(".leancloud_visitors").attr('id').trim() : 'icafebolger.com';
+        var Counter = AV.Object.extend("Counter");
+        var query = new Counter;
+        query.save({
+            words: url
+        }).then(function (object) {
+        })
+    }
+    $(function () {
+        var Counter = AV.Object.extend("Counter");
+        addCount(Counter);
+        showTime(Counter);
+    });
+</script>
+        
+    
+    <script>
+    var disqus_shortname = 'hexo-theme-hueman';
+    
+    
+    var disqus_url = 'https://hezhaoxiang.work/2019/huawei-jianmo/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>
