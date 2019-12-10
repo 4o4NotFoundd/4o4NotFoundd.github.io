@@ -275,13 +275,13 @@ code {
   display: block;
   padding: 10px 0;
   width: 165px;
-  height: 165px;
+  height: 120px;
   background-image: url("images/logo-header.png");
   background-position: 0px 10px;
   background-repeat: no-repeat;
-  -webkit-background-size: 165px 165px;
-  -moz-background-size: 165px 165px;
-  background-size: 165px 165px;
+  -webkit-background-size: 165px 120px;
+  -moz-background-size: 165px 120px;
+  background-size: 165px 120px;
 }
 .main-body {
   margin-top: -60px;
@@ -294,8 +294,8 @@ code {
   box-sizing: border-box;
   -webkit-box-shadow: rgba(0,0,0,0.098) 0px 1px 1px 0px;
   box-shadow: rgba(0,0,0,0.098) 0px 1px 1px 0px;
-  padding-left: 340px;
-  background: url("images/s-left.png") repeat-y left 0;
+  padding-right: 340px;
+  background: url("images/s-left.png") repeat-y right 0;
 }
 .main-body-inner:before,
 .main-body-inner:after {
@@ -306,7 +306,7 @@ code {
   clear: both;
 }
 #main {
-  float: right;
+  float: left;
   width: 100%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -376,11 +376,11 @@ code {
   margin-left: 20px;
 }
 #header-title .subtitle {
-  font-size: 16px;
+  font-size: 30px;
   font-style: italic;
-  line-height: 175px;
+  line-height: 130px;
   color: rgba(255,255,255,0.7);
-  text-shadow: 0 1px rgba(0,0,0,0.2);
+  text-shadow: 0 5px rgba(0,0,0,0.2);
 }
 .nav-container .nav-icon,
 .nav-container .nav-container-inner #main-nav .main-nav-list-item .main-nav-list-link {
@@ -556,8 +556,8 @@ code {
   display: none;
 }
 #sidebar {
-  float: left;
-  margin-left: -340px;
+  float: right;
+  margin-right: -340px;
   width: 340px;
 }
 #sidebar .sidebar-toggle {
@@ -1663,10 +1663,10 @@ a.article-title:hover {
 }
 #footer .logo {
   width: 132px;
-  height: 132px;
-  -webkit-background-size: 132px 132px;
-  -moz-background-size: 132px 132px;
-  background-size: 132px 132px;
+  height: 96px;
+  -webkit-background-size: 132px 96px;
+  -moz-background-size: 132px 96px;
+  background-size: 132px 96px;
 }
 i.icon {
   display: inline-block;
@@ -1848,7 +1848,7 @@ i.icon:before {
 }
 .highlight {
   color: #a9b7c6;
-  background: #282b2e;
+  background: #282b56;
 }
 .highlight .code .number,
 .highlight .code .literal,
@@ -1856,7 +1856,9 @@ i.icon:before {
 .highlight .code .bullet {
   color: #6897bb;
 }
-.highlight .code .keyword,
+.highlight .code .keyword {
+  color: #4caf50;
+}
 .highlight .code .selector-tag,
 .highlight .code .deletion {
   color: #cc7832;
@@ -1890,6 +1892,7 @@ i.icon:before {
 }
 .highlight .code .emphasis {
   font-style: italic;
+  font-size: 20px;
 }
 .highlight .code .strong {
   font-weight: bold;
@@ -1917,12 +1920,12 @@ i.icon:before {
     margin-top: -50px;
   }
   .main-body-inner {
-    padding-left: 50px;
-    background-position: -290px 0 !important;
+    padding-right: 50px;
+    background-position: -340px 0 !important;
   }
   .main-body-inner #sidebar {
-    left: 0;
-    background: url("images/s-left.png") repeat-y left 0;
+    right: 0;
+    background: url("images/s-left.png") repeat-y right 0;
     margin: 0;
     height: 100%;
     position: absolute;
@@ -1959,7 +1962,7 @@ i.icon:before {
     font-family: fontawesome;
   }
   .main-body-inner #sidebar .sidebar-toggle .toggle:before {
-    content: '\f101';
+    content: '\f100';
   }
   .main-body-inner #sidebar .sidebar-top {
     padding: 10px 30px;
