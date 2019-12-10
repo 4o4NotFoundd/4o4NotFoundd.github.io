@@ -2,16 +2,58 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://hezhaoxiang.work/2019/learn-vue01/</loc>
+    <loc>https://hezhaoxiang.work/2019/huawei-jianmo/</loc>
     
-    <lastmod>2019-12-10T07:19:47.863Z</lastmod>
+    <lastmod>2019-12-10T07:37:22.803Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hezhaoxiang.work/2019/learn-vue-todoList/</loc>
+    
+    <lastmod>2019-12-10T07:37:22.797Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hezhaoxiang.work/2019/learn-html03/</loc>
+    
+    <lastmod>2019-12-10T07:37:22.791Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hezhaoxiang.work/2019/learn-html02/</loc>
+    
+    <lastmod>2019-12-10T07:37:22.787Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://hezhaoxiang.work/2019/howtodo-2048demo/</loc>
     
-    <lastmod>2019-12-10T07:14:20.442Z</lastmod>
+    <lastmod>2019-12-10T07:37:22.756Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hezhaoxiang.work/2019/learn-html01/</loc>
+    
+    <lastmod>2019-12-10T07:34:01.580Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hezhaoxiang.work/2019/learn-vuex/</loc>
+    
+    <lastmod>2019-12-10T07:31:46.918Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hezhaoxiang.work/2019/learn-vue01/</loc>
+    
+    <lastmod>2019-12-10T07:19:47.863Z</lastmod>
     
   </url>
   
@@ -44,34 +86,6 @@
   </url>
   
   <url>
-    <loc>https://hezhaoxiang.work/2019/huawei-jianmo/</loc>
-    
-    <lastmod>2019-12-10T07:06:44.830Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hezhaoxiang.work/2019/learn-vue-todoList/</loc>
-    
-    <lastmod>2019-12-10T07:02:46.975Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hezhaoxiang.work/2019/learnjs03/</loc>
-    
-    <lastmod>2019-12-10T06:30:41.056Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hezhaoxiang.work/2019/learnjs03/</loc>
-    
-    <lastmod>2019-12-10T06:30:41.056Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://hezhaoxiang.work/2019/learnjs01/</loc>
     
     <lastmod>2019-12-10T06:27:23.250Z</lastmod>
@@ -82,27 +96,6 @@
     <loc>https://hezhaoxiang.work/2019/2019100819/</loc>
     
     <lastmod>2019-12-09T14:03:41.798Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hezhaoxiang.work/2019/2019091819/</loc>
-    
-    <lastmod>2019-12-09T14:00:32.587Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hezhaoxiang.work/2019/2019091715/</loc>
-    
-    <lastmod>2019-12-09T13:57:52.118Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hezhaoxiang.work/2019/2019091019/</loc>
-    
-    <lastmod>2019-12-09T13:43:59.876Z</lastmod>
     
   </url>
   

@@ -6,17 +6,24 @@
     
 
     
-    <title>Welcome to hzx 的博客，随便看~</title>
+    <title>Vue.js之vuex入门 | Welcome to hzx 的博客，随便看~</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta name="keywords" content="web前端、js、Vue">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Welcome to hzx 的博客，随便看~">
-<meta property="og:url" content="https:&#x2F;&#x2F;hezhaoxiang.work&#x2F;index.html">
+    <meta name="keywords" content="Vuex" />
+    
+    <meta name="description" content="放图，这个图最能说明vuex和Vue之间的关系。 一、原理虚线中的Vuex是用来处理vue的组件，vue compontents（组件）通过dispatch（理解为转发事件）交给action，通过接入后端api完成一些业务，在action中进行异步操作，再将结果以commit（提交事件）方式发给mutations。mutations中最终实现vue compontent的method。state用">
+<meta name="keywords" content="Vuex">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vue.js之vuex入门">
+<meta property="og:url" content="https:&#x2F;&#x2F;hezhaoxiang.work&#x2F;2019&#x2F;learn-vuex&#x2F;index.html">
 <meta property="og:site_name" content="Welcome to hzx 的博客，随便看~">
+<meta property="og:description" content="放图，这个图最能说明vuex和Vue之间的关系。 一、原理虚线中的Vuex是用来处理vue的组件，vue compontents（组件）通过dispatch（理解为转发事件）交给action，通过接入后端api完成一些业务，在action中进行异步操作，再将结果以commit（提交事件）方式发给mutations。mutations中最终实现vue compontent的method。state用">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20191204154825907.png?x-oss-process&#x3D;image&#x2F;watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDEwNTQ1OQ&#x3D;&#x3D;,size_16,color_FFFFFF,t_70">
+<meta property="og:updated_time" content="2019-12-10T07:31:46.918Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20191204154825907.png?x-oss-process&#x3D;image&#x2F;watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDEwNTQ1OQ&#x3D;&#x3D;,size_16,color_FFFFFF,t_70">
     
 
     
@@ -135,534 +142,205 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <em class="page-title-link" data-url="home">主页</em>
+    <a class="page-title-link" href="/categories/Vue%E5%AD%A6%E4%B9%A0/">Vue学习</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Vue%E5%AD%A6%E4%B9%A0/Vuex/">Vuex</a>
     </h1>
 </div>
 
                         <div class="main-body-content">
-                            
-
-    
-    
+                            <article id="post-Vue.js之vuex入门" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
         
-        
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/archives/2019" class="archive-year"><i class="icon fa fa-calendar-o"></i>2019</a>
-            </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2019/learn-vuex/" class="thumbnail">
-    
-    
-        <span style="background-image:url(https://img-blog.csdnimg.cn/20191204154825907.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDEwNTQ1OQ==,size_16,color_FFFFFF,t_70)" alt="Vue.js之vuex入门" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="https://hezhaoxiang.work/2019/learn-vuex/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/Vue%E5%AD%A6%E4%B9%A0/">Vue学习</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Vue%E5%AD%A6%E4%B9%A0/Vuex/">Vuex</a>
-            </div>
-            <div class="date"><time datetime="2019-12-04T11:11:30.000Z" itemprop="datePublished">2019-12-04</time></div>
-        </div>
-        
+            <header class="article-header">
+                
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2019/learn-vuex/">Vue.js之vuex入门</a>
+        Vue.js之vuex入门
         </h1>
     
 
-        <p class="article-excerpt">
-            放图，这个图最能说明vuex和Vue之间的关系。
-一、原理虚线中的Vuex是用来处理vue的组件，vue compontents（组件）通过dispatch（理解为转发事件）交给action，通过接入后端api完成一些业务，在action中进行异步操作，再将结果以commit（提交事件）方式发给mutations。mutations中最终实现vue compontent的method。state用
-        </p>
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+      <i class="fa fa-calendar"></i>
+      <a href="/2019/learn-vuex/" class="article-date">
+         <time datetime="2019-12-04T11:11:30.000Z" itemprop="datePublished">2019-12-04</time>
+      </a>
     </div>
-</article>
-    
-
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2019/learn-vue-todoList/" class="thumbnail">
-    
-    
-        <span style="background-image:url(https://img-blog.csdnimg.cn/20191129104133441.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDEwNTQ1OQ==,size_16,color_FFFFFF,t_70)" alt="Vue.js小Demo--todoList待办事项清单" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="https://hezhaoxiang.work/2019/learn-vue-todoList/">0</span>
-    
-</span>
 
 
-    
-</a>
+                
 
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/Demo/">Demo</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Demo/todoList/">todoList</a>
-            </div>
-            <div class="date"><time datetime="2019-11-29T13:38:00.000Z" itemprop="datePublished">2019-11-29</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2019/learn-vue-todoList/">Vue.js小Demo--todoList待办事项清单</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            Vue实现todolist整体思路：1、创建vue项目（不包括router，不使用eslint检查语法）2、修改为空白项目，去掉helloworld等3、构思整体框架，创建一个DOM（标题appheader，输入栏input、展示列表list）通过css渲染4、依次完成各个组件AppHeader、todoInput、todoItem，最后由APP.vue组合展示。组件化思想是Vue的核心思想，将各
-        </p>
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Vuex/" rel="tag">Vuex</a>
     </div>
-</article>
-    
-        </div>
-    
 
-    
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2019/huawei-jianmo/" class="thumbnail">
-    
-    
-        <span style="background-image:url(https://img-blog.csdnimg.cn/20191113142801552.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDEwNTQ1OQ==,size_16,color_FFFFFF,t_70)" alt="2019年“华为杯”研究生数学建模竞赛--E题（全球变暖）思路&amp;感想" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="https://hezhaoxiang.work/2019/huawei-jianmo/">0</span>
-    
-</span>
+                <!---cloud阅读量统计系统-->
+                阅读数量:<span id="/2019/learn-vuex/" class="leancloud_visitors" data-flag-title="Vue.js之vuex入门"></span>次
+                
 
+                
 
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/%E7%AB%9E%E8%B5%9B/">竞赛</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/%E7%AB%9E%E8%B5%9B/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">数学建模</a>
             </div>
-            <div class="date"><time datetime="2019-11-13T06:53:00.000Z" itemprop="datePublished">2019-11-13</time></div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <p>放图，这个图最能说明vuex和Vue之间的关系。<br><img src="https://img-blog.csdnimg.cn/20191204154825907.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDEwNTQ1OQ==,size_16,color_FFFFFF,t_70" alt=""></p>
+<h2 id="一、原理"><a href="#一、原理" class="headerlink" title="一、原理"></a>一、原理</h2><p>虚线中的Vuex是用来处理vue的组件，vue compontents（组件）通过dispatch（理解为转发事件）交给action，通过接入后端api完成一些业务，在action中进行异步操作，再将结果以commit（提交事件）方式发给mutations。mutations中最终实现vue compontent的method。state用来存数据，交给组件在页面中显示。</p>
+<p>devtools是vue为了适应浏览器的一个插件，在这个插件中可以看到vue响应的过程，包括每个对象，属性和value。<br><img src="https://img-blog.csdnimg.cn/20191204155831986.png" alt=""><br><img src="https://img-blog.csdnimg.cn/2019120416001188.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDEwNTQ1OQ==,size_16,color_FFFFFF,t_70" alt=""></p>
+<h2 id="二、vuex组成"><a href="#二、vuex组成" class="headerlink" title="二、vuex组成"></a>二、vuex组成</h2><p>1、state<br>2、getter<br>3、mutations<br>4、actions<br>5、modules</p>
+<p> <strong>1. state</strong></p>
+<p> 相当于数据仓库，vuex中的数据放在store实例中，store对象包括 s以上5个部分。<br>store称为单一状态树：所有状态信息保存在一个store中，便于管理。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">const store= new Vuex.Store(&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">  state:&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    //counter 数据变量</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">//保存数据，在其他地方引用$store.state.counter</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">  &#125;,&#125;</span></pre></td></tr></table></figure>
+
+<p> <strong>2. getter</strong><br> 用来获取数据，类似computed计算属性。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">getters:&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">    // adddd()&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    // &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">//类似计算属性computed，使用时$store.getter.adddd&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">//filter过滤,s代表student数组中的一个，结果返回学生信息。</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">this.$store.state.student.filter(s =&gt;&#123; </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">        Return s.age&gt;<span class="number">20</span>&#125;)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">等价于：</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">this.$store.student.filter(s=&gt; s.age&gt;=20) </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">//前一个&gt;= 是过渡函数，filter格式，第二个&gt;=是判断条件</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">more20(state)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">    &#125;,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">    more20Length(state,getter)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">      //调用getter中已有的函数getter.more20.length</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">  &#125;,</span></pre></td></tr></table></figure>
+<p> <strong>3. mutations</strong><br> <strong>在mutations中，vue组件的method，commit给mutation，mutation来处理。</strong><br> 用来修改数据，包括两部分：事件类型type+回调函数；<br>回调函数的参数被称为mutation的负载payload。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">两种提交风格：</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">	this.$store.commit(“appmethodTomutation”,count)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">//此处事件类型appmethodTomutation，payload：count</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">//可以直接由vue.component--&gt;mutations，执行同步操作</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">//如果有异步操作，则需要vue.component--&gt;actions--&gt;mutations</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">	this.$store.commit(&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">type:” appmethodTomutation”,   count   &#125;)</span></pre></td></tr></table></figure>
+
+<ul>
+<li>响应式原理：界面刷新，state中的属性值跟着刷新。如果初始没有该属性，则不跟随响应。</li>
+<li>添加属性:并跟随响应的方法push，pop，Vue.set（state.info,‘address’,’shandong’）</li>
+<li>删除属性：Vue.delete(state.info,’age’)</li>
+<li>Miutation常量：将方法定义为常量，commit时写常量。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">//常量：</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">this.$store.commit(INCERES)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">//在mutation中 使用</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">[INCRESE]&#123;方法  &#125;   </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">//还需要在mutation.js中单独定义</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line"> export const INCRESE=‘increse’</span></pre></td></tr></table></figure>
+<p> <strong>4.actions</strong><br> vue的method dispatch给action，actions 中commit 给 mutations，最终在mutation中解决。<br> action执行异步操作：<br> （如setTimeout（（）=&gt;{ state.info.name=’xlkhj’  }, 1000），在mutation中都是同步操作。<br>Context上下文，相当于store</p>
+<p><img src="https://img-blog.csdnimg.cn/20191204185637387.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDEwNTQ1OQ==,size_16,color_FFFFFF,t_70" alt=""><br><img src="https://img-blog.csdnimg.cn/20191204185658484.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDEwNTQ1OQ==,size_16,color_FFFFFF,t_70" alt=""><br><strong>5. modules</strong><br>   store内容过多时可使用，将store的功能模块化，每个模块中又可以有state等。从module中的action取store中的值context.rootGetters。</p>
+<h2 id="三、在vue中使用vuex"><a href="#三、在vue中使用vuex" class="headerlink" title="三、在vue中使用vuex"></a>三、在vue中使用vuex</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">Vue.use(Vuex)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">//<span class="number">1</span>、安装插件</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">//<span class="number">2</span>、创建store对象</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">const store= new Vuex.Store</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">// <span class="number">3</span>、导出store对象：</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">export default store</span></pre></td></tr></table></figure>
+
+
+
+
         </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2019/huawei-jianmo/">2019年“华为杯”研究生数学建模竞赛--E题（全球变暖）思路&amp;感想</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            11月11日，公布成绩得了二等，欣喜若狂，毕竟三个人建模经历并不丰富。在此，首先感谢两位厉害的小姐姐一起交流、合作、查资料、编程、统计作图、合作分工、熬夜，才最后完成了论文。不论最后的结果如何，每个人的付出都是大于三分之一的。
-目录一、研一参加数模情况二、研二开始前的准备三、比赛过程（周四~周一上午，四天四夜）四、注意事项
-一、研一参加数模情况 研一刚开学的时候，导员在年级大会上就说起了“华为杯”
-        </p>
-    </div>
-</article>
-    
-
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2019/howtodo-2048demo/" class="thumbnail">
-    
-    
-        <span style="background-image:url(https://img-blog.csdnimg.cn/20191102193244964.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDEwNTQ1OQ==,size_16,color_FFFFFF,t_70)" alt="web--2048小游戏复现（慕课网）" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="https://hezhaoxiang.work/2019/howtodo-2048demo/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/Demo/">Demo</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Demo/2048%E5%B0%8F%E6%B8%B8%E6%88%8F/">2048小游戏</a>
-            </div>
-            <div class="date"><time datetime="2019-11-01T13:06:00.000Z" itemprop="datePublished">2019-11-01</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2019/howtodo-2048demo/">web--2048小游戏复现（慕课网）</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            这周断断续续完成了2048小游戏的网页版，这里主要讲这款游戏的逻辑和代码实现。参考：慕课网2048私人订制  https://www.imooc.com/learn/76对着视频把源码敲了一遍，这里作一个思路整理。
-一、整体思路1、游戏页面结构及样式2、2048游戏逻辑3、手机端优化思路可以划分为上三步，在第一步中，首先规划好整体的排版。
-页面内容包括2048header、游戏开始button、得
-        </p>
-    </div>
-</article>
-    
-        </div>
-    
-
-    
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2019/learn-vue01/" class="thumbnail">
-    
-    
-        <span style="background-image:url(https://img-blog.csdnimg.cn/20191128212909590.png)" alt="Vue入门&amp;注意事项" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="https://hezhaoxiang.work/2019/learn-vue01/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/Vue%E5%AD%A6%E4%B9%A0/">Vue学习</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Vue%E5%AD%A6%E4%B9%A0/Vue/">Vue</a>
-            </div>
-            <div class="date"><time datetime="2019-11-01T13:06:00.000Z" itemprop="datePublished">2019-11-01</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2019/learn-vue01/">Vue入门&amp;注意事项</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            一、简介
-vue是前端开发中交为常用的框架，
-
-vue-cli是vue的脚手架工具，具有所占内存少、开发高效等特点，简单说vue-cli使得vue开发更简单。
-
-cli：command-line-interface命令行界面（字符用户界面）
-二、安装环境及创建项目
-
-1、安装环境
-
-npm：node package manager，node的包管理器。推荐使用淘宝镜像来安装npm，官方网速太慢。1
-        </p>
-    </div>
-</article>
-    
-
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2019/learnjs04-jquery/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="https://hezhaoxiang.work/2019/learnjs04-jquery/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/web%E5%89%8D%E7%AB%AF/">web前端</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/web%E5%89%8D%E7%AB%AF/JavaScript/">JavaScript</a>
-            </div>
-            <div class="date"><time datetime="2019-10-22T11:48:00.000Z" itemprop="datePublished">2019-10-22</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2019/learnjs04-jquery/">web--JavaScript（四）jQuery</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            (一)jquery 查找html元素的方式简单来说，jQuery是js的一个库，来完善js的功能。
-查找html元素的方式：id、class、字段p、css四种jQuery用来处理浏览器不兼容，简化 HTML DOM 操作、事件处理、动画和 Ajax。在09年以后，多数jQuery的程序都可以用js直接写
-（二）jquery与 html1、设置文本内容，对文本操作：myElement.text(“
-        </p>
-    </div>
-</article>
-    
-        </div>
-    
-
-    
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2019/learnjs03-DOM/" class="thumbnail">
-    
-    
-        <span style="background-image:url(https://img-blog.csdnimg.cn/20191021193952337.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDEwNTQ1OQ==,size_16,color_FFFFFF,t_70)" alt="web前端--JavaScript（三）对象、函数、DOM&amp;BOM" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="https://hezhaoxiang.work/2019/learnjs03-DOM/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/web%E5%89%8D%E7%AB%AF/">web前端</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/web%E5%89%8D%E7%AB%AF/JavaScript/">JavaScript</a>
-            </div>
-            <div class="date"><time datetime="2019-10-21T11:36:00.000Z" itemprop="datePublished">2019-10-21</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2019/learnjs03-DOM/">web前端--JavaScript（三）对象、函数、DOM&amp;BOM</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            根据上一篇博客思路，js从对象、函数、DOM和BOM再到jQuery入手。今天总结前三者，最后的DOM还没学完，再更。
-一、js对象(一)js对象创建方法：1、使用对象文字–属性：值(最常用)2、使用关键词new3、对象构造器，创建构造类型的对象4、ECMAScript5中函数Object.create()
-（二）访问对象属性person.nameperson[“name”]x=name;pers
-        </p>
-    </div>
-</article>
-    
-
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2019/learnjs03/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="https://hezhaoxiang.work/2019/learnjs03/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/%E5%AF%B9%E6%8A%97%E6%A0%B7%E6%9C%AC/">对抗样本</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/%E5%AF%B9%E6%8A%97%E6%A0%B7%E6%9C%AC/%E8%AE%BA%E6%96%87/">论文</a>
-            </div>
-            <div class="date"><time datetime="2019-10-21T11:36:00.000Z" itemprop="datePublished">2019-10-21</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2019/learnjs03/">对抗样本了解概念</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            接触对抗样本的第一天，主要从概念，结构，算法三个方面来了解。其中学习内容多来自以下几篇文章和博客，侵删。算法：https://blog.csdn.net/sinat_29957455/article/details/80795656概念：https://www.leiphone.com/news/201702/Jpb0uiOt9RTwcB8E.html?viewType=weixin概念：http
-        </p>
-    </div>
-</article>
-    
-        </div>
-    
-
-    
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2019/learnjs02/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="https://hezhaoxiang.work/2019/learnjs02/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/web%E5%89%8D%E7%AB%AF/">web前端</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/web%E5%89%8D%E7%AB%AF/JavaScript/">JavaScript</a>
-            </div>
-            <div class="date"><time datetime="2019-10-20T13:34:00.000Z" itemprop="datePublished">2019-10-20</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2019/learnjs02/">web前端--JavaScript（二）基础知识</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            内容来源：https://www.w3school.com.cn/js/index.aspw3cshool是官方教程，看起来比较清楚，视频大多时间太冗长。以下内容多摘自w3cshool。
-一、js整体学习路线1、基础知识，数据类型等2、js对象3、函数4、DOM全部内容5、BOM-js window
-二、基础知识1、显示：window.alert(“”)document.write(“”)inne
-        </p>
-    </div>
-</article>
-    
-
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2019/learnjs01/" class="thumbnail">
-    
-    
-        <span style="background-image:url(%5Cimages%5Cpasted-2.png)" alt="web前端--JavaScript（一）入门" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="https://hezhaoxiang.work/2019/learnjs01/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/web%E5%89%8D%E7%AB%AF/">web前端</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/web%E5%89%8D%E7%AB%AF/JavaScript/">JavaScript</a>
-            </div>
-            <div class="date"><time datetime="2019-10-10T13:54:00.000Z" itemprop="datePublished">2019-10-10</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2019/learnjs01/">web前端--JavaScript（一）入门</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
+        <footer class="article-footer">
             
-内容来源：https://www.w3school.com.cn/js/index.aspw3cshool是官方教程，看起来比较清楚，视频大多时间太冗长。以下内容多摘自w3cshool。
-一、js整体学习路线1、基础知识，数据类型等2、js对象3、函数4、DOM全部内容5、BOM-js window
-二、基础知识1、显示：window.alert(“”)document.write(“”)inn
-        </p>
+
+
+
+    <a data-url="https://hezhaoxiang.work/2019/learn-vuex/" data-id="ck3zhqa97000sxkjy6mivfidx" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
     </div>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "author": {
+            "@type": "Person",
+            "name": "He Zhaoxiang"
+        },
+        "headline": "Vue.js之vuex入门",
+        "image": "https://hezhaoxiang.workhttps://img-blog.csdnimg.cn/20191204154825907.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDEwNTQ1OQ==,size_16,color_FFFFFF,t_70",
+        "keywords": "Vuex",
+        "genre": "Vue学习 Vuex",
+        "datePublished": "2019-12-04",
+        "dateCreated": "2019-12-04",
+        "dateModified": "2019-12-10",
+        "url": "/https:/hezhaoxiang.work/2019/learn-vuex/",
+        "description": "放图，这个图最能说明vuex和Vue之间的关系。
+一、原理虚线中的Vuex是用来处理vue的组件，vue compontents（组件）通过dispatch（理解为转发事件）交给action，通过接入后端api完成一些业务，在action中进行异步操作，再将结果以commit（提交事件）方式发给mutations。mutations中最终实现vue compontent的method。state用",
+        "wordCount": 324
+    }
+</script>
+
 </article>
+<!--
+    <section id="comments">
     
-        </div>
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+
     
+    </section>
+
+-->
 
 
-    </div></section>
+<!--来比力评论系统，在commetn/livebe.ejs中-->
+<!-- 来必力City版安装代码 -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC80Nzg3Mi8yNDM2OQ==">
+    <script type="text/javascript">
+        (function(d, s) {
+            var j, e = d.getElementsByTagName(s)[0];
 
+            if (typeof LivereTower === 'function') { return; }
 
-    <nav id="page-nav">
-        <span class="pages">第 1 页，共 2 页</span>
-        <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">&raquo;</a>
-    </nav>
+            j = d.createElement(s);
+            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+            j.async = true;
 
+            e.parentNode.insertBefore(j, e);
+        })(document, 'script');
+    </script>
+    <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+</div>
+<!-- City版安装代码已完成 -->
 
                         </div>
                     </section>
@@ -698,6 +376,19 @@ npm：node package manager，node的包管理器。推荐使用淘宝镜像来�
             
         </ul>
     </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2019/learn-vue-todoList/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">上一篇</strong>
+        <p class="article-nav-title">Vue.js小Demo--todoList待办事项清单</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
     
     <div class="widgets-container">
         
@@ -963,11 +654,13 @@ npm：node package manager，node的包管理器。推荐使用淘宝镜像来�
     var disqus_shortname = 'hexo-theme-hueman';
     
     
+    var disqus_url = 'https://hezhaoxiang.work/2019/learn-vuex/';
+    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>
