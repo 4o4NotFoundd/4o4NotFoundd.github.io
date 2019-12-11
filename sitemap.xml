@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://hezhaoxiang.work/2019/hexo-hueman/</loc>
+    
+    <lastmod>2019-12-11T13:37:21.049Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hezhaoxiang.work/2019/learnjs01/</loc>
+    
+    <lastmod>2019-12-11T01:43:44.308Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://hezhaoxiang.work/2019/learn-vue-todoList/</loc>
     
     <lastmod>2019-12-10T12:34:05.560Z</lastmod>
@@ -96,13 +110,6 @@
     <loc>https://hezhaoxiang.work/2019/learnjs03/</loc>
     
     <lastmod>2019-12-10T07:10:00.813Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hezhaoxiang.work/2019/learnjs01/</loc>
-    
-    <lastmod>2019-12-10T06:27:23.250Z</lastmod>
     
   </url>
   

@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://hezhaoxiang.work/2019/hexo-hueman/</loc>
+    <lastmod>2019-12-11</lastmod>
+  </url>  <url>
+    <loc>https://hezhaoxiang.work/2019/learnjs01/</loc>
+    <lastmod>2019-12-11</lastmod>
+  </url>  <url>
     <loc>https://hezhaoxiang.work/2019/learn-vue-todoList/</loc>
     <lastmod>2019-12-10</lastmod>
   </url>  <url>
@@ -35,9 +41,6 @@
     <lastmod>2019-12-10</lastmod>
   </url>  <url>
     <loc>https://hezhaoxiang.work/2019/learnjs03/</loc>
-    <lastmod>2019-12-10</lastmod>
-  </url>  <url>
-    <loc>https://hezhaoxiang.work/2019/learnjs01/</loc>
     <lastmod>2019-12-10</lastmod>
   </url>  <url>
     <loc>https://hezhaoxiang.work/2019/2019100819/</loc>
