@@ -6,20 +6,24 @@
     
 
     
-    <title>留下你的故事 | Welcome to hzx 的博客，随便看~</title>
+    <title>vue-router深入学习 | Welcome to hzx 的博客，随便看~</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta name="description" content="啤酒，花生米准备好了，你的故事呢？">
-<meta name="keywords" content="web前端、js、Vue">
-<meta property="og:type" content="website">
-<meta property="og:title" content="留下你的故事">
-<meta property="og:url" content="https:&#x2F;&#x2F;hezhaoxiang.work&#x2F;board&#x2F;index.html">
+    <meta name="keywords" content="Vue-router" />
+    
+    <meta name="description" content="#一、router路由发展的几个阶段##1、后端路由阶段后端渲染：前端只有html和css，后端通过jsp等技术渲染页面，再交给前端。后端路由：后端处理url和页面映射之间的关系。后端通过正则匹配url，controller控制器来处理匹配的页面，把html返回给前端。 ##2、前后端分离阶段 后端负责数据，前端渲染：网页中的内容大部分是由前端写的js在浏览器中执行，后端负责提供API和数据 ##">
+<meta name="keywords" content="Vue-router">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue-router深入学习">
+<meta property="og:url" content="https:&#x2F;&#x2F;hezhaoxiang.work&#x2F;2019&#x2F;learn-vue-router&#x2F;index.html">
 <meta property="og:site_name" content="Welcome to hzx 的博客，随便看~">
-<meta property="og:description" content="啤酒，花生米准备好了，你的故事呢？">
+<meta property="og:description" content="#一、router路由发展的几个阶段##1、后端路由阶段后端渲染：前端只有html和css，后端通过jsp等技术渲染页面，再交给前端。后端路由：后端处理url和页面映射之间的关系。后端通过正则匹配url，controller控制器来处理匹配的页面，把html返回给前端。 ##2、前后端分离阶段 后端负责数据，前端渲染：网页中的内容大部分是由前端写的js在浏览器中执行，后端负责提供API和数据 ##">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-12-09T13:40:35.705Z">
+<meta property="og:image" content="https:&#x2F;&#x2F;cdn.nlark.com&#x2F;yuque&#x2F;0&#x2F;2019&#x2F;png&#x2F;676682&#x2F;1576556714624-d4fd2aeb-7b89-4157-9c2e-74dd4f71c0b1.png#align&#x3D;left&amp;display&#x3D;inline&amp;height&#x3D;205&amp;name&#x3D;image.png&amp;originHeight&#x3D;410&amp;originWidth&#x3D;1108&amp;size&#x3D;172150&amp;status&#x3D;done&amp;style&#x3D;none&amp;width&#x3D;554">
+<meta property="og:updated_time" content="2019-12-17T13:36:38.261Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;cdn.nlark.com&#x2F;yuque&#x2F;0&#x2F;2019&#x2F;png&#x2F;676682&#x2F;1576556714624-d4fd2aeb-7b89-4157-9c2e-74dd4f71c0b1.png#align&#x3D;left&amp;display&#x3D;inline&amp;height&#x3D;205&amp;name&#x3D;image.png&amp;originHeight&#x3D;410&amp;originWidth&#x3D;1108&amp;size&#x3D;172150&amp;status&#x3D;done&amp;style&#x3D;none&amp;width&#x3D;554">
     
 
     
@@ -134,28 +138,98 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <em class="page-title-link" data-url="/board/index.html">留下你的故事</em>
+    <a class="page-title-link" href="/categories/web%E5%89%8D%E7%AB%AF/">web前端</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/web%E5%89%8D%E7%AB%AF/Vue%E5%AD%A6%E4%B9%A0/">Vue学习</a>
     </h1>
 </div>
 
                         <div class="main-body-content">
-                            <article id="page-" class="article article-single article-type-page" itemscope itemprop="blogPost">
+                            <article id="post-vue-router深入" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        留下你的故事
+        vue-router深入学习
         </h1>
     
 
             </header>
         
         
+            <div class="article-meta">
+                
+    <div class="article-date">
+      <i class="fa fa-calendar"></i>
+      <a href="/2019/learn-vue-router/" class="article-date">
+         <time datetime="2019-12-17T13:00:00.000Z" itemprop="datePublished">2019-12-17</time>
+      </a>
+    </div>
+
+
+                
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Vue-router/" rel="tag">Vue-router</a>
+    </div>
+
+                <!---cloud阅读量统计系统-->
+                阅读数量:<span id="/2019/learn-vue-router/" class="leancloud_visitors" data-flag-title="vue-router深入学习"></span>次
+                
+
+                
+   <div class="article-counter">
+      <i class="fa fa-file-word-o"></i>
+      <span class="post-count-item-text">本文字数: </span>
+      <span class="post-count">831</span>
+      <i class="fa fa-clock-o"></i>
+      <span class="post-time-item-text">阅读时长: </span>
+      <span class="post-count">3 分钟 </span>
+   </div>
+
+
+            </div>
+        
         
         <div class="article-entry" itemprop="articleBody">
-            <p>啤酒，花生米准备好了，你的故事呢？</p>
+            <p>#一、router路由发展的几个阶段<br>##1、后端路由阶段<br>后端渲染：前端只有html和css，后端通过jsp等技术渲染页面，再交给前端。<br>后端路由：后端处理url和页面映射之间的关系。后端通过正则匹配url，controller控制器来处理匹配的页面，把html返回给前端。</p>
+<p>##2、前后端分离阶段</p>
+<p>后端负责数据，<br>前端渲染：网页中的内容大部分是由前端写的js在浏览器中执行，后端负责提供API和数据</p>
+<p>##3、前端路由阶段（SPA单页面富应用阶段）<br>整个网页只有一个html页面（包含html+css+js），当用户点击时，从url1–&gt;url2，通过前端路由，加载url2的内容（在vue中就是加载一个组件。）<br>改变url页面不整体刷新，两种实现方式：</p>
+<ul>
+<li>（1）改变url的hash，location.hash=’aaa’</li>
+<li>（2）html5中的history模式pushState,history.pushState({},’’,’home’)三个参数为data title url。<br>history.pushState入栈<br>history.go(-1)=history.back()出栈<br>history.forward()=history.go(1)<br>#二、基础知识0<br>##1、懒加载<br>build打包时，appxxx.js文件变得很大，使用懒加载更高效。<br>router懒加载：用到的时候再加载。把不同路由对应的组件分割成不同的块，路由被访问时才加载对应组件，这样更高效。</li>
+</ul>
+<p>##2、嵌套路由<br>（1）创建子组件children，路由映射中配置<br>（2）在组件内使用<router-view><br>##3、传递参数params和query<br>params:是路由的一部分，一般params后接userid或name，展示:$router.params.userid<br>query:查询，即拼接在url后面的内容，url统一资源定位符格式：<br><code>协议：//主机名:端口号（默认80，即不显示）/路径?query#fragment片段</code><br>通过<code></code>查询<br><code>&lt;router-link :to=&quot;{path: &#39;/profile&#39;, query:{name:&#39;zx&#39;,age:&#39;25&#39;}}&quot; tag=&quot;button&quot;&gt;档案&lt;/router-link&gt;</code><br>对应url中的内容发生变化<br>#三、router基础1</p>
+<h2 id="1-router和route区别"><a href="#1-router和route区别" class="headerlink" title="1.router和route区别"></a>1.router和route区别</h2><ul>
+<li>router是vue中本身创建的class，ctrl加点击可跳转到类中。</li>
+</ul>
+<p>所有的组件都继承自Vue的原型。在main.js中定义的方法全局可用。<br />$router为VueRouter实例，想要导航到不同URL，则使用$router.push方法</p>
+<ul>
+<li>route仅为当前活跃的跳转所用。</li>
+</ul>
+<p>$route为当前router跳转对象里面可以获取name、path、query、params等<br /><img src="https://cdn.nlark.com/yuque/0/2019/png/676682/1576556714624-d4fd2aeb-7b89-4157-9c2e-74dd4f71c0b1.png#align=left&display=inline&height=205&name=image.png&originHeight=410&originWidth=1108&size=172150&status=done&style=none&width=554" alt="image.png"></p>
+<p><a name="dDLt0"></a></p>
+<h2 id="2-导航守卫"><a href="#2-导航守卫" class="headerlink" title="2.导航守卫"></a>2.导航守卫</h2><p>在不同页面之间跳转时，title不变，使用导航守卫来监听跳转动作，实现title变化<br /><code>router.beforeEach（{</code><br /><code>window.document.title= to.meta.title //在钩子（routes）中定义标题，meta：title</code><br /><code>next() //next需要包含，它是一个函数，跳转到route</code><br /><code>}）</code><br />beforeEach是守卫（guard）函数，有to,from,next三个参数。<br />afterEach（后置钩子函数，不用next）<br /><img src="https://cdn.nlark.com/yuque/0/2019/png/676682/1576562330137-5425d62f-70bf-4fae-ae78-cd5ed0f80edf.png#align=left&display=inline&height=387&name=image.png&originHeight=387&originWidth=961&size=54471&status=done&style=none&width=961" alt="image.png"></p>
+<ul>
+<li>全局守卫：beforeEach和afterEach</li>
+<li>路由独享守卫：配置在router中</li>
+</ul>
+<p><code>beforeEnter：（to,from,next）=&gt;{</code><br />next()<br /><code>}</code></p>
+<ul>
+<li><p>组件内部守卫：beforeRouteEnter(不能获取实例中的this), beforeRouteUpdate(),beforeRouteLeave。<br><a name="2T03R"></a></p>
+<h2 id="3-keep-alive"><a href="#3-keep-alive" class="headerlink" title="3. keep-alive"></a>3. keep-alive</h2><p>是vue的内置组件。<br />在使用keep-alive之前，每次从首页跳转到关于，组件都会被销毁，再点首页，又重新创建（生命周期）。为了不这样多次创建销毁，使用keep-alive：</p>
+</li>
+<li><input disabled="" type="checkbox"> <p><code>&lt;``kee-alive exclue=&quot;profile,about&quot;&gt; //profile组件会被从创建销毁，没有保持alive,profile和alive之间不能加空格</code></p>
+</li>
+<li><input disabled="" type="checkbox"> <p><code>&lt;router-view/&gt;</code></p>
+</li>
+<li><input disabled="" type="checkbox"> <p><code>&lt;/lkeep-alive&gt;</code></p>
+</li>
+</ul>
+<p>activated和deactivated只有在使用keep-alive时才有效。<br><a name="2T7aJ"></a></p>
 
         </div>
         <footer class="article-footer">
@@ -208,17 +282,19 @@ window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMin
             "@type": "Person",
             "name": "He Zhaoxiang"
         },
-        "headline": "留下你的故事",
-        "image": "/https:/hezhaoxiang.work",
-        
-        
-        "datePublished": "2019-12-09",
-        "dateCreated": "2019-12-09",
-        "dateModified": "2019-12-09",
-        "url": "/https:/hezhaoxiang.work/board/index.html",
-        "description": "啤酒，花生米准备好了，你的故事呢？
-",
-        "wordCount": 1
+        "headline": "vue-router深入学习",
+        "image": "https://hezhaoxiang.workhttps://cdn.nlark.com/yuque/0/2019/png/676682/1576556714624-d4fd2aeb-7b89-4157-9c2e-74dd4f71c0b1.png#align=left&display=inline&height=205&name=image.png&originHeight=410&originWidth=1108&size=172150&status=done&style=none&width=554",
+        "keywords": "Vue-router",
+        "genre": "web前端 Vue学习",
+        "datePublished": "2019-12-17",
+        "dateCreated": "2019-12-17",
+        "dateModified": "2019-12-17",
+        "url": "/https:/hezhaoxiang.work/2019/learn-vue-router/",
+        "description": "#一、router路由发展的几个阶段##1、后端路由阶段后端渲染：前端只有html和css，后端通过jsp等技术渲染页面，再交给前端。后端路由：后端处理url和页面映射之间的关系。后端通过正则匹配url，controller控制器来处理匹配的页面，把html返回给前端。
+##2、前后端分离阶段
+后端负责数据，前端渲染：网页中的内容大部分是由前端写的js在浏览器中执行，后端负责提供API和数据
+##",
+        "wordCount": 55
     }
 </script>
 
@@ -292,6 +368,29 @@ window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMin
             
         </ul>
     </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2019/learn-vue-router/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">下一篇</strong>
+        <p class="article-nav-title">
+        
+            使用电脑，你不能不知道的技巧
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2019/hexo-hueman/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">上一篇</strong>
+        <p class="article-nav-title">教你半小时搭建博客网站-HEXO-hueman主题个人定制</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
     
     <div class="widgets-container">
         
@@ -440,7 +539,7 @@ window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMin
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'https://hezhaoxiang.work/board/index.html';
+    var disqus_url = 'https://hezhaoxiang.work/2019/learn-vue-router/';
     
     (function() {
     var dsq = document.createElement('script');
