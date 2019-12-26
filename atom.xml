@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hezhaoxiang.work/"/>
-  <updated>2019-12-23T13:25:22.645Z</updated>
+  <updated>2019-12-26T14:22:17.611Z</updated>
   <id>https://hezhaoxiang.work/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>购物街0-首页开发（Vue购物，学它就对了！）</title>
+    <link href="https://hezhaoxiang.work/2019/mall-home-all/"/>
+    <id>https://hezhaoxiang.work/2019/mall-home-all/</id>
+    <published>2019-12-26T14:30:00.000Z</published>
+    <updated>2019-12-26T14:22:17.611Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="零、说明"><a href="#零、说明" class="headerlink" title="零、说明"></a>零、说明</h1><p>本demo是跟随coderwhy老师学习Vue做的，跟着视频一点点敲的，视频可以在b站上找到，仅限个人学习，侵删（应该不涉及侵权吧，就当给老师宣传了哈哈哈，视频真的讲的很细致，一点点学还是有收获的<del>，自己码的<a href="https://hezhaoxiang.work/">demo在这里</a>！博客里有github</del>）</p><h1 id="一、整体思路"><a href="#一、整体思路" class="headerlink" title="一、整体思路"></a>一、整体思路</h1><h1 id="1、效果图"><a href="#1、效果图" class="headerlink" title="1、效果图"></a>1、效果图</h1><p>先上整体效果图~<br><img src="https://cdn.nlark.com/yuque/0/2019/png/676682/1577368803629-bb382dad-293e-45d5-8ddd-842314f1b79e.png#align=left&display=inline&height=500&name=image.png&originHeight=610&originWidth=424&size=208891&status=done&style=none&width=347" alt="image.png">)<img src="https://cdn.nlark.com/yuque/0/2019/png/676682/1577369089041-0046166c-a84e-447a-934e-c62629835086.png#align=left&display=inline&height=490&name=image.png&originHeight=603&originWidth=356&size=232393&status=done&style=none&width=289" alt="image.png"><br>这是我跟着视频做的，主要分为<strong>四个功能模块“首页、分类、购物车、我的”</strong></p><h1 id="2、首页功能"><a href="#2、首页功能" class="headerlink" title="2、首页功能"></a>2、首页功能</h1><p>目前基本实现首页，首页中包括以下几个功能（从上到下）：</p><ol><li>标题栏Navbar</li><li>轮播图swiper</li><li>本周流行recommend</li><li>商品栏tab-control</li><li>商品列表goodList</li><li>导航栏（应该是0步，最先开始）</li></ol><p>最下方的导航栏作为公共组件，可复用。</p><h1 id="二、首页具体实现"><a href="#二、首页具体实现" class="headerlink" title="二、首页具体实现"></a>二、首页具体实现</h1><h2 id="0、导航栏tabbar"><a href="#0、导航栏tabbar" class="headerlink" title="0、导航栏tabbar"></a>0、导航栏tabbar</h2><p>思想：组件复用<br><img src="https://cdn.nlark.com/yuque/0/2019/png/676682/1577369654098-cb1e061d-4cf2-4ec6-b0ea-0108d68f387c.png#align=left&display=inline&height=294&name=image.png&originHeight=241&originWidth=437&size=13337&status=done&style=none&width=533" alt="image.png"><br><img src="https://cdn.nlark.com/yuque/0/2019/png/676682/1577369684295-93fb63ed-c5a5-46ec-814b-2278dabae880.png#align=left&display=inline&height=291&name=image.png&originHeight=291&originWidth=931&size=39035&status=done&style=none&width=931" alt="image.png"></p><h2 id="1-CSS格式引用"><a href="#1-CSS格式引用" class="headerlink" title="1, CSS格式引用"></a>1, CSS格式引用</h2><h2 id="normalize-css：常用格式，从github上引用"><a href="#normalize-css：常用格式，从github上引用" class="headerlink" title="normalize.css：常用格式，从github上引用"></a>normalize.css：常用格式，从github上引用</h2><p>css引用方式：<br>（1）在html中：<code>&lt;link ref=&quot;xx.css&quot;&gt;</code><br>（2）在另外一个css中： <a href="#">@import</a><code>&quot;css文件路径/url&quot;</code></p><h2 id="2，组件引用路径配置"><a href="#2，组件引用路径配置" class="headerlink" title="2，组件引用路径配置"></a>2，组件引用路径配置</h2><p>根目录下创建 vue.config.js<br><img src="https://cdn.nlark.com/yuque/0/2019/png/676682/1577067046833-ed1cb881-c1d8-4c6b-bf33-172aed7be5a0.png#align=left&display=inline&height=428&name=image.png&originHeight=428&originWidth=914&size=36261&status=done&style=none&width=914" alt="image.png"></p><p>图片的引用路径，前加~<br><img src="https://cdn.nlark.com/yuque/0/2019/png/676682/1577067545443-5c1ba149-8565-42a8-979e-9f0e3f131322.png#align=left&display=inline&height=154&name=image.png&originHeight=154&originWidth=940&size=23047&status=done&style=none&width=940" alt="image.png"><br>修改icon网站图标：在public中 favicon.ico</p><h2 id="3-顶端导航组件"><a href="#3-顶端导航组件" class="headerlink" title="3, 顶端导航组件"></a>3, 顶端导航组件</h2><p>nav-tab-bar，创建组件，使用插槽将顶部的bar分为左中右三部分，在首页中只展示center的slot内容“购物街”<br><img src="https://cdn.nlark.com/yuque/0/2019/png/676682/1577103302820-d42c43ff-0439-47e3-b6b8-3e350294d838.png#align=left&display=inline&height=460&name=image.png&originHeight=460&originWidth=731&size=45953&status=done&style=none&width=731" alt="image.png"></p><h2 id="4-请求多个数据"><a href="#4-请求多个数据" class="headerlink" title="4, 请求多个数据"></a>4, 请求多个数据</h2><p><img src="https://cdn.nlark.com/yuque/0/2019/png/676682/1577102761672-aad6e418-fc7c-4122-9e4d-801c648009fa.png#align=left&display=inline&height=405&name=image.png&originHeight=405&originWidth=724&size=33264&status=done&style=none&width=724" alt="image.png"></p><ul><li><input disabled="" type="checkbox"> <img src="https://cdn.nlark.com/yuque/0/2019/png/676682/1577102470371-a7ceda98-d7c3-428b-b177-7aa06965b00f.png#align=left&display=inline&height=266&name=image.png&originHeight=266&originWidth=254&size=10452&status=done&style=none&width=254" alt="image.png"><h2 id="5，-轮播图（后续专门说）-首页推荐"><a href="#5，-轮播图（后续专门说）-首页推荐" class="headerlink" title="5， 轮播图（后续专门说）+首页推荐"></a>5， 轮播图（后续专门说）+首页推荐</h2><h2 id="6，-tab-control"><a href="#6，-tab-control" class="headerlink" title="6， tab-control"></a>6， tab-control</h2>流行、新款、精选<br><code>position: sticky</code><br>top: 44px //设置可随页面下滑，上滑到44处固定<h2 id="7，-商品列表数据，获取保存"><a href="#7，-商品列表数据，获取保存" class="headerlink" title="7， 商品列表数据，获取保存"></a>7， 商品列表数据，获取保存</h2>所有数据data{pop:{page:0,list:[]},<br>news:{page:0,list:[]}<br>sell :{page:0,list:[]}<br>}<h2 id="8-点击，显示相应列表数据"><a href="#8-点击，显示相应列表数据" class="headerlink" title="8, 点击，显示相应列表数据"></a>8, 点击，显示相应列表数据</h2></li></ul><h2 id="9，-移动端滑动效果"><a href="#9，-移动端滑动效果" class="headerlink" title="9， 移动端滑动效果"></a>9， 移动端滑动效果</h2><p>使用better-scroll框架（github）<br>安装： npm install better-scroll –save<br>局部滚动</p><p>ref如果是绑定在组件中的，那个通过t*<em>his.$refs.ref名字 *</em>获取的是一个元素对象。</p><p>10，back-top实现<br>监听组件的原生事件<br><strong>方法一</strong>：使用修饰符click.native<br><img src="https://cdn.nlark.com/yuque/0/2019/png/676682/1577350858561-34b3410c-673f-4412-b0af-78ecab55cbff.png#align=left&display=inline&height=35&name=image.png&originHeight=35&originWidth=450&size=3917&status=done&style=none&width=450" alt="image.png"><br>方法二：在组件内使用this.$emit传给组件，再实现函数</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;零、说明&quot;&gt;&lt;a href=&quot;#零、说明&quot; class=&quot;headerlink&quot; title=&quot;零、说明&quot;&gt;&lt;/a&gt;零、说明&lt;/h1&gt;&lt;p&gt;本demo是跟随coderwhy老师学习Vue做的，跟着视频一点点敲的，视频可以在b站上找到，仅限个人学习，侵删（应该不涉及
+      
+    
+    </summary>
+    
+      <category term="Demo" scheme="https://hezhaoxiang.work/categories/Demo/"/>
+    
+      <category term="购物街-Vue" scheme="https://hezhaoxiang.work/categories/Demo/%E8%B4%AD%E7%89%A9%E8%A1%97-Vue/"/>
+    
+    
+      <category term="购物街" scheme="https://hezhaoxiang.work/tags/%E8%B4%AD%E7%89%A9%E8%A1%97/"/>
+    
+  </entry>
   
   <entry>
     <title>购物街0-首页开发</title>
