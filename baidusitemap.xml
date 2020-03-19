@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://hezhaoxiang.work/2020/http/</loc>
+    <lastmod>2020-03-19</lastmod>
+  </url>  <url>
     <loc>https://hezhaoxiang.work/2020/es6-webpack/</loc>
     <lastmod>2020-03-19</lastmod>
   </url>  <url>
@@ -43,10 +46,10 @@
     <loc>https://hezhaoxiang.work/2019/learn-html01/</loc>
     <lastmod>2019-12-10</lastmod>
   </url>  <url>
-    <loc>https://hezhaoxiang.work/2019/learn-vuex/</loc>
+    <loc>https://hezhaoxiang.work/2019/learn-vue01/</loc>
     <lastmod>2019-12-10</lastmod>
   </url>  <url>
-    <loc>https://hezhaoxiang.work/2019/learn-vue01/</loc>
+    <loc>https://hezhaoxiang.work/2019/learn-vuex/</loc>
     <lastmod>2019-12-10</lastmod>
   </url>  <url>
     <loc>https://hezhaoxiang.work/2019/howtodo-2048demo/</loc>

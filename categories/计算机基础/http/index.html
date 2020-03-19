@@ -6,7 +6,7 @@
     
 
     
-    <title>分类: ES6 | 前端小窝--&gt;小白之家</title>
+    <title>分类: http | 前端小窝--&gt;小白之家</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
@@ -14,7 +14,7 @@
 <meta name="keywords" content="web前端、js、Vue">
 <meta property="og:type" content="website">
 <meta property="og:title" content="前端小窝--&gt;小白之家">
-<meta property="og:url" content="https:&#x2F;&#x2F;hezhaoxiang.work&#x2F;categories&#x2F;web%E5%89%8D%E7%AB%AF&#x2F;ES6&#x2F;index.html">
+<meta property="og:url" content="https:&#x2F;&#x2F;hezhaoxiang.work&#x2F;categories&#x2F;%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80&#x2F;http&#x2F;index.html">
 <meta property="og:site_name" content="前端小窝--&gt;小白之家">
 <meta property="og:description" content="贺兆祥">
 <meta property="og:locale" content="zh-CN">
@@ -133,7 +133,7 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <i class="icon fa fa-folder-open"></i>分类: <em class="page-title-link">ES6</em>
+    <i class="icon fa fa-folder-open"></i>分类: <em class="page-title-link">http</em>
     </h1>
 </div>
 
@@ -157,17 +157,17 @@
         <article class="article article-summary">
     <div class="article-summary-inner">
         
-        <a href="/2020/learnes6-01/" class="thumbnail">
+        <a href="/2020/http/" class="thumbnail">
     
     
-        <span style="background-image:url(https://cdn.nlark.com/yuque/0/2020/png/676682/1584375882200-e271d6b9-bfce-4375-84dd-48ab000bb7a2.png#align=left&display=inline&height=126&name=image.png&originHeight=252&originWidth=441&size=13777&status=done&style=none&width=220.5)" alt="web前端--ES6初探" class="thumbnail-image"></span>
+        <span style="background-image:url(https://cdn.nlark.com/yuque/0/2020/png/676682/1584548205948-114979f3-ba13-4077-bce7-d13651a80223.png#align=left&display=inline&height=236&name=image.png&originHeight=576&originWidth=1822&size=351629&status=done&style=none&width=746)" alt="不能不知道的HTTP" class="thumbnail-image"></span>
     
     
         
 <span class="comment-counter">
     <i class="fa fa-comments-o"></i>
     
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="https://hezhaoxiang.work/2020/learnes6-01/">0</span>
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="https://hezhaoxiang.work/2020/http/">0</span>
     
 </span>
 
@@ -178,29 +178,30 @@
         
         <div class="article-meta">
             <div class="category">
-            <a class="article-category-link" href="/categories/web%E5%89%8D%E7%AB%AF/">web前端</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/web%E5%89%8D%E7%AB%AF/ES6/">ES6</a>
+            <a class="article-category-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/">计算机基础</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/http/">http</a>
             </div>
-            <div class="date"><time datetime="2020-03-10T10:36:00.000Z" itemprop="datePublished">2020-03-10</time></div>
+            <div class="date"><time datetime="2020-03-18T12:36:00.000Z" itemprop="datePublished">2020-03-18</time></div>
         </div>
         
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2020/learnes6-01/">web前端--ES6初探</a>
+        <a href="/2020/http/">不能不知道的HTTP</a>
         </h1>
     
 
         <p class="article-excerpt">
             
+一、入门部分
+1、cache-control缓存设置
+max-age=100：静态资源缓存100秒
 
-let声明变量
-ES6中新增的变量，只在块级作用域中有效（一个大括号中）；
+public/private:只能在客户端/代理服务器  缓存
 
-防止循环中的变量变成全局变量；
+must-revalidate：缓存过期后，到服务端验证才能继续使用缓存
 
-不存在变量提升，暂时性死区（一个大括号内，对let变量先使用后定义，报错undefined）如：var num=10；if(1){ console.log(num) let num; }
-const声明常量
-值不可更改（值对应内存地址），具有块级作用域，声明时必须赋值，否则报错；
-v
+no-cache/no-store:是否使用缓存
+2、缓存验证（缓存与服务器内容是否相同）
+last-modified配合if-modified-sinc
         </p>
     </div>
 </article>

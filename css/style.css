@@ -593,6 +593,7 @@ code {
   padding: 3px 0;
 }
 #sidebar .sidebar-top .social-links {
+  display: none;
   float: right;
   position: relative;
   padding-top: 2px;

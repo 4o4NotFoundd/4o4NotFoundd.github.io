@@ -6,24 +6,24 @@
     
 
     
-    <title>购物街0-首页开发（Vue购物，学它就对了！） | 前端小窝--&gt;小白之家</title>
+    <title>不能不知道的HTTP | 前端小窝--&gt;小白之家</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta name="keywords" content="购物街" />
+    <meta name="keywords" content="http" />
     
-    <meta name="description" content="零、说明本demo是跟随coderwhy老师学习Vue做的，跟着视频一点点敲的，视频可以在b站上找到，仅限个人学习，侵删（应该不涉及侵权吧，就当给老师宣传了哈哈哈，视频真的讲的很细致，一点点学还是有收获的，自己码的demo在这里！博客里有github） 一、整体思路1、效果图先上整体效果图~)这是我跟着视频做的，主要分为四个功能模块“首页、分类、购物车、我的” 2、首页功能目前基本实现首页，首页中">
-<meta name="keywords" content="购物街">
+    <meta name="description" content="一、入门部分 1、cache-control缓存设置 max-age&#x3D;100：静态资源缓存100秒  public&#x2F;private:只能在客户端&#x2F;代理服务器  缓存  must-revalidate：缓存过期后，到服务端验证才能继续使用缓存  no-cache&#x2F;no-store:是否使用缓存 2、缓存验证（缓存与服务器内容是否相同） last-modified配合if-modified-sinc">
+<meta name="keywords" content="http">
 <meta property="og:type" content="article">
-<meta property="og:title" content="购物街0-首页开发（Vue购物，学它就对了！）">
-<meta property="og:url" content="https:&#x2F;&#x2F;hezhaoxiang.work&#x2F;2019&#x2F;mall-home-all&#x2F;index.html">
+<meta property="og:title" content="不能不知道的HTTP">
+<meta property="og:url" content="https:&#x2F;&#x2F;hezhaoxiang.work&#x2F;2020&#x2F;http&#x2F;index.html">
 <meta property="og:site_name" content="前端小窝--&gt;小白之家">
-<meta property="og:description" content="零、说明本demo是跟随coderwhy老师学习Vue做的，跟着视频一点点敲的，视频可以在b站上找到，仅限个人学习，侵删（应该不涉及侵权吧，就当给老师宣传了哈哈哈，视频真的讲的很细致，一点点学还是有收获的，自己码的demo在这里！博客里有github） 一、整体思路1、效果图先上整体效果图~)这是我跟着视频做的，主要分为四个功能模块“首页、分类、购物车、我的” 2、首页功能目前基本实现首页，首页中">
+<meta property="og:description" content="一、入门部分 1、cache-control缓存设置 max-age&#x3D;100：静态资源缓存100秒  public&#x2F;private:只能在客户端&#x2F;代理服务器  缓存  must-revalidate：缓存过期后，到服务端验证才能继续使用缓存  no-cache&#x2F;no-store:是否使用缓存 2、缓存验证（缓存与服务器内容是否相同） last-modified配合if-modified-sinc">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https:&#x2F;&#x2F;cdn.nlark.com&#x2F;yuque&#x2F;0&#x2F;2019&#x2F;png&#x2F;676682&#x2F;1577368803629-bb382dad-293e-45d5-8ddd-842314f1b79e.png#align&#x3D;left&amp;display&#x3D;inline&amp;height&#x3D;500&amp;name&#x3D;image.png&amp;originHeight&#x3D;610&amp;originWidth&#x3D;424&amp;size&#x3D;208891&amp;status&#x3D;done&amp;style&#x3D;none&amp;width&#x3D;347">
-<meta property="og:updated_time" content="2019-12-26T14:22:18.000Z">
+<meta property="og:image" content="https:&#x2F;&#x2F;cdn.nlark.com&#x2F;yuque&#x2F;0&#x2F;2020&#x2F;png&#x2F;676682&#x2F;1584548205948-114979f3-ba13-4077-bce7-d13651a80223.png#align&#x3D;left&amp;display&#x3D;inline&amp;height&#x3D;236&amp;name&#x3D;image.png&amp;originHeight&#x3D;576&amp;originWidth&#x3D;1822&amp;size&#x3D;351629&amp;status&#x3D;done&amp;style&#x3D;none&amp;width&#x3D;746">
+<meta property="og:updated_time" content="2020-03-19T09:48:30.090Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https:&#x2F;&#x2F;cdn.nlark.com&#x2F;yuque&#x2F;0&#x2F;2019&#x2F;png&#x2F;676682&#x2F;1577368803629-bb382dad-293e-45d5-8ddd-842314f1b79e.png#align&#x3D;left&amp;display&#x3D;inline&amp;height&#x3D;500&amp;name&#x3D;image.png&amp;originHeight&#x3D;610&amp;originWidth&#x3D;424&amp;size&#x3D;208891&amp;status&#x3D;done&amp;style&#x3D;none&amp;width&#x3D;347">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;cdn.nlark.com&#x2F;yuque&#x2F;0&#x2F;2020&#x2F;png&#x2F;676682&#x2F;1584548205948-114979f3-ba13-4077-bce7-d13651a80223.png#align&#x3D;left&amp;display&#x3D;inline&amp;height&#x3D;236&amp;name&#x3D;image.png&amp;originHeight&#x3D;576&amp;originWidth&#x3D;1822&amp;size&#x3D;351629&amp;status&#x3D;done&amp;style&#x3D;none&amp;width&#x3D;746">
     
 
     
@@ -138,19 +138,19 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <a class="page-title-link" href="/categories/Demo/">Demo</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Demo/%E8%B4%AD%E7%89%A9%E8%A1%97-Vue/">购物街-Vue</a>
+    <a class="page-title-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/">计算机基础</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/http/">http</a>
     </h1>
 </div>
 
                         <div class="main-body-content">
-                            <article id="post-Vue购物，选它就对了！" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-3月18-日报--http" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        购物街0-首页开发（Vue购物，学它就对了！）
+        不能不知道的HTTP
         </h1>
     
 
@@ -161,8 +161,8 @@
                 
     <div class="article-date">
       <i class="fa fa-calendar"></i>
-      <a href="/2019/mall-home-all/" class="article-date">
-         <time datetime="2019-12-26T14:30:00.000Z" itemprop="datePublished">2019-12-26</time>
+      <a href="/2020/http/" class="article-date">
+         <time datetime="2020-03-18T12:36:00.000Z" itemprop="datePublished">2020-03-18</time>
       </a>
     </div>
 
@@ -172,21 +172,21 @@
                 
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/%E8%B4%AD%E7%89%A9%E8%A1%97/" rel="tag">购物街</a>
+        <a class="tag-link" href="/tags/http/" rel="tag">http</a>
     </div>
 
                 <!---cloud阅读量统计系统-->
-                阅读数量:<span id="/2019/mall-home-all/" class="leancloud_visitors" data-flag-title="购物街0-首页开发（Vue购物，学它就对了！）"></span>次
+                阅读数量:<span id="/2020/http/" class="leancloud_visitors" data-flag-title="不能不知道的HTTP"></span>次
                 
 
                 
    <div class="article-counter">
       <i class="fa fa-file-word-o"></i>
       <span class="post-count-item-text">本文字数: </span>
-      <span class="post-count">552</span>
+      <span class="post-count">1.1k</span>
       <i class="fa fa-clock-o"></i>
       <span class="post-time-item-text">阅读时长: </span>
-      <span class="post-count">2 分钟 </span>
+      <span class="post-count">4 分钟 </span>
    </div>
 
 
@@ -194,30 +194,146 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h1 id="零、说明"><a href="#零、说明" class="headerlink" title="零、说明"></a>零、说明</h1><p>本demo是跟随coderwhy老师学习Vue做的，跟着视频一点点敲的，视频可以在b站上找到，仅限个人学习，侵删（应该不涉及侵权吧，就当给老师宣传了哈哈哈，视频真的讲的很细致，一点点学还是有收获的<del>，自己码的<a href="https://hezhaoxiang.work/">demo在这里</a>！博客里有github</del>）</p>
-<h1 id="一、整体思路"><a href="#一、整体思路" class="headerlink" title="一、整体思路"></a>一、整体思路</h1><h1 id="1、效果图"><a href="#1、效果图" class="headerlink" title="1、效果图"></a>1、效果图</h1><p>先上整体效果图~<br><img src="https://cdn.nlark.com/yuque/0/2019/png/676682/1577368803629-bb382dad-293e-45d5-8ddd-842314f1b79e.png#align=left&display=inline&height=500&name=image.png&originHeight=610&originWidth=424&size=208891&status=done&style=none&width=347" alt="image.png">)<img src="https://cdn.nlark.com/yuque/0/2019/png/676682/1577369089041-0046166c-a84e-447a-934e-c62629835086.png#align=left&display=inline&height=490&name=image.png&originHeight=603&originWidth=356&size=232393&status=done&style=none&width=289" alt="image.png"><br>这是我跟着视频做的，主要分为<strong>四个功能模块“首页、分类、购物车、我的”</strong></p>
-<h1 id="2、首页功能"><a href="#2、首页功能" class="headerlink" title="2、首页功能"></a>2、首页功能</h1><p>目前基本实现首页，首页中包括以下几个功能（从上到下）：</p>
-<ol>
-<li>标题栏Navbar</li>
-<li>轮播图swiper</li>
-<li>本周流行recommend</li>
-<li>商品栏tab-control</li>
-<li>商品列表goodList</li>
-<li>导航栏（应该是0步，最先开始）</li>
-</ol>
-<p>最下方的导航栏作为公共组件，可复用。</p>
-<h1 id="二、首页具体实现"><a href="#二、首页具体实现" class="headerlink" title="二、首页具体实现"></a>二、首页具体实现</h1><h2 id="0、导航栏tabbar"><a href="#0、导航栏tabbar" class="headerlink" title="0、导航栏tabbar"></a>0、导航栏tabbar</h2><p>思想：组件复用<br><img src="https://cdn.nlark.com/yuque/0/2019/png/676682/1577369654098-cb1e061d-4cf2-4ec6-b0ea-0108d68f387c.png#align=left&display=inline&height=294&name=image.png&originHeight=241&originWidth=437&size=13337&status=done&style=none&width=533" alt="image.png"><br><img src="https://cdn.nlark.com/yuque/0/2019/png/676682/1577369684295-93fb63ed-c5a5-46ec-814b-2278dabae880.png#align=left&display=inline&height=291&name=image.png&originHeight=291&originWidth=931&size=39035&status=done&style=none&width=931" alt="image.png"></p>
-<h2 id="1-CSS格式引用"><a href="#1-CSS格式引用" class="headerlink" title="1, CSS格式引用"></a>1, CSS格式引用</h2><h2 id="normalize-css：常用格式，从github上引用"><a href="#normalize-css：常用格式，从github上引用" class="headerlink" title="normalize.css：常用格式，从github上引用"></a>normalize.css：常用格式，从github上引用</h2><p>css引用方式：<br>（1）在html中：<code>&lt;link ref=&quot;xx.css&quot;&gt;</code><br>（2）在另外一个css中： <a href="#">@import</a><code>&quot;css文件路径/url&quot;</code></p>
-<h2 id="2，组件引用路径配置"><a href="#2，组件引用路径配置" class="headerlink" title="2，组件引用路径配置"></a>2，组件引用路径配置</h2><p>根目录下创建 vue.config.js<br><img src="https://cdn.nlark.com/yuque/0/2019/png/676682/1577067046833-ed1cb881-c1d8-4c6b-bf33-172aed7be5a0.png#align=left&display=inline&height=428&name=image.png&originHeight=428&originWidth=914&size=36261&status=done&style=none&width=914" alt="image.png"></p>
-<p>图片的引用路径，前加~<br><img src="https://cdn.nlark.com/yuque/0/2019/png/676682/1577067545443-5c1ba149-8565-42a8-979e-9f0e3f131322.png#align=left&display=inline&height=154&name=image.png&originHeight=154&originWidth=940&size=23047&status=done&style=none&width=940" alt="image.png"><br>修改icon网站图标：在public中 favicon.ico</p>
-<h2 id="3-顶端导航组件"><a href="#3-顶端导航组件" class="headerlink" title="3, 顶端导航组件"></a>3, 顶端导航组件</h2><p>nav-tab-bar，创建组件，使用插槽将顶部的bar分为左中右三部分，在首页中只展示center的slot内容“购物街”<br><img src="https://cdn.nlark.com/yuque/0/2019/png/676682/1577103302820-d42c43ff-0439-47e3-b6b8-3e350294d838.png#align=left&display=inline&height=460&name=image.png&originHeight=460&originWidth=731&size=45953&status=done&style=none&width=731" alt="image.png"></p>
-<h2 id="4-请求多个数据"><a href="#4-请求多个数据" class="headerlink" title="4, 请求多个数据"></a>4, 请求多个数据</h2><p><img src="https://cdn.nlark.com/yuque/0/2019/png/676682/1577102761672-aad6e418-fc7c-4122-9e4d-801c648009fa.png#align=left&display=inline&height=405&name=image.png&originHeight=405&originWidth=724&size=33264&status=done&style=none&width=724" alt="image.png"></p>
-<ul>
-<li><input disabled="" type="checkbox"> <img src="https://cdn.nlark.com/yuque/0/2019/png/676682/1577102470371-a7ceda98-d7c3-428b-b177-7aa06965b00f.png#align=left&display=inline&height=266&name=image.png&originHeight=266&originWidth=254&size=10452&status=done&style=none&width=254" alt="image.png"><h2 id="5，-轮播图（后续专门说）-首页推荐"><a href="#5，-轮播图（后续专门说）-首页推荐" class="headerlink" title="5， 轮播图（后续专门说）+首页推荐"></a>5， 轮播图（后续专门说）+首页推荐</h2><h2 id="6，-tab-control"><a href="#6，-tab-control" class="headerlink" title="6， tab-control"></a>6， tab-control</h2>流行、新款、精选<br><code>position: sticky</code><br>top: 44px //设置可随页面下滑，上滑到44处固定<h2 id="7，-商品列表数据，获取保存"><a href="#7，-商品列表数据，获取保存" class="headerlink" title="7， 商品列表数据，获取保存"></a>7， 商品列表数据，获取保存</h2>所有数据data{pop:{page:0,list:[]},<br>news:{page:0,list:[]}<br>sell :{page:0,list:[]}<br>}<h2 id="8-点击，显示相应列表数据"><a href="#8-点击，显示相应列表数据" class="headerlink" title="8, 点击，显示相应列表数据"></a>8, 点击，显示相应列表数据</h2></li>
+            <p><a name="zepR4"></a></p>
+<h1 id="一、入门部分"><a href="#一、入门部分" class="headerlink" title="一、入门部分"></a>一、入门部分</h1><p><a name="7jJWa"></a></p>
+<h4 id="1、cache-control缓存设置"><a href="#1、cache-control缓存设置" class="headerlink" title="1、cache-control缓存设置"></a>1、cache-control缓存设置</h4><ul>
+<li><p>max-age=100：静态资源缓存100秒</p>
+</li>
+<li><p>public/private:只能在客户端/代理服务器  缓存</p>
+</li>
+<li><p>must-revalidate：缓存过期后，到服务端验证才能继续使用缓存</p>
+</li>
+<li><p>no-cache/no-store:是否使用缓存<br><a name="0427n"></a></p>
+<h4 id="2、缓存验证（缓存与服务器内容是否相同）"><a href="#2、缓存验证（缓存与服务器内容是否相同）" class="headerlink" title="2、缓存验证（缓存与服务器内容是否相同）"></a>2、缓存验证（缓存与服务器内容是否相同）</h4></li>
+<li><p>last-modified配合if-modified-since</p>
+</li>
+<li><p>etag配合 if-none-match</p>
+</li>
 </ul>
-<h2 id="9，-移动端滑动效果"><a href="#9，-移动端滑动效果" class="headerlink" title="9， 移动端滑动效果"></a>9， 移动端滑动效果</h2><p>使用better-scroll框架（github）<br>安装： npm install better-scroll –save<br>局部滚动</p>
-<p>ref如果是绑定在组件中的，那个通过t*<em>his.$refs.ref名字 *</em>获取的是一个元素对象。</p>
-<p>10，back-top实现<br>监听组件的原生事件<br><strong>方法一</strong>：使用修饰符click.native<br><img src="https://cdn.nlark.com/yuque/0/2019/png/676682/1577350858561-34b3410c-673f-4412-b0af-78ecab55cbff.png#align=left&display=inline&height=35&name=image.png&originHeight=35&originWidth=450&size=3917&status=done&style=none&width=450" alt="image.png"><br>方法二：在组件内使用this.$emit传给组件，再实现函数</p>
+<p>3、头部</p>
+<ul>
+<li>content-type conten-encoding：数据类型</li>
+<li>cookie：保持会话信息</li>
+<li>CORS实现跨域并保证安全</li>
+</ul>
+<p>4、TCP部分</p>
+<ul>
+<li>https链接创建过程，为什么https安全</li>
+<li>长链接，为什么需要</li>
+<li>http2的信道复用为什么能提高性能</li>
+</ul>
+<p>5、输入url后http请求返回的完整过程<br /><img src="https://cdn.nlark.com/yuque/0/2020/png/676682/1584548205948-114979f3-ba13-4077-bce7-d13651a80223.png#align=left&display=inline&height=236&name=image.png&originHeight=576&originWidth=1822&size=351629&status=done&style=none&width=746" alt="image.png"></p>
+<p>redirect跳转–》app cache–》DNS解析域名–》创建TCP连接–》request发送请求–》response接受响应</p>
+<p><a name="EEppw"></a></p>
+<h1 id="二、基础知识"><a href="#二、基础知识" class="headerlink" title="二、基础知识"></a>二、基础知识</h1><p><a name="pvbZQ"></a></p>
+<h4 id="1、五层模型"><a href="#1、五层模型" class="headerlink" title="1、五层模型"></a>1、五层模型</h4><ul>
+<li><p>应用层（http，ftp）–传输层（TCP，UDP）–网络层–数据链路层–物理层<br><a name="U4uuZ"></a></p>
+<h4 id="2、http1-1（增加一些host命令）-http2"><a href="#2、http1-1（增加一些host命令）-http2" class="headerlink" title="2、http1.1（增加一些host命令） http2"></a>2、http1.1（增加一些host命令） http2</h4></li>
+<li><p>数据以二进制传输，头信息压缩和推送（服务器主动推送html，js等到客户端）提高效率。<br><a name="ABpby"></a></p>
+<h4 id="3、http三次握手"><a href="#3、http三次握手" class="headerlink" title="3、http三次握手"></a>3、http三次握手</h4><p>（1）客户端C–&gt;服务端S：发送标志位SYN=1，序列号seq=x<br />（2）S–&gt;C:                     SYN =1, seq=y  确认号ack=x+1<br />（3）C–&gt;S:                     seq=z  ack=y+1<br><a name="bCX5u"></a></p>
+<h4 id="4、URI，-URL，URN"><a href="#4、URI，-URL，URN" class="headerlink" title="4、URI， URL，URN"></a>4、URI， URL，URN</h4></li>
+<li><p>URI =URL+URN 统一资源标志符： 标识互联网上的唯一资源；</p>
+</li>
+<li><p>URL 统一资源定位器:访问链接    基本形式：协议+主机+端口号+路径path参数</p>
+</li>
+<li><p>URN永久统一资源定位符，移动后仍能访问<br><a name="mpLGW"></a></p>
+<h4 id="5、http报文"><a href="#5、http报文" class="headerlink" title="5、http报文"></a>5、http报文</h4><p><img src="https://cdn.nlark.com/yuque/0/2020/png/676682/1584556378357-bf1b77b0-1dd9-4d25-8192-6d3de7cf2121.png#align=left&display=inline&height=232&name=image.png&originHeight=464&originWidth=1541&size=273687&status=done&style=none&width=770.5" alt="image.png"></p>
+</li>
+<li><p>起始行： 请求方法+URL+协议版本                                 协议版本+状态码</p>
+</li>
+<li><p>header首部<br><a name="Sq9QZ"></a></p>
+<h4 id="6、http方法"><a href="#6、http方法" class="headerlink" title="6、http方法"></a>6、http方法</h4><p>get post delete<br><a name="fZLzz"></a></p>
+<h4 id="7、CORS跨域"><a href="#7、CORS跨域" class="headerlink" title="7、CORS跨域"></a>7、CORS跨域</h4></li>
+<li><p>两种解决跨域请求办法</p>
+</li>
+</ul>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/676682/1584586489701-cc937423-f886-460a-ab3d-277cff14e262.png#align=left&display=inline&height=182&name=image.png&originHeight=363&originWidth=918&size=40317&status=done&style=none&width=459" alt="image.png"><br><a name="jE05P"></a></p>
+<h4 id="8、CORE预请求"><a href="#8、CORE预请求" class="headerlink" title="8、CORE预请求"></a>8、CORE预请求</h4><ul>
+<li><p>默认允许的method请求方法：GET POST HEAD( delete等不行)</p>
+</li>
+<li><p>默认允许的content-type ：text/plain、  multipart/form-data 、application/x-www-form-urlencoded</p>
+</li>
+<li><p>预请求：’Access-Control-Allow-Methods’:’PUT.POST,DELETE’ //使得预请求允许</p>
+</li>
+<li><p>通过请求方法options，让服务器允许后续的post请求<br><a name="TTANL"></a></p>
+<h3 id="9、缓存头cache-control-header中"><a href="#9、缓存头cache-control-header中" class="headerlink" title="9、缓存头cache-control (header中)"></a>9、缓存头cache-control (header中)</h3><p><a name="HYX1S"></a></p>
+<h4 id="1-可缓存性"><a href="#1-可缓存性" class="headerlink" title="(1)可缓存性"></a>(1)可缓存性</h4></li>
+<li><p>public : 经过的地方（客户端和代理服务器）都可进行缓存</p>
+</li>
+<li><p>private：只有发起请求的浏览器可以进行缓存</p>
+</li>
+<li><p>no-cache：不允许缓存（本地可以有缓存，下次使用缓存需要服务器先验证）</p>
+</li>
+<li><p>区别 于no-store：完全不允许缓存<br><a name="f7x6e"></a></p>
+<h4 id="（2）到期"><a href="#（2）到期" class="headerlink" title="（2）到期"></a>（2）到期</h4></li>
+<li><p>浏览器中：max-age=&lt;&gt;多少秒</p>
+</li>
+<li><p>代理服务器中： s-maxage</p>
+</li>
+<li><p>服务器中：max-stale，即使浏览器中过期，max-stale不过期也能继续使用<br><a name="wbXZH"></a></p>
+<h4 id="（3）重新验证"><a href="#（3）重新验证" class="headerlink" title="（3）重新验证"></a>（3）重新验证</h4></li>
+<li><p>must-revalidate：过期后必须重新到服务器端进行请求</p>
+</li>
+<li><p>proxy-revalidate：缓存服务器过期去原服务器请求<br><a name="iB1T9"></a></p>
+<h3 id="10、资源验证-header中"><a href="#10、资源验证-header中" class="headerlink" title="10、资源验证 (header中)"></a>10、资源验证 (header中)</h3><p><a name="pqK3U"></a></p>
+<h4 id="两种验证头"><a href="#两种验证头" class="headerlink" title="两种验证头"></a>两种验证头</h4></li>
+<li><p>last-modified：上次修改时间 配合if-modified-since或者if-unmodified-since验证是否修改</p>
+</li>
+<li><p>etag 数据签名（如进行hash）配合if-match或if-none-match判断签名是否变化<br><a name="457Dm"></a></p>
+<h4 id="11、Cookie-header中"><a href="#11、Cookie-header中" class="headerlink" title="11、Cookie  (header中)"></a>11、Cookie  (header中)</h4></li>
+<li><p>通过set-cookie设置，下次请求时后自动带上</p>
+</li>
+<li><p><strong>cookie形式：键值对key=value  id=1223，可有多个 set-cookie：[‘id-1’,’ad=2’]</strong></p>
+</li>
+</ul>
+<p><strong>cookie属性</strong></p>
+<ul>
+<li><p>max-age和expires设置过期时间</p>
+</li>
+<li><p>secure只在https中使用</p>
+</li>
+<li><p>httpOnly不能通过document.cookie访问<br><a name="OvV71"></a></p>
+<h3 id="12、session"><a href="#12、session" class="headerlink" title="12、session"></a>12、session</h3></li>
+<li><p>作为会话连接，通常使用cookie的key作为session，二者不相等，</p>
+</li>
+<li><p>释放链接后消失，而cookie通常存在缓存中<br><a name="atn9Y"></a></p>
+<h4 id="13、http长链接"><a href="#13、http长链接" class="headerlink" title="13、http长链接"></a>13、http长链接</h4></li>
+<li><p>connection：Keep-Alive 继续保持，可以复用</p>
+</li>
+<li><p>一个TCP链接可以有多个http链接<br><a name="xqfsP"></a></p>
+<h3 id="14、数据协商"><a href="#14、数据协商" class="headerlink" title="14、数据协商"></a>14、数据协商</h3><p>客户端和服务端协商数据<br><a name="QQz57"></a></p>
+<h4 id="（1）请求Accept"><a href="#（1）请求Accept" class="headerlink" title="（1）请求Accept"></a>（1）请求Accept</h4></li>
+<li><p>accept指定想要的数据类型</p>
+</li>
+<li><p>accept-encoding压缩方式：gzip ，deflate ，br（较新，压缩比高）</p>
+</li>
+<li><p>accept-language :’zh-CN’ ‘en’</p>
+</li>
+<li><p>user-Agent:  包括win10系统,浏览器内核，浏览器版本等信息<br><a name="J4kMv"></a></p>
+<h4 id="（2）服务端返回Content"><a href="#（2）服务端返回Content" class="headerlink" title="（2）服务端返回Content"></a>（2）服务端返回Content</h4></li>
+<li><p>Content-Type</p>
+</li>
+<li><p>content-encoding</p>
+</li>
+<li><p>content-language</p>
+</li>
+</ul>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/676682/1584599066280-f9c26d7e-30a8-47a6-88e7-ab0cef3a4b84.png#align=left&display=inline&height=324&name=image.png&originHeight=647&originWidth=792&size=53194&status=done&style=none&width=396" alt="image.png"><br><a name="x8SBs"></a></p>
+<h4 id="15、redirect重定向"><a href="#15、redirect重定向" class="headerlink" title="15、redirect重定向"></a>15、redirect重定向</h4><ul>
+<li><p>资源转移到别的地方 location：‘/new’<br><a name="iKY7q"></a></p>
+<h3 id="16、CSP（Content-Security-Policy）内容安全策略"><a href="#16、CSP（Content-Security-Policy）内容安全策略" class="headerlink" title="16、CSP（Content-Security-Policy）内容安全策略"></a>16、CSP（Content-Security-Policy）内容安全策略</h3><p><a name="79npc"></a></p>
+<h4 id="（1）作用"><a href="#（1）作用" class="headerlink" title="（1）作用"></a>（1）作用</h4></li>
+<li><p>限制资源获取</p>
+</li>
+<li><p>报告资源获取越权<br><a name="om2mL"></a></p>
+<h4 id="（2）限制方式"><a href="#（2）限制方式" class="headerlink" title="（2）限制方式"></a>（2）限制方式</h4></li>
+<li><p>default-src 限制全局/部分 script-src</p>
+</li>
+<li><p>制定资源 范围</p>
+</li>
+<li><p>‘Content-Security-Policy’ : ‘default-src &#39;http&#39;self\ ‘不能通过链接方式获取该资源,不能跳转出去</p>
+</li>
+</ul>
 
         </div>
         <footer class="article-footer">
@@ -270,18 +386,27 @@ window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMin
             "@type": "Person",
             "name": "He Zhaoxiang"
         },
-        "headline": "购物街0-首页开发（Vue购物，学它就对了！）",
-        "image": "https://hezhaoxiang.workhttps://cdn.nlark.com/yuque/0/2019/png/676682/1577368803629-bb382dad-293e-45d5-8ddd-842314f1b79e.png#align=left&display=inline&height=500&name=image.png&originHeight=610&originWidth=424&size=208891&status=done&style=none&width=347",
-        "keywords": "购物街",
-        "genre": "Demo 购物街-Vue",
-        "datePublished": "2019-12-26",
-        "dateCreated": "2019-12-26",
-        "dateModified": "2019-12-26",
-        "url": "/https:/hezhaoxiang.work/2019/mall-home-all/",
-        "description": "零、说明本demo是跟随coderwhy老师学习Vue做的，跟着视频一点点敲的，视频可以在b站上找到，仅限个人学习，侵删（应该不涉及侵权吧，就当给老师宣传了哈哈哈，视频真的讲的很细致，一点点学还是有收获的，自己码的demo在这里！博客里有github）
-一、整体思路1、效果图先上整体效果图~)这是我跟着视频做的，主要分为四个功能模块“首页、分类、购物车、我的”
-2、首页功能目前基本实现首页，首页中",
-        "wordCount": 119
+        "headline": "不能不知道的HTTP",
+        "image": "https://hezhaoxiang.workhttps://cdn.nlark.com/yuque/0/2020/png/676682/1584548205948-114979f3-ba13-4077-bce7-d13651a80223.png#align=left&display=inline&height=236&name=image.png&originHeight=576&originWidth=1822&size=351629&status=done&style=none&width=746",
+        "keywords": "http",
+        "genre": "计算机基础 http",
+        "datePublished": "2020-03-18",
+        "dateCreated": "2020-03-18",
+        "dateModified": "2020-03-19",
+        "url": "/https:/hezhaoxiang.work/2020/http/",
+        "description": "
+一、入门部分
+1、cache-control缓存设置
+max-age=100：静态资源缓存100秒
+
+public/private:只能在客户端/代理服务器  缓存
+
+must-revalidate：缓存过期后，到服务端验证才能继续使用缓存
+
+no-cache/no-store:是否使用缓存
+2、缓存验证（缓存与服务器内容是否相同）
+last-modified配合if-modified-sinc",
+        "wordCount": 293
     }
 </script>
 
@@ -359,20 +484,10 @@ window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMin
         
 <nav id="article-nav">
     
-        <a href="/2020/learnjs05-base0/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">下一篇</strong>
-        <p class="article-nav-title">
-        
-            web前端--JavaScript（五）JavaScript高级程序设计-笔记总结-1-6章
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
     
-    
-        <a href="/2019/mall-home/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2020/es6-webpack/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">上一篇</strong>
-        <p class="article-nav-title">购物街0-首页开发</p>
+        <p class="article-nav-title">web前端--ES6模块化和webpack</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -522,7 +637,7 @@ window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMin
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'https://hezhaoxiang.work/2019/mall-home-all/';
+    var disqus_url = 'https://hezhaoxiang.work/2020/http/';
     
     (function() {
     var dsq = document.createElement('script');

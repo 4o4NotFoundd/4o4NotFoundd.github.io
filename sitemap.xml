@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://hezhaoxiang.work/2020/http/</loc>
+    
+    <lastmod>2020-03-19T09:48:30.090Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://hezhaoxiang.work/2020/es6-webpack/</loc>
     
-    <lastmod>2020-03-19T06:53:04.804Z</lastmod>
+    <lastmod>2020-03-19T09:38:35.989Z</lastmod>
     
   </url>
   
@@ -100,13 +107,6 @@
   </url>
   
   <url>
-    <loc>https://hezhaoxiang.work/2019/learn-vuex/</loc>
-    
-    <lastmod>2019-12-10T11:33:12.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://hezhaoxiang.work/2019/learn-vue01/</loc>
     
     <lastmod>2019-12-10T11:33:12.000Z</lastmod>
@@ -114,14 +114,21 @@
   </url>
   
   <url>
-    <loc>https://hezhaoxiang.work/about/index.html</loc>
+    <loc>https://hezhaoxiang.work/2019/learn-vuex/</loc>
+    
+    <lastmod>2019-12-10T11:33:12.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hezhaoxiang.work/about/inde2x.html</loc>
     
     <lastmod>2019-12-10T11:06:04.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://hezhaoxiang.work/about/inde2x.html</loc>
+    <loc>https://hezhaoxiang.work/about/index.html</loc>
     
     <lastmod>2019-12-10T11:06:04.000Z</lastmod>
     
