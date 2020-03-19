@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hezhaoxiang.work/"/>
-  <updated>2020-03-16T17:31:37.359Z</updated>
+  <updated>2020-03-19T06:53:04.804Z</updated>
   <id>https://hezhaoxiang.work/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>web前端--ES6模块化和webpack</title>
+    <link href="https://hezhaoxiang.work/2020/es6-webpack/"/>
+    <id>https://hezhaoxiang.work/2020/es6-webpack/</id>
+    <published>2020-03-17T15:36:00.000Z</published>
+    <updated>2020-03-19T06:53:04.804Z</updated>
+    
+    <content type="html"><![CDATA[<p>内容同步更新在语雀笔记里~<br><a name="NsGDe"></a></p><h1 id="一、ES6模块化"><a href="#一、ES6模块化" class="headerlink" title="一、ES6模块化"></a>一、ES6模块化</h1><p><a name="gsNbY"></a></p><h4 id="模块化"><a href="#模块化" class="headerlink" title="模块化"></a>模块化</h4><ul><li><p>将一个功能封装到一个模块中，模块之间相互隔离，通过接口调用；</p></li><li><p>代码复用，便于管理和后期维护。<br><a name="ErL9S"></a></p><h4 id="浏览器模块化规范"><a href="#浏览器模块化规范" class="headerlink" title="浏览器模块化规范"></a>浏览器模块化规范</h4></li><li><p>AMD：require.js</p></li><li><p>CMD:  Sea.js<br><a name="7n9a3"></a></p><h4 id="服务器端模块化规范"><a href="#服务器端模块化规范" class="headerlink" title="服务器端模块化规范"></a>服务器端模块化规范</h4></li><li><p>CommonJS: 1、模块分为单文件模块和包 2、模块导出 module.export 和exports  3、导入require（’模块标识符’）<br><a name="OTTo0"></a></p><h4 id="ES6模块化（浏览器与服务器通用）定义规范"><a href="#ES6模块化（浏览器与服务器通用）定义规范" class="headerlink" title="ES6模块化（浏览器与服务器通用）定义规范"></a>ES6模块化（浏览器与服务器通用）定义规范</h4></li><li><p>每个js是单独的文件</p></li><li><p>导入模块成员用import，暴露使用export<br><a name="Vt5is"></a></p><h4 id="node-js中使用bable实现ES6模块化"><a href="#node-js中使用bable实现ES6模块化" class="headerlink" title="node.js中使用bable实现ES6模块化"></a>node.js中使用bable实现ES6模块化</h4></li><li><p>bable：语法转换插件 npm install –save-dev <a href="#">@bable</a>/cli，polyfill等 </p></li><li><p>项目中创建bable.config.js文件如下，然后npx bable-node index.js，在index.js中 运行bable插件</p></li></ul><p><img src="https://cdn.nlark.com/yuque/0/2020/png/676682/1584445907745-609448a2-349f-4532-9ba4-a38373903db0.png#align=left&display=inline&height=183&name=image.png&originHeight=366&originWidth=348&size=13767&status=done&style=none&width=174" alt="image.png"><br><a name="2TI2m"></a></p><h4 id="导出"><a href="#导出" class="headerlink" title="导出"></a>导出</h4><ul><li><p>默认*<em>export default { 变量 }  *</em>可以将模块中的私有变量暴露出去</p></li><li><p>按需导出 <strong>export function sum= fumction（）{}</strong><br><a name="gqHcr"></a></p><h4 id="导入"><a href="#导入" class="headerlink" title="导入"></a>导入</h4></li><li><p>import 接收名 from  ‘./sum.js’</p></li><li><p>按需导入 import { s1 } from “./m1.js” s1需要和按需导出的相同</p></li><li><p>直接导入并执行模块代码 <strong>import ‘./m1.js’ ,</strong>不暴露m1的成员，直接执行m1.js<br><a name="xRwDj"></a></p><h1 id="二、webpack"><a href="#二、webpack" class="headerlink" title="二、webpack"></a>二、webpack</h1><p><a name="UpjCf"></a></p><h4 id="1、webpack"><a href="#1、webpack" class="headerlink" title="1、webpack"></a>1、webpack</h4></li><li><p>前端项目打包工具</p></li><li><p>功能：模块化友好，代码压缩混淆、js兼容问题，性能优化等</p></li><li><p>ul&gt;li{这是第$个}*9，实现9列<br><a name="ymYTX"></a></p><h4 id="2、基本使用"><a href="#2、基本使用" class="headerlink" title="2、基本使用"></a>2、基本使用</h4></li><li><p>npm init -y 初始化webpack，创建package.json文件，然后创建src文件夹，index.js中包含所用的方法<br><a name="BpVXg"></a></p><h4 id="3、在项目中使用"><a href="#3、在项目中使用" class="headerlink" title="3、在项目中使用"></a>3、在项目中使用</h4></li><li><p>npm install webpack webpack-cli -D，然后创建package.config.js</p></li></ul><p><img src="https://cdn.nlark.com/yuque/0/2020/png/676682/1584459101662-a06c5243-749a-4601-bfcd-b1dc89236c26.png#align=left&display=inline&height=76&name=image.png&originHeight=151&originWidth=460&size=8715&status=done&style=none&width=230" alt="image.png"></p><ul><li>在package.json中，</li></ul><p><img src="https://cdn.nlark.com/yuque/0/2020/png/676682/1584461481927-3d26970b-4f9e-4eea-b3a4-085d0f20baf1.png#align=left&display=inline&height=81&name=image.png&originHeight=161&originWidth=575&size=10668&status=done&style=none&width=287.5" alt="image.png"><br><a name="US0Xe"></a></p><h4 id="4、打包的入口和出口"><a href="#4、打包的入口和出口" class="headerlink" title="4、打包的入口和出口"></a>4、打包的入口和出口</h4><ul><li>默认入口：src-&gt;index.js</li><li>打包输出文件： dist-&gt;main.js</li><li>修改默认出入口</li></ul><p><img src="https://cdn.nlark.com/yuque/0/2020/png/676682/1584462771067-44b896eb-4883-4bbe-80a0-716a01eb25b2.png#align=left&display=inline&height=140&name=image.png&originHeight=279&originWidth=675&size=20264&status=done&style=none&width=337.5" alt="image.png"><br><a name="CL0na"></a></p><h4 id="5、webpack自动打包"><a href="#5、webpack自动打包" class="headerlink" title="5、webpack自动打包"></a>5、webpack自动打包</h4><ul><li><p>npm install webpack-dev-server -D安装，修改package.json-&gt;script  dev：”webpack-dev-server”，index.html中引用的script改为bundle.js  然后运行 npm run dev<br><a name="ASOYV"></a></p><h4 id="6、配置html-webpack-plugin生成预览页面"><a href="#6、配置html-webpack-plugin生成预览页面" class="headerlink" title="6、配置html-webpack-plugin生成预览页面"></a>6、配置html-webpack-plugin生成预览页面</h4></li><li><p>npm install html-webpack-plugin -D安装插件</p></li></ul><p><img src="https://cdn.nlark.com/yuque/0/2020/png/676682/1584531500364-bdf9315f-5581-47b6-a86d-1186e4f0171b.png#align=left&display=inline&height=140&name=image.png&originHeight=280&originWidth=842&size=29547&status=done&style=none&width=421" alt="image.png"><br><a name="W7mYB"></a></p><h4 id="7、package-json中的配置"><a href="#7、package-json中的配置" class="headerlink" title="7、package.json中的配置"></a>7、package.json中的配置</h4><ul><li><p>–open 打包后自动打开网页</p></li><li><p>–host 配置ip –host 127.0.0.1</p></li><li><p>–port配置端口 –port 8888<br><a name="J3QFU"></a></p><h4 id="8、webpack加载器–loader打包非js结尾的模块"><a href="#8、webpack加载器–loader打包非js结尾的模块" class="headerlink" title="8、webpack加载器–loader打包非js结尾的模块"></a>8、webpack加载器–loader打包非js结尾的模块</h4></li><li><p>打包css/less/sess文件 npm i style-loader css-loader -D安装less-loader/sess-loader</p></li></ul><p><img src="https://cdn.nlark.com/yuque/0/2020/png/676682/1584540093835-427dc729-1390-49db-980d-560bbbb0859a.png#align=left&display=inline&height=135&name=image.png&originHeight=270&originWidth=852&size=26002&status=done&style=none&width=426" alt="image.png"></p><p><a name="pI340"></a></p><h4 id="9、webpack加载器–配置postCSS自动添加css兼容前缀"><a href="#9、webpack加载器–配置postCSS自动添加css兼容前缀" class="headerlink" title="9、webpack加载器–配置postCSS自动添加css兼容前缀"></a>9、webpack加载器–配置postCSS自动添加css兼容前缀</h4><ul><li>运行npm i postcss-loader autoprefixer -D</li><li>根目录创建配置文件postcss.config.js,并在<strong>webpack.config.js中module-&gt;rules中加入postcss-loader</strong></li></ul><p><strong><img src="https://cdn.nlark.com/yuque/0/2020/png/676682/1584540886725-05a9b4a8-1e3b-418d-ac9b-98b3f290e0cd.png#align=left&display=inline&height=79&name=image.png&originHeight=158&originWidth=503&size=9720&status=done&style=none&width=251.5" alt="image.png"></strong><br />**<br><a name="ImOAL"></a></p><h4 id="10、webpack加载器–打包图片和字体"><a href="#10、webpack加载器–打包图片和字体" class="headerlink" title="10、webpack加载器–打包图片和字体"></a>10、webpack加载器–打包图片和字体</h4><ul><li>npm i url-loader file-loader -D</li><li>在webpack.config.js中module-&gt;rules中加入如下规则</li></ul><p><img src="https://cdn.nlark.com/yuque/0/2020/png/676682/1584541555342-da4c7182-071c-4b30-bc35-121cfcdd3499.png#align=left&display=inline&height=189&name=image.png&originHeight=377&originWidth=873&size=41931&status=done&style=none&width=436.5" alt="image.png"></p><p><a name="x9Pz2"></a></p><h4 id="11、webpack加载器–打包js文件中的高级语法"><a href="#11、webpack加载器–打包js文件中的高级语法" class="headerlink" title="11、webpack加载器–打包js文件中的高级语法"></a>11、webpack加载器–打包js文件中的高级语法</h4><ul><li>安装babel转换器相关的包</li></ul><p><img src="https://cdn.nlark.com/yuque/0/2020/png/676682/1584542326766-400c145a-0dc0-4563-86b8-e1b6a34ce48d.png#align=left&display=inline&height=50&name=image.png&originHeight=100&originWidth=617&size=59119&status=done&style=none&width=308.5" alt="image.png"><br /><img src="https://cdn.nlark.com/yuque/0/2020/png/676682/1584542874992-698dc63a-a39a-4dc8-b8e6-5d35f58f1172.png#align=left&display=inline&height=120&name=image.png&originHeight=241&originWidth=951&size=28577&status=done&style=none&width=475.5" alt="image.png"><br /></p><p><a name="s4kF7"></a></p><h4 id="12、webpack加载器–配置vue组件"><a href="#12、webpack加载器–配置vue组件" class="headerlink" title="12、webpack加载器–配置vue组件"></a>12、webpack加载器–配置vue组件</h4><ul><li>npm i vue-loader vue-template-compiler -D</li></ul><p><img src="https://cdn.nlark.com/yuque/0/2020/png/676682/1584545532437-f3cc94c1-ccf9-4948-995a-444f81ea2430.png#align=left&display=inline&height=181&name=image.png&originHeight=361&originWidth=792&size=24755&status=done&style=none&width=396" alt="image.png"><br><a name="tcsBb"></a></p><h4 id="13、webpack使用vue"><a href="#13、webpack使用vue" class="headerlink" title="13、webpack使用vue"></a>13、webpack使用vue</h4><ul><li>npm i vue -S 安装</li></ul><p><img src="https://cdn.nlark.com/yuque/0/2020/png/676682/1584546247787-3550a3b1-363a-43f7-8849-b48186d3b266.png#align=left&display=inline&height=111&name=image.png&originHeight=222&originWidth=652&size=22094&status=done&style=none&width=326" alt="image.png"><br><a name="DjXKS"></a></p><h4 id="14、webpack-打包发布vue"><a href="#14、webpack-打包发布vue" class="headerlink" title="14、webpack 打包发布vue"></a>14、webpack 打包发布vue</h4><ul><li>在package.json 中配置scripts： “build”：”webpack -p”,即可通过npm run build 打包</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;内容同步更新在语雀笔记里~&lt;br&gt;&lt;a name=&quot;NsGDe&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;一、ES6模块化&quot;&gt;&lt;a href=&quot;#一、ES6模块化&quot; class=&quot;headerlink&quot; title=&quot;一、ES6模块化&quot;&gt;&lt;/a&gt;一、ES6模块化&lt;/h1&gt;&lt;p&gt;&lt;
+      
+    
+    </summary>
+    
+      <category term="web前端" scheme="https://hezhaoxiang.work/categories/web%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="webpack" scheme="https://hezhaoxiang.work/categories/web%E5%89%8D%E7%AB%AF/webpack/"/>
+    
+    
+      <category term="webpack" scheme="https://hezhaoxiang.work/tags/webpack/"/>
+    
+  </entry>
   
   <entry>
     <title>web前端--ES6初探</title>
@@ -442,33 +470,6 @@
     
     
       <category term="JavaScript" scheme="https://hezhaoxiang.work/tags/JavaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>对抗样本了解概念</title>
-    <link href="https://hezhaoxiang.work/2019/learnjs03/"/>
-    <id>https://hezhaoxiang.work/2019/learnjs03/</id>
-    <published>2019-10-21T11:36:00.000Z</published>
-    <updated>2019-12-10T07:10:02.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>接触对抗样本的第一天，主要从概念，结构，算法三个方面来了解。其中学习内容多来自以下几篇文章和博客，侵删。<br>算法：<a href="https://blog.csdn.net/sinat_29957455/article/details/80795656" target="_blank" rel="noopener">https://blog.csdn.net/sinat_29957455/article/details/80795656</a><br>概念：<a href="https://www.leiphone.com/news/201702/Jpb0uiOt9RTwcB8E.html?viewType=weixin" target="_blank" rel="noopener">https://www.leiphone.com/news/201702/Jpb0uiOt9RTwcB8E.html?viewType=weixin</a><br>概念：<a href="http://www.sohu.com/a/230434686_651893" target="_blank" rel="noopener">http://www.sohu.com/a/230434686_651893</a><br>实现：<a href="https://www.kaggle.com/benhamner/adversarial-learning-challenges-getting-started/data" target="_blank" rel="noopener">https://www.kaggle.com/benhamner/adversarial-learning-challenges-getting-started/data</a></p><h1 id="一、概念"><a href="#一、概念" class="headerlink" title="一、概念"></a>一、概念</h1><p>   是指数据集（图像数据集）经过优化改变其特性，而外表没有变化得到的数据集，分类时这些样本数据会分类错误，即所说的对抗样本。干净样本是原始数据集，能正确分类的样本。</p><h1 id="二、如何生成对抗样本"><a href="#二、如何生成对抗样本" class="headerlink" title="二、如何生成对抗样本"></a>二、如何生成对抗样本</h1><p>   生成对抗样本称为攻击过程，常见攻击算法有：FGSM、deepfool、BIM，最小基本迭代法、CW等。</p><h1 id="三、如何防御对抗样本"><a href="#三、如何防御对抗样本" class="headerlink" title="三、如何防御对抗样本"></a>三、如何防御对抗样本</h1><p>所说的防御，主要指从数据集中，区分出干净样本和对抗样本。对于对抗样本的防御，方法也很多：图片去噪、训练分类模型、拒绝分类等。</p><p>注：小白，不当之处请指教orz</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;接触对抗样本的第一天，主要从概念，结构，算法三个方面来了解。其中学习内容多来自以下几篇文章和博客，侵删。&lt;br&gt;算法：&lt;a href=&quot;https://blog.csdn.net/sinat_29957455/article/details/80795656&quot; target
-      
-    
-    </summary>
-    
-      <category term="对抗样本" scheme="https://hezhaoxiang.work/categories/%E5%AF%B9%E6%8A%97%E6%A0%B7%E6%9C%AC/"/>
-    
-      <category term="论文" scheme="https://hezhaoxiang.work/categories/%E5%AF%B9%E6%8A%97%E6%A0%B7%E6%9C%AC/%E8%AE%BA%E6%96%87/"/>
-    
-    
-      <category term="对抗样本" scheme="https://hezhaoxiang.work/tags/%E5%AF%B9%E6%8A%97%E6%A0%B7%E6%9C%AC/"/>
     
   </entry>
   

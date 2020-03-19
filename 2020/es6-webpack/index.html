@@ -6,24 +6,24 @@
     
 
     
-    <title>Vue.js之vuex入门 | 前端小窝--&gt;小白之家</title>
+    <title>web前端--ES6模块化和webpack | 前端小窝--&gt;小白之家</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta name="keywords" content="Vuex" />
+    <meta name="keywords" content="webpack" />
     
-    <meta name="description" content="放图，这个图最能说明vuex和Vue之间的关系。 一、原理虚线中的Vuex是用来处理vue的组件，vue compontents（组件）通过dispatch（理解为转发事件）交给action，通过接入后端api完成一些业务，在action中进行异步操作，再将结果以commit（提交事件）方式发给mutations。mutations中最终实现vue compontent的method。state用">
-<meta name="keywords" content="Vuex">
+    <meta name="description" content="内容同步更新在语雀笔记里~ 一、ES6模块化 模块化 将一个功能封装到一个模块中，模块之间相互隔离，通过接口调用；  代码复用，便于管理和后期维护。 浏览器模块化规范 AMD：require.js  CMD:  Sea.js 服务器端模块化规范 CommonJS: 1、模块分为单文件模块和包 2、模块导出 module.export 和exports  3、导入require（’模块标识符’） E">
+<meta name="keywords" content="webpack">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Vue.js之vuex入门">
-<meta property="og:url" content="https:&#x2F;&#x2F;hezhaoxiang.work&#x2F;2019&#x2F;learn-vuex&#x2F;index.html">
+<meta property="og:title" content="web前端--ES6模块化和webpack">
+<meta property="og:url" content="https:&#x2F;&#x2F;hezhaoxiang.work&#x2F;2020&#x2F;es6-webpack&#x2F;index.html">
 <meta property="og:site_name" content="前端小窝--&gt;小白之家">
-<meta property="og:description" content="放图，这个图最能说明vuex和Vue之间的关系。 一、原理虚线中的Vuex是用来处理vue的组件，vue compontents（组件）通过dispatch（理解为转发事件）交给action，通过接入后端api完成一些业务，在action中进行异步操作，再将结果以commit（提交事件）方式发给mutations。mutations中最终实现vue compontent的method。state用">
+<meta property="og:description" content="内容同步更新在语雀笔记里~ 一、ES6模块化 模块化 将一个功能封装到一个模块中，模块之间相互隔离，通过接口调用；  代码复用，便于管理和后期维护。 浏览器模块化规范 AMD：require.js  CMD:  Sea.js 服务器端模块化规范 CommonJS: 1、模块分为单文件模块和包 2、模块导出 module.export 和exports  3、导入require（’模块标识符’） E">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20191204154825907.png?x-oss-process&#x3D;image&#x2F;watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDEwNTQ1OQ&#x3D;&#x3D;,size_16,color_FFFFFF,t_70">
-<meta property="og:updated_time" content="2019-12-10T11:33:12.000Z">
+<meta property="og:image" content="https:&#x2F;&#x2F;cdn.nlark.com&#x2F;yuque&#x2F;0&#x2F;2020&#x2F;png&#x2F;676682&#x2F;1584445907745-609448a2-349f-4532-9ba4-a38373903db0.png#align&#x3D;left&amp;display&#x3D;inline&amp;height&#x3D;183&amp;name&#x3D;image.png&amp;originHeight&#x3D;366&amp;originWidth&#x3D;348&amp;size&#x3D;13767&amp;status&#x3D;done&amp;style&#x3D;none&amp;width&#x3D;174">
+<meta property="og:updated_time" content="2020-03-19T06:53:04.804Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20191204154825907.png?x-oss-process&#x3D;image&#x2F;watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDEwNTQ1OQ&#x3D;&#x3D;,size_16,color_FFFFFF,t_70">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;cdn.nlark.com&#x2F;yuque&#x2F;0&#x2F;2020&#x2F;png&#x2F;676682&#x2F;1584445907745-609448a2-349f-4532-9ba4-a38373903db0.png#align&#x3D;left&amp;display&#x3D;inline&amp;height&#x3D;183&amp;name&#x3D;image.png&amp;originHeight&#x3D;366&amp;originWidth&#x3D;348&amp;size&#x3D;13767&amp;status&#x3D;done&amp;style&#x3D;none&amp;width&#x3D;174">
     
 
     
@@ -138,19 +138,19 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <a class="page-title-link" href="/categories/web%E5%89%8D%E7%AB%AF/">web前端</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/web%E5%89%8D%E7%AB%AF/Vue%E5%AD%A6%E4%B9%A0/">Vue学习</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/web%E5%89%8D%E7%AB%AF/Vue%E5%AD%A6%E4%B9%A0/Vuex/">Vuex</a>
+    <a class="page-title-link" href="/categories/web%E5%89%8D%E7%AB%AF/">web前端</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/web%E5%89%8D%E7%AB%AF/webpack/">webpack</a>
     </h1>
 </div>
 
                         <div class="main-body-content">
-                            <article id="post-Vue.js之vuex入门" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-3月17-日报 ES6模块化和webpack" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        Vue.js之vuex入门
+        web前端--ES6模块化和webpack
         </h1>
     
 
@@ -161,8 +161,8 @@
                 
     <div class="article-date">
       <i class="fa fa-calendar"></i>
-      <a href="/2019/learn-vuex/" class="article-date">
-         <time datetime="2019-12-04T11:11:30.000Z" itemprop="datePublished">2019-12-04</time>
+      <a href="/2020/es6-webpack/" class="article-date">
+         <time datetime="2020-03-17T15:36:00.000Z" itemprop="datePublished">2020-03-17</time>
       </a>
     </div>
 
@@ -172,18 +172,18 @@
                 
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/Vuex/" rel="tag">Vuex</a>
+        <a class="tag-link" href="/tags/webpack/" rel="tag">webpack</a>
     </div>
 
                 <!---cloud阅读量统计系统-->
-                阅读数量:<span id="/2019/learn-vuex/" class="leancloud_visitors" data-flag-title="Vue.js之vuex入门"></span>次
+                阅读数量:<span id="/2020/es6-webpack/" class="leancloud_visitors" data-flag-title="web前端--ES6模块化和webpack"></span>次
                 
 
                 
    <div class="article-counter">
       <i class="fa fa-file-word-o"></i>
       <span class="post-count-item-text">本文字数: </span>
-      <span class="post-count">729</span>
+      <span class="post-count">723</span>
       <i class="fa fa-clock-o"></i>
       <span class="post-time-item-text">阅读时长: </span>
       <span class="post-count">3 分钟 </span>
@@ -194,32 +194,109 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <p>放图，这个图最能说明vuex和Vue之间的关系。<br><img src="https://img-blog.csdnimg.cn/20191204154825907.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDEwNTQ1OQ==,size_16,color_FFFFFF,t_70" alt=""></p>
-<h2 id="一、原理"><a href="#一、原理" class="headerlink" title="一、原理"></a>一、原理</h2><p>虚线中的Vuex是用来处理vue的组件，vue compontents（组件）通过dispatch（理解为转发事件）交给action，通过接入后端api完成一些业务，在action中进行异步操作，再将结果以commit（提交事件）方式发给mutations。mutations中最终实现vue compontent的method。state用来存数据，交给组件在页面中显示。</p>
-<p>devtools是vue为了适应浏览器的一个插件，在这个插件中可以看到vue响应的过程，包括每个对象，属性和value。<br><img src="https://img-blog.csdnimg.cn/20191204155831986.png" alt=""><br><img src="https://img-blog.csdnimg.cn/2019120416001188.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDEwNTQ1OQ==,size_16,color_FFFFFF,t_70" alt=""></p>
-<h2 id="二、vuex组成"><a href="#二、vuex组成" class="headerlink" title="二、vuex组成"></a>二、vuex组成</h2><p>1、state<br>2、getter<br>3、mutations<br>4、actions<br>5、modules</p>
-<p> <strong>1. state</strong></p>
-<p> 相当于数据仓库，vuex中的数据放在store实例中，store对象包括 s以上5个部分。<br>store称为单一状态树：所有状态信息保存在一个store中，便于管理。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">const store= new Vuex.Store(&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">  state:&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    //counter 数据变量</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">//保存数据，在其他地方引用$store.state.counter</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">  &#125;,&#125;</span></pre></td></tr></table></figure>
-
-<p> <strong>2. getter</strong><br> 用来获取数据，类似computed计算属性。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">getters:&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">    // adddd()&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    // &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">//类似计算属性computed，使用时$store.getter.adddd&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">//filter过滤,s代表student数组中的一个，结果返回学生信息。</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">this.$store.state.student.filter(s =&gt;&#123; </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">        Return s.age&gt;<span class="number">20</span>&#125;)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">等价于：</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">this.$store.student.filter(s=&gt; s.age&gt;=20) </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">//前一个&gt;= 是过渡函数，filter格式，第二个&gt;=是判断条件</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">more20(state)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">    &#125;,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">    more20Length(state,getter)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">      //调用getter中已有的函数getter.more20.length</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">  &#125;,</span></pre></td></tr></table></figure>
-<p> <strong>3. mutations</strong><br> <strong>在mutations中，vue组件的method，commit给mutation，mutation来处理。</strong><br> 用来修改数据，包括两部分：事件类型type+回调函数；<br>回调函数的参数被称为mutation的负载payload。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">两种提交风格：</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">	this.$store.commit(“appmethodTomutation”,count)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">//此处事件类型appmethodTomutation，payload：count</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">//可以直接由vue.component--&gt;mutations，执行同步操作</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">//如果有异步操作，则需要vue.component--&gt;actions--&gt;mutations</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">	this.$store.commit(&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">type:” appmethodTomutation”,   count   &#125;)</span></pre></td></tr></table></figure>
-
-<ul>
-<li>响应式原理：界面刷新，state中的属性值跟着刷新。如果初始没有该属性，则不跟随响应。</li>
-<li>添加属性:并跟随响应的方法push，pop，Vue.set（state.info,‘address’,’shandong’）</li>
-<li>删除属性：Vue.delete(state.info,’age’)</li>
-<li>Miutation常量：将方法定义为常量，commit时写常量。</li>
+            <p>内容同步更新在语雀笔记里~<br><a name="NsGDe"></a></p>
+<h1 id="一、ES6模块化"><a href="#一、ES6模块化" class="headerlink" title="一、ES6模块化"></a>一、ES6模块化</h1><p><a name="gsNbY"></a></p>
+<h4 id="模块化"><a href="#模块化" class="headerlink" title="模块化"></a>模块化</h4><ul>
+<li><p>将一个功能封装到一个模块中，模块之间相互隔离，通过接口调用；</p>
+</li>
+<li><p>代码复用，便于管理和后期维护。<br><a name="ErL9S"></a></p>
+<h4 id="浏览器模块化规范"><a href="#浏览器模块化规范" class="headerlink" title="浏览器模块化规范"></a>浏览器模块化规范</h4></li>
+<li><p>AMD：require.js</p>
+</li>
+<li><p>CMD:  Sea.js<br><a name="7n9a3"></a></p>
+<h4 id="服务器端模块化规范"><a href="#服务器端模块化规范" class="headerlink" title="服务器端模块化规范"></a>服务器端模块化规范</h4></li>
+<li><p>CommonJS: 1、模块分为单文件模块和包 2、模块导出 module.export 和exports  3、导入require（’模块标识符’）<br><a name="OTTo0"></a></p>
+<h4 id="ES6模块化（浏览器与服务器通用）定义规范"><a href="#ES6模块化（浏览器与服务器通用）定义规范" class="headerlink" title="ES6模块化（浏览器与服务器通用）定义规范"></a>ES6模块化（浏览器与服务器通用）定义规范</h4></li>
+<li><p>每个js是单独的文件</p>
+</li>
+<li><p>导入模块成员用import，暴露使用export<br><a name="Vt5is"></a></p>
+<h4 id="node-js中使用bable实现ES6模块化"><a href="#node-js中使用bable实现ES6模块化" class="headerlink" title="node.js中使用bable实现ES6模块化"></a>node.js中使用bable实现ES6模块化</h4></li>
+<li><p>bable：语法转换插件 npm install –save-dev <a href="#">@bable</a>/cli，polyfill等 </p>
+</li>
+<li><p>项目中创建bable.config.js文件如下，然后npx bable-node index.js，在index.js中 运行bable插件</p>
+</li>
 </ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">//常量：</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">this.$store.commit(INCERES)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">//在mutation中 使用</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">[INCRESE]&#123;方法  &#125;   </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">//还需要在mutation.js中单独定义</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line"> export const INCRESE=‘increse’</span></pre></td></tr></table></figure>
-<p> <strong>4.actions</strong><br> vue的method dispatch给action，actions 中commit 给 mutations，最终在mutation中解决。<br> action执行异步操作：<br> （如setTimeout（（）=&gt;{ state.info.name=’xlkhj’  }, 1000），在mutation中都是同步操作。<br>Context上下文，相当于store</p>
-<p><img src="https://img-blog.csdnimg.cn/20191204185637387.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDEwNTQ1OQ==,size_16,color_FFFFFF,t_70" alt=""><br><img src="https://img-blog.csdnimg.cn/20191204185658484.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDEwNTQ1OQ==,size_16,color_FFFFFF,t_70" alt=""><br><strong>5. modules</strong><br>   store内容过多时可使用，将store的功能模块化，每个模块中又可以有state等。从module中的action取store中的值context.rootGetters。</p>
-<h2 id="三、在vue中使用vuex"><a href="#三、在vue中使用vuex" class="headerlink" title="三、在vue中使用vuex"></a>三、在vue中使用vuex</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">Vue.use(Vuex)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">//<span class="number">1</span>、安装插件</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">//<span class="number">2</span>、创建store对象</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">const store= new Vuex.Store</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">// <span class="number">3</span>、导出store对象：</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">export default store</span></pre></td></tr></table></figure>
-
-
-
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/676682/1584445907745-609448a2-349f-4532-9ba4-a38373903db0.png#align=left&display=inline&height=183&name=image.png&originHeight=366&originWidth=348&size=13767&status=done&style=none&width=174" alt="image.png"><br><a name="2TI2m"></a></p>
+<h4 id="导出"><a href="#导出" class="headerlink" title="导出"></a>导出</h4><ul>
+<li><p>默认*<em>export default { 变量 }  *</em>可以将模块中的私有变量暴露出去</p>
+</li>
+<li><p>按需导出 <strong>export function sum= fumction（）{}</strong><br><a name="gqHcr"></a></p>
+<h4 id="导入"><a href="#导入" class="headerlink" title="导入"></a>导入</h4></li>
+<li><p>import 接收名 from  ‘./sum.js’</p>
+</li>
+<li><p>按需导入 import { s1 } from “./m1.js” s1需要和按需导出的相同</p>
+</li>
+<li><p>直接导入并执行模块代码 <strong>import ‘./m1.js’ ,</strong>不暴露m1的成员，直接执行m1.js<br><a name="xRwDj"></a></p>
+<h1 id="二、webpack"><a href="#二、webpack" class="headerlink" title="二、webpack"></a>二、webpack</h1><p><a name="UpjCf"></a></p>
+<h4 id="1、webpack"><a href="#1、webpack" class="headerlink" title="1、webpack"></a>1、webpack</h4></li>
+<li><p>前端项目打包工具</p>
+</li>
+<li><p>功能：模块化友好，代码压缩混淆、js兼容问题，性能优化等</p>
+</li>
+<li><p>ul&gt;li{这是第$个}*9，实现9列<br><a name="ymYTX"></a></p>
+<h4 id="2、基本使用"><a href="#2、基本使用" class="headerlink" title="2、基本使用"></a>2、基本使用</h4></li>
+<li><p>npm init -y 初始化webpack，创建package.json文件，然后创建src文件夹，index.js中包含所用的方法<br><a name="BpVXg"></a></p>
+<h4 id="3、在项目中使用"><a href="#3、在项目中使用" class="headerlink" title="3、在项目中使用"></a>3、在项目中使用</h4></li>
+<li><p>npm install webpack webpack-cli -D，然后创建package.config.js</p>
+</li>
+</ul>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/676682/1584459101662-a06c5243-749a-4601-bfcd-b1dc89236c26.png#align=left&display=inline&height=76&name=image.png&originHeight=151&originWidth=460&size=8715&status=done&style=none&width=230" alt="image.png"></p>
+<ul>
+<li>在package.json中，</li>
+</ul>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/676682/1584461481927-3d26970b-4f9e-4eea-b3a4-085d0f20baf1.png#align=left&display=inline&height=81&name=image.png&originHeight=161&originWidth=575&size=10668&status=done&style=none&width=287.5" alt="image.png"><br><a name="US0Xe"></a></p>
+<h4 id="4、打包的入口和出口"><a href="#4、打包的入口和出口" class="headerlink" title="4、打包的入口和出口"></a>4、打包的入口和出口</h4><ul>
+<li>默认入口：src-&gt;index.js</li>
+<li>打包输出文件： dist-&gt;main.js</li>
+<li>修改默认出入口</li>
+</ul>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/676682/1584462771067-44b896eb-4883-4bbe-80a0-716a01eb25b2.png#align=left&display=inline&height=140&name=image.png&originHeight=279&originWidth=675&size=20264&status=done&style=none&width=337.5" alt="image.png"><br><a name="CL0na"></a></p>
+<h4 id="5、webpack自动打包"><a href="#5、webpack自动打包" class="headerlink" title="5、webpack自动打包"></a>5、webpack自动打包</h4><ul>
+<li><p>npm install webpack-dev-server -D安装，修改package.json-&gt;script  dev：”webpack-dev-server”，index.html中引用的script改为bundle.js  然后运行 npm run dev<br><a name="ASOYV"></a></p>
+<h4 id="6、配置html-webpack-plugin生成预览页面"><a href="#6、配置html-webpack-plugin生成预览页面" class="headerlink" title="6、配置html-webpack-plugin生成预览页面"></a>6、配置html-webpack-plugin生成预览页面</h4></li>
+<li><p>npm install html-webpack-plugin -D安装插件</p>
+</li>
+</ul>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/676682/1584531500364-bdf9315f-5581-47b6-a86d-1186e4f0171b.png#align=left&display=inline&height=140&name=image.png&originHeight=280&originWidth=842&size=29547&status=done&style=none&width=421" alt="image.png"><br><a name="W7mYB"></a></p>
+<h4 id="7、package-json中的配置"><a href="#7、package-json中的配置" class="headerlink" title="7、package.json中的配置"></a>7、package.json中的配置</h4><ul>
+<li><p>–open 打包后自动打开网页</p>
+</li>
+<li><p>–host 配置ip –host 127.0.0.1</p>
+</li>
+<li><p>–port配置端口 –port 8888<br><a name="J3QFU"></a></p>
+<h4 id="8、webpack加载器–loader打包非js结尾的模块"><a href="#8、webpack加载器–loader打包非js结尾的模块" class="headerlink" title="8、webpack加载器–loader打包非js结尾的模块"></a>8、webpack加载器–loader打包非js结尾的模块</h4></li>
+<li><p>打包css/less/sess文件 npm i style-loader css-loader -D安装less-loader/sess-loader</p>
+</li>
+</ul>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/676682/1584540093835-427dc729-1390-49db-980d-560bbbb0859a.png#align=left&display=inline&height=135&name=image.png&originHeight=270&originWidth=852&size=26002&status=done&style=none&width=426" alt="image.png"></p>
+<p><a name="pI340"></a></p>
+<h4 id="9、webpack加载器–配置postCSS自动添加css兼容前缀"><a href="#9、webpack加载器–配置postCSS自动添加css兼容前缀" class="headerlink" title="9、webpack加载器–配置postCSS自动添加css兼容前缀"></a>9、webpack加载器–配置postCSS自动添加css兼容前缀</h4><ul>
+<li>运行npm i postcss-loader autoprefixer -D</li>
+<li>根目录创建配置文件postcss.config.js,并在<strong>webpack.config.js中module-&gt;rules中加入postcss-loader</strong></li>
+</ul>
+<p><strong><img src="https://cdn.nlark.com/yuque/0/2020/png/676682/1584540886725-05a9b4a8-1e3b-418d-ac9b-98b3f290e0cd.png#align=left&display=inline&height=79&name=image.png&originHeight=158&originWidth=503&size=9720&status=done&style=none&width=251.5" alt="image.png"></strong><br />**<br><a name="ImOAL"></a></p>
+<h4 id="10、webpack加载器–打包图片和字体"><a href="#10、webpack加载器–打包图片和字体" class="headerlink" title="10、webpack加载器–打包图片和字体"></a>10、webpack加载器–打包图片和字体</h4><ul>
+<li>npm i url-loader file-loader -D</li>
+<li>在webpack.config.js中module-&gt;rules中加入如下规则</li>
+</ul>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/676682/1584541555342-da4c7182-071c-4b30-bc35-121cfcdd3499.png#align=left&display=inline&height=189&name=image.png&originHeight=377&originWidth=873&size=41931&status=done&style=none&width=436.5" alt="image.png"></p>
+<p><a name="x9Pz2"></a></p>
+<h4 id="11、webpack加载器–打包js文件中的高级语法"><a href="#11、webpack加载器–打包js文件中的高级语法" class="headerlink" title="11、webpack加载器–打包js文件中的高级语法"></a>11、webpack加载器–打包js文件中的高级语法</h4><ul>
+<li>安装babel转换器相关的包</li>
+</ul>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/676682/1584542326766-400c145a-0dc0-4563-86b8-e1b6a34ce48d.png#align=left&display=inline&height=50&name=image.png&originHeight=100&originWidth=617&size=59119&status=done&style=none&width=308.5" alt="image.png"><br /><img src="https://cdn.nlark.com/yuque/0/2020/png/676682/1584542874992-698dc63a-a39a-4dc8-b8e6-5d35f58f1172.png#align=left&display=inline&height=120&name=image.png&originHeight=241&originWidth=951&size=28577&status=done&style=none&width=475.5" alt="image.png"><br /></p>
+<p><a name="s4kF7"></a></p>
+<h4 id="12、webpack加载器–配置vue组件"><a href="#12、webpack加载器–配置vue组件" class="headerlink" title="12、webpack加载器–配置vue组件"></a>12、webpack加载器–配置vue组件</h4><ul>
+<li>npm i vue-loader vue-template-compiler -D</li>
+</ul>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/676682/1584545532437-f3cc94c1-ccf9-4948-995a-444f81ea2430.png#align=left&display=inline&height=181&name=image.png&originHeight=361&originWidth=792&size=24755&status=done&style=none&width=396" alt="image.png"><br><a name="tcsBb"></a></p>
+<h4 id="13、webpack使用vue"><a href="#13、webpack使用vue" class="headerlink" title="13、webpack使用vue"></a>13、webpack使用vue</h4><ul>
+<li>npm i vue -S 安装</li>
+</ul>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/676682/1584546247787-3550a3b1-363a-43f7-8849-b48186d3b266.png#align=left&display=inline&height=111&name=image.png&originHeight=222&originWidth=652&size=22094&status=done&style=none&width=326" alt="image.png"><br><a name="DjXKS"></a></p>
+<h4 id="14、webpack-打包发布vue"><a href="#14、webpack-打包发布vue" class="headerlink" title="14、webpack 打包发布vue"></a>14、webpack 打包发布vue</h4><ul>
+<li>在package.json 中配置scripts： “build”：”webpack -p”,即可通过npm run build 打包</li>
+</ul>
 
         </div>
         <footer class="article-footer">
@@ -272,17 +349,28 @@ window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMin
             "@type": "Person",
             "name": "He Zhaoxiang"
         },
-        "headline": "Vue.js之vuex入门",
-        "image": "https://hezhaoxiang.workhttps://img-blog.csdnimg.cn/20191204154825907.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDEwNTQ1OQ==,size_16,color_FFFFFF,t_70",
-        "keywords": "Vuex",
-        "genre": "web前端 Vue学习 Vuex",
-        "datePublished": "2019-12-04",
-        "dateCreated": "2019-12-04",
-        "dateModified": "2019-12-10",
-        "url": "/https:/hezhaoxiang.work/2019/learn-vuex/",
-        "description": "放图，这个图最能说明vuex和Vue之间的关系。
-一、原理虚线中的Vuex是用来处理vue的组件，vue compontents（组件）通过dispatch（理解为转发事件）交给action，通过接入后端api完成一些业务，在action中进行异步操作，再将结果以commit（提交事件）方式发给mutations。mutations中最终实现vue compontent的method。state用",
-        "wordCount": 324
+        "headline": "web前端--ES6模块化和webpack",
+        "image": "https://hezhaoxiang.workhttps://cdn.nlark.com/yuque/0/2020/png/676682/1584445907745-609448a2-349f-4532-9ba4-a38373903db0.png#align=left&display=inline&height=183&name=image.png&originHeight=366&originWidth=348&size=13767&status=done&style=none&width=174",
+        "keywords": "webpack",
+        "genre": "web前端 webpack",
+        "datePublished": "2020-03-17",
+        "dateCreated": "2020-03-17",
+        "dateModified": "2020-03-19",
+        "url": "/https:/hezhaoxiang.work/2020/es6-webpack/",
+        "description": "内容同步更新在语雀笔记里~
+一、ES6模块化
+模块化
+将一个功能封装到一个模块中，模块之间相互隔离，通过接口调用；
+
+代码复用，便于管理和后期维护。
+浏览器模块化规范
+AMD：require.js
+
+CMD:  Sea.js
+服务器端模块化规范
+CommonJS: 1、模块分为单文件模块和包 2、模块导出 module.export 和exports  3、导入require（’模块标识符’）
+E",
+        "wordCount": 240
     }
 </script>
 
@@ -360,20 +448,10 @@ window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMin
         
 <nav id="article-nav">
     
-        <a href="/2019/hexo-hueman/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">下一篇</strong>
-        <p class="article-nav-title">
-        
-            教你半小时搭建博客网站-HEXO-hueman主题个人定制
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
     
-    
-        <a href="/2019/learn-vue-todoList/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2020/learnes6-01/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">上一篇</strong>
-        <p class="article-nav-title">Vue.js小Demo--todoList待办事项清单</p>
+        <p class="article-nav-title">web前端--ES6初探</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -527,7 +605,7 @@ window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMin
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'https://hezhaoxiang.work/2019/learn-vuex/';
+    var disqus_url = 'https://hezhaoxiang.work/2020/es6-webpack/';
     
     (function() {
     var dsq = document.createElement('script');
