@@ -12,16 +12,16 @@
     
     <meta name="keywords" content="Demo,JavaScript" />
     
-    <meta name="description" content="这周断断续续完成了2048小游戏的网页版，这里主要讲这款游戏的逻辑和代码实现。参考：慕课网2048私人订制  https:&#x2F;&#x2F;www.imooc.com&#x2F;learn&#x2F;76对着视频把源码敲了一遍，这里作一个思路整理。 一、整体思路1、游戏页面结构及样式2、2048游戏逻辑3、手机端优化思路可以划分为上三步，在第一步中，首先规划好整体的排版。 页面内容包括2048header、游戏开始button、得">
+    <meta name="description" content="date: 2019-12-26 22:30:00title: 购物街0-首页开发（Vue购物，学它就对了！）author: He Zhaoxiangid: mall-home-alltags:  购物街categories: Demo 购物街-Vue   这周断断续续完成了2048小游戏的网页版，这里主要讲这款游戏的逻辑和代码实现。参考：慕课网2048私人订制  https:&#x2F;&#x2F;www.imoo">
 <meta name="keywords" content="Demo,JavaScript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="web--2048小游戏复现（慕课网）">
 <meta property="og:url" content="https:&#x2F;&#x2F;hezhaoxiang.work&#x2F;2019&#x2F;howtodo-2048demo&#x2F;index.html">
 <meta property="og:site_name" content="前端小窝--&gt;小白之家">
-<meta property="og:description" content="这周断断续续完成了2048小游戏的网页版，这里主要讲这款游戏的逻辑和代码实现。参考：慕课网2048私人订制  https:&#x2F;&#x2F;www.imooc.com&#x2F;learn&#x2F;76对着视频把源码敲了一遍，这里作一个思路整理。 一、整体思路1、游戏页面结构及样式2、2048游戏逻辑3、手机端优化思路可以划分为上三步，在第一步中，首先规划好整体的排版。 页面内容包括2048header、游戏开始button、得">
+<meta property="og:description" content="date: 2019-12-26 22:30:00title: 购物街0-首页开发（Vue购物，学它就对了！）author: He Zhaoxiangid: mall-home-alltags:  购物街categories: Demo 购物街-Vue   这周断断续续完成了2048小游戏的网页版，这里主要讲这款游戏的逻辑和代码实现。参考：慕课网2048私人订制  https:&#x2F;&#x2F;www.imoo">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20191102193244964.png?x-oss-process&#x3D;image&#x2F;watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDEwNTQ1OQ&#x3D;&#x3D;,size_16,color_FFFFFF,t_70">
-<meta property="og:updated_time" content="2019-12-10T07:37:24.000Z">
+<meta property="og:updated_time" content="2020-04-01T18:30:06.525Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20191102193244964.png?x-oss-process&#x3D;image&#x2F;watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDEwNTQ1OQ&#x3D;&#x3D;,size_16,color_FFFFFF,t_70">
     
@@ -194,11 +194,18 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <p>这周断断续续完成了2048小游戏的网页版，这里主要讲这款游戏的逻辑和代码实现。<br>参考：慕课网2048私人订制  <a href="https://www.imooc.com/learn/76" target="_blank" rel="noopener">https://www.imooc.com/learn/76</a><br>对着视频把源码敲了一遍，这里作一个思路整理。</p>
+            <h1 id=""><a href="#" class="headerlink" title=""></a></h1><p>date: 2019-12-26 22:30:00<br>title: 购物街0-首页开发（Vue购物，学它就对了！）<br>author: He Zhaoxiang<br>id: mall-home-all<br>tags:</p>
+<ul>
+<li>购物街<br>categories:</li>
+<li>Demo</li>
+<li>购物街-Vue</li>
+</ul>
+<hr>
+<p>这周断断续续完成了2048小游戏的网页版，这里主要讲这款游戏的逻辑和代码实现。<br>参考：慕课网2048私人订制  <a href="https://www.imooc.com/learn/76" target="_blank" rel="noopener">https://www.imooc.com/learn/76</a><br>对着视频把源码敲了一遍，这里作一个思路整理。</p>
 <h2 id="一、整体思路"><a href="#一、整体思路" class="headerlink" title="一、整体思路"></a>一、整体思路</h2><p>1、游戏页面结构及样式<br>2、2048游戏逻辑<br>3、手机端优化<br>思路可以划分为上三步，在第一步中，首先规划好整体的排版。<br><img src="https://img-blog.csdnimg.cn/20191102193244964.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDEwNTQ1OQ==,size_16,color_FFFFFF,t_70" alt=""></p>
 <p>页面内容包括2048header、游戏开始button、得分字段<p>、整个4*4方格grid-container。在container中每一个cell后期都要绑定一个number。</p>
 <h2 id="二、游戏页面结构及样式"><a href="#二、游戏页面结构及样式" class="headerlink" title="二、游戏页面结构及样式"></a>二、游戏页面结构及样式</h2><p>2048，开始、得分<br>设置text-align：center；margin左右auto居中，字体背景颜色等；</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">&lt;<span class="selector-tag">header</span>&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">	&lt;h1&gt;2048&lt;/h1&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">	&lt;a href="javascrpit:newgame();"&gt;开始&lt;/a&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">	&lt;p&gt;得分&lt;/p&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">&lt;/header&gt;</span></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">&lt;header&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">	&lt;h1&gt;2048&lt;/h1&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">	&lt;a href="javascrpit:newgame();"&gt;开始&lt;/a&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">	&lt;p&gt;得分&lt;/p&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">&lt;/header&gt;</span></pre></td></tr></table></figure>
 <p>4*4方格,盒子模型</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">&lt;div id="grid-container"&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">	&lt;div id="grid-cell-0-0&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">	&lt;/div&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">&lt;/div&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">//grid-cell-0-0到3-3</span></pre></td></tr></table></figure>
 <p>container设置width、height、background，bord-radius边框，padding，margin、position（relative相对定位，相当于浮动）<br>grid-cell设置width，height、background-color、position（absolute绝对定位，可以被覆盖）<br>number-cell覆盖每个grid-cell，，其中的数字为border-number，初使为0</p>
@@ -278,12 +285,17 @@ window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMin
         "genre": "Demo 2048小游戏",
         "datePublished": "2019-11-01",
         "dateCreated": "2019-11-01",
-        "dateModified": "2019-12-10",
+        "dateModified": "2020-04-02",
         "url": "/https:/hezhaoxiang.work/2019/howtodo-2048demo/",
-        "description": "这周断断续续完成了2048小游戏的网页版，这里主要讲这款游戏的逻辑和代码实现。参考：慕课网2048私人订制  https://www.imooc.com/learn/76对着视频把源码敲了一遍，这里作一个思路整理。
-一、整体思路1、游戏页面结构及样式2、2048游戏逻辑3、手机端优化思路可以划分为上三步，在第一步中，首先规划好整体的排版。
-页面内容包括2048header、游戏开始button、得",
-        "wordCount": 8249
+        "description": "date: 2019-12-26 22:30:00title: 购物街0-首页开发（Vue购物，学它就对了！）author: He Zhaoxiangid: mall-home-alltags:
+
+购物街categories:
+Demo
+购物街-Vue
+
+
+这周断断续续完成了2048小游戏的网页版，这里主要讲这款游戏的逻辑和代码实现。参考：慕课网2048私人订制  https://www.imoo",
+        "wordCount": 8258
     }
 </script>
 
