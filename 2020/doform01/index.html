@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+
+    
+
+    
+    <title>美团实习总结一--Echarts看板总结 | 前端小窝--&gt;小白之家</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="keywords" content="实习" />
+    
+    <meta name="description" content="策略看板总结 （一）基础 js的native和prevent   .native: 原生js的绑定系统事件，vue中绑定按键事件 @keyup.enter.native .prevent: @submit.native.prevent 阻止默认提交   空对象补足，补充key：null，先拿到allkeys，key数组，在空对象中添加key和value  数据格式转换，infoMap  对象数组">
+<meta name="keywords" content="实习">
+<meta property="og:type" content="article">
+<meta property="og:title" content="美团实习总结一--Echarts看板总结">
+<meta property="og:url" content="https:&#x2F;&#x2F;hezhaoxiang.work&#x2F;2020&#x2F;doform01&#x2F;index.html">
+<meta property="og:site_name" content="前端小窝--&gt;小白之家">
+<meta property="og:description" content="策略看板总结 （一）基础 js的native和prevent   .native: 原生js的绑定系统事件，vue中绑定按键事件 @keyup.enter.native .prevent: @submit.native.prevent 阻止默认提交   空对象补足，补充key：null，先拿到allkeys，key数组，在空对象中添加key和value  数据格式转换，infoMap  对象数组">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https:&#x2F;&#x2F;cdn.nlark.com&#x2F;yuque&#x2F;0&#x2F;2020&#x2F;png&#x2F;676682&#x2F;1599503267454-095e906f-31a6-40a4-b105-db01231b2466.png#align&#x3D;left&amp;display&#x3D;inline&amp;height&#x3D;116&amp;margin&#x3D;%5Bobject%20Object%5D&amp;name&#x3D;image.png&amp;originHeight&#x3D;232&amp;originWidth&#x3D;954&amp;size&#x3D;30972&amp;status&#x3D;done&amp;style&#x3D;none&amp;width&#x3D;477">
+<meta property="og:updated_time" content="2020-09-07T19:03:28.497Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;cdn.nlark.com&#x2F;yuque&#x2F;0&#x2F;2020&#x2F;png&#x2F;676682&#x2F;1599503267454-095e906f-31a6-40a4-b105-db01231b2466.png#align&#x3D;left&amp;display&#x3D;inline&amp;height&#x3D;116&amp;margin&#x3D;%5Bobject%20Object%5D&amp;name&#x3D;image.png&amp;originHeight&#x3D;232&amp;originWidth&#x3D;954&amp;size&#x3D;30972&amp;status&#x3D;done&amp;style&#x3D;none&amp;width&#x3D;477">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="前端小窝--&gt;小白之家" type="application/atom+xml" />
+    
+
+    
+        <link rel="icon" href="/css/images/favicon.ico" />
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">Do what u love,  love what u do .</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">主页</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Demo/">Demo</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Demo/2048%E5%B0%8F%E6%B8%B8%E6%88%8F/">2048小游戏</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Demo/todoList/">todoList</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Demo/%E5%B0%8F%E6%8A%80%E5%B7%A7/">小技巧</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Demo/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">搭建博客</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Demo/%E8%B4%AD%E7%89%A9-Vue/">购物-Vue</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/">web前端</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/ES6/">ES6</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/HTML-CSS/">HTML&CSS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/JavaScript/">JavaScript</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/Vue%E5%AD%A6%E4%B9%A0/">Vue学习</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/webpack/">webpack</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E7%AB%9E%E8%B5%9B/">竞赛</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E7%AB%9E%E8%B5%9B/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">数学建模</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E7%BE%8E%E5%9B%A2%E5%AE%9E%E4%B9%A0/">美团实习</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E7%BE%8E%E5%9B%A2%E5%AE%9E%E4%B9%A0/%E5%B7%A5%E4%BD%9C%E6%80%BB%E7%BB%93/">工作总结</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/">计算机基础</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/http/">http</a></li></ul></li></ul>
+                                    
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/board">小秘密</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="想要查找什么..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/%E7%BE%8E%E5%9B%A2%E5%AE%9E%E4%B9%A0/">美团实习</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/%E7%BE%8E%E5%9B%A2%E5%AE%9E%E4%B9%A0/%E5%B7%A5%E4%BD%9C%E6%80%BB%E7%BB%93/">工作总结</a>
+    </h1>
+</div>
+
+                        <div class="main-body-content">
+                            <article id="post-实习总结一一一" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        美团实习总结一--Echarts看板总结
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+      <i class="fa fa-calendar"></i>
+      <a href="/2020/doform01/" class="article-date">
+         <time datetime="2020-06-30T14:36:00.000Z" itemprop="datePublished">2020-06-30</time>
+      </a>
+    </div>
+
+
+                
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/%E5%AE%9E%E4%B9%A0/" rel="tag">实习</a>
+    </div>
+
+                <!---cloud阅读量统计系统-->
+                阅读数量:<span id="/2020/doform01/" class="leancloud_visitors" data-flag-title="美团实习总结一--Echarts看板总结"></span>次
+                
+
+                
+   <div class="article-counter">
+      <i class="fa fa-file-word-o"></i>
+      <span class="post-count-item-text">本文字数: </span>
+      <span class="post-count">1.7k</span>
+      <i class="fa fa-clock-o"></i>
+      <span class="post-time-item-text">阅读时长: </span>
+      <span class="post-count">6 分钟 </span>
+   </div>
+
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <hr>
+<h1 id="策略看板总结"><a href="#策略看板总结" class="headerlink" title="策略看板总结"></a>策略看板总结</h1><p><a name="NnaXo"></a></p>
+<h1 id="（一）基础"><a href="#（一）基础" class="headerlink" title="（一）基础"></a>（一）基础</h1><ol>
+<li>js的native和prevent</li>
+</ol>
+<ul>
+<li>.native: 原生js的绑定系统事件，vue中绑定按键事件 @keyup.enter.native<br /></li>
+<li>.prevent: @submit.native.prevent 阻止默认提交</li>
+</ul>
+<ol start="3">
+<li><p>空对象补足，补充key：null，先拿到allkeys，key数组，在空对象中添加key和value</p>
+</li>
+<li><p>数据格式转换，infoMap</p>
+<p> 对象数组中，相同key的值进行合并。</p>
+</li>
+<li><p>async await</p>
+<p>异步执行，先执行async中的部分，await部分异步（请求到结果再返回）</p>
+</li>
+<li><p>请求方法request </p>
+</li>
+<li><p>样式布局 display：block，按组件划分，高度别写死，多使用margin-top，margin-bottom</p>
+</li>
+<li><p>json处理</p>
+</li>
+</ol>
+<ul>
+<li>JSON.stringify(myJson); json转为对象格式；</li>
+<li>JSON.parse(myObj); 对象转为json格式；</li>
+</ul>
+<ol start="9">
+<li><br />
+<a name="kkYHJ"></a>
+# （二）vue知识
+</li>
+<li><p><strong>vuex使用</strong></p>
+</li>
+</ol>
+<ul>
+<li>store：在main.js中引用store.js，加入到根vue中;<br /></li>
+<li>state成员函数（变量）定义；<br /></li>
+<li>mutation相当于method，使用处 this.$store.commit(‘函数名’，’变量‘)进行保存；<br /></li>
+<li>action：处理异步，可以封装commit<br />method1Action 。。。 commit(); 优点是mutation是同步操作，不能进行其中的变量追踪，action默认为一个primise，执行异步；<br /></li>
+<li>module：多个store划分管理；<br /></li>
+</ul>
+<ol start="2">
+<li><strong>watch钩子使用–三种</strong></li>
+</ol>
+<ul>
+<li>变量名：直接加方法名  city： ’fun1‘；city变化时才执行fun1;<br /></li>
+<li>immediate： true 立即执行handler方法<br /></li>
+<li>deep: true 监听对象的变化<br /></li>
+</ul>
+<ol start="3">
+<li><strong>nextick原理和使用</strong></li>
+</ol>
+<ul>
+<li><p>this.$nextick(()=&gt; {}) （异步）</p>
+</li>
+<li><p>vue.nextick 是获取到Dom对象进行操作，一般用于从后台获取数据后，进行DOM更新（如项目中用于更新echart渲染的图表）</p>
+</li>
+<li><p>this.nextick则绑定到了当前环境下的DOM实例</p>
+</li>
+<li><p>使用：在mounted或method中执行，更新DOM，若用于created，在DOM渲染完之后，才能获取DOM值<br><a name="frDby"></a></p>
+<h1 id="（三）element组件"><a href="#（三）element组件" class="headerlink" title="（三）element组件"></a>（三）element组件</h1><p><a name="c0pAf"></a></p>
+<h3 id="1、el-input"><a href="#1、el-input" class="headerlink" title="1、el-input"></a>1、el-input</h3></li>
+<li><p>:maxlength=”2” 限制输入的最大长度为2（两个数字）注意：el-input-number 对maxlength属性无效(该组件有max,min) </p>
+</li>
+<li><p>或者用原生js方法 <input type="text" maxlength="2"></input>  </p>
+</li>
+<li><inoput type="text" oninput="if(value.length > 2) value.slice(0,2) " /></li>
+<li><p>校验：@blur=“method1” 输入框失去焦点时执行method1 ，报错：this.$message.error(‘数据格式错误’)；（el组件）<br><a name="gxXTv"></a></p>
+<h3 id="2、el-button"><a href="#2、el-button" class="headerlink" title="2、el-button"></a>2、el-button</h3></li>
+<li><p>plain：空心形式, size=”mini”</p>
+</li>
+<li><p>type=”primary”</p>
+</li>
+<li><p>@click=”method2” 绑定事件<br><a name="eb32O"></a></p>
+<h3 id="3、el-select-el-option"><a href="#3、el-select-el-option" class="headerlink" title="3、el-select el-option"></a>3、el-select el-option</h3><p>el-select</p>
+</li>
+<li><p>v-model=”selected”  绑定选中的值</p>
+</li>
+<li><p>filterable  支持输入搜索</p>
+</li>
+<li><p>:plaecholder=”请选择”</p>
+</li>
+<li><p>@change=”chooseMethod”  事件绑定在el-select上</p>
+</li>
+</ul>
+<p>el-option</p>
+<ul>
+<li><p>&lt; v-for=”item in options”  :key=”item.value” :label=”item.label” :value=”item.value” &gt;</p>
+</li>
+<li><p>{label:’选项一’， value: ‘1’ } label是显示的选项，key以value来确定每一个唯一<br><a name="zJvKC"></a></p>
+<h3 id="4、el-date-picker"><a href="#4、el-date-picker" class="headerlink" title="4、el-date-picker"></a>4、el-date-picker</h3></li>
+<li><p>type=”date”,datetime, daterange  时间选择分别为“某天，某天具体到分，日期范围”</p>
+</li>
+<li><p>v-model=”toDate” toDate是日期数组，使用时须转为20200701格式</p>
+</li>
+<li><p>range-separator=”-“   start-placeholder=”开始日期”  end-placeholder=”结束日期”&gt;<br><a name="rwxgh"></a></p>
+<h3 id="5、el-radio"><a href="#5、el-radio" class="headerlink" title="5、el-radio"></a>5、el-radio</h3></li>
+<li><p><el-radio v-model="oneRadio" v-for="item in radiosList" :key="item.value" :label="item.value"></el-radio>   注：radiosList是一个对象数组，oneRadio是一个数字或字符，绑定的是 :label 的内容</p>
+</li>
+<li><p>按钮形式：<el-radio-group v-model="chooseType"></p>
+</li>
+</ul>
+<p><el-radio-button :label="choose1">选项一</el-radio-button><br /><el-radio-btton :label="choose2">x</el-radio-button><br /></el-radio-group><br><a name="R6t2S"></a></p>
+<h3 id="6、el-form"><a href="#6、el-form" class="headerlink" title="6、el-form"></a>6、el-form</h3><ul>
+<li><strong>el-form表单绑定form所有的数据，可放置多个控件 input，select等,</strong></li>
+<li><el-form v-model="formdata"> 
+
+</li>
+</ul>
+<p><e-form-item ><el-input v-model="formdata.name"></el-form-item><br /></el-form><br><a name="oaVo7"></a></p>
+<h3 id="7、el-card"><a href="#7、el-card" class="headerlink" title="7、el-card"></a>7、el-card</h3><ul>
+<li><p>卡片式展示,可实现阴影效果；</p>
+</li>
+<li><p><el-card body-style="{padding: '4px, 5px'; width: '100px'}" shadow="hover"></el-card><br><a name="yeRaw"></a></p>
+<h3 id="8、el-upload"><a href="#8、el-upload" class="headerlink" title="8、el-upload"></a>8、el-upload</h3></li>
+<li><p>action=”<a href="https://jsonplaceholder.typicode.com/posts/&quot;" target="_blank" rel="noopener">https://jsonplaceholder.typicode.com/posts/&quot;</a> 上传位置，post方式</p>
+</li>
+<li><p>:limit=”3”  数量限制</p>
+</li>
+<li><p>on-success=”m1”</p>
+</li>
+<li><p>on-remove=”m2”</p>
+</li>
+<li><p>on-preview=”m3” 图片放大预览</p>
+</li>
+</ul>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/676682/1599503267454-095e906f-31a6-40a4-b105-db01231b2466.png#align=left&display=inline&height=116&margin=%5Bobject%20Object%5D&name=image.png&originHeight=232&originWidth=954&size=30972&status=done&style=none&width=477" alt="image.png"><br />，m3里 得到imgUrl</p>
+<ul>
+<li><p>list-type=”picture-card/picture”展示类型：卡片或直接图片<br><a name="jHjQd"></a></p>
+<h3 id="9、el-table"><a href="#9、el-table" class="headerlink" title="9、el-table"></a>9、el-table</h3></li>
+<li><p>用法与原理：</p>
+</li>
+</ul>
+<p>table按行展示数据，多行展示可以在tableData中n个对象–&gt;n行<br />或: 数组v-for形式，每个el-table-column的prop与tableData中对应，如0303，0304<br /><el-table :data="params" ><br />&lt;el-table-column <br />v-for=”(item index) in tableHead”<br />:prop=”item”<br />:label=”item”  //表头展示内容<br />:key=”index” &gt;<br /><template><br /><br><br /></template><br /></el-table-column><br /></el-table><br />tableData格式：【{0303: []; 0304: []; },{0303: []; 0304: [];}】是一个对象数组，<br><a name="dS01R"></a></p>
+<h1 id="（四）echarts组件"><a href="#（四）echarts组件" class="headerlink" title="（四）echarts组件"></a>（四）echarts组件</h1><ol>
+<li>主要用法：设置chartX和series</li>
+</ol>
+<ul>
+<li>chartX值：从接口数据中读取，chartX = Object.keys(result);</li>
+<li>series = [{name,data,type}] 数组，处理后的result push进数组；其中name为图例，data数组，type为line或bar；</li>
+</ul>
+<ol start="2">
+<li>读取接口数据，设置chartX，添加series–&gt;chartInit</li>
+</ol>
+<ul>
+<li>request中包含的请求参数，通过 async fun1 –&gt; try{ await result=this.$service.接口名（request）}–&gt;catch(err){} –&gt;finally{}</li>
+</ul>
+<ol start="3">
+<li>图表渲染</li>
+</ol>
+<ul>
+<li>setTooltip（提示词中的formatter，修改提示顺序，样式等），</li>
+<li>setLegendOption，title，</li>
+<li>setyAxis（formatter中 小数-&gt;百分比）</li>
+</ul>
+<ol start="4">
+<li>tooltip提示词修改，排序</li>
+<li>图例顺序修改</li>
+<li>个人思考：大数据量情况下，echarts会不会慢？如何优化？</li>
+</ol>
+<p>查阅资料，使用echarts中的datazoom方式。</p>
+<ol start="7">
+<li><p>如果不使用monitorChart，自己是否可以渲染图表？</p>
+<p>  原本echarts组件所有设置均在option中，monitorChart对echarts的封装，完成配置项即可。<br><a name="7JBuM"></a></p>
+<h1 id="（五）体会-amp-思考"><a href="#（五）体会-amp-思考" class="headerlink" title="（五）体会&amp;思考"></a>（五）体会&amp;思考</h1><p><a name="DImiL"></a></p>
+<h3 id="1、组件化封装和使用"><a href="#1、组件化封装和使用" class="headerlink" title="1、组件化封装和使用"></a>1、组件化封装和使用</h3></li>
+</ol>
+<ul>
+<li><p>单独功能划分为组件，保证组件内功能单一，不会影响其他功能；</p>
+</li>
+<li><p>封装现有组件进行使用，修改配置项，如monitorCharts组件，对title，chartX，legend，tooltip,type等方面都涉及到；使用时查看组件如何封装、之前如何使用，或”echarts官网–&gt;配置项”都能找到相关设置；<br><a name="a34Uu"></a></p>
+<h3 id="2、通过接口获取数据，进行处理"><a href="#2、通过接口获取数据，进行处理" class="headerlink" title="2、通过接口获取数据，进行处理"></a>2、通过接口获取数据，进行处理</h3></li>
+<li><p>对接口的封装，理解接口封装的原理，使用request进行请求数据。</p>
+</li>
+<li><p>后端数据如何处理，转换成自己所需要的格式，进行合理变换，再进行渲染，这一步很重要。</p>
+</li>
+<li><br /></li>
+<li><p>个人思考：大数据量情况下，echarts会不会慢？如何优化？</p>
+</li>
+<li><p>如果不使用monitorChart，自己是否可以渲染图表<br><a name="0Gqtl"></a></p>
+<h3 id="3、项目整体构思，实现思路"><a href="#3、项目整体构思，实现思路" class="headerlink" title="3、项目整体构思，实现思路"></a>3、项目整体构思，实现思路</h3><p><a name="ytQG3"></a></p>
+<h4 id="（1）流程图"><a href="#（1）流程图" class="headerlink" title="（1）流程图"></a>（1）流程图</h4><p><img src="https://cdn.nlark.com/yuque/0/2020/png/676682/1599503304407-8811c2c4-9956-4ee9-a082-43d019722fac.png#align=left&display=inline&height=401&margin=%5Bobject%20Object%5D&name=image.png&originHeight=801&originWidth=869&size=73134&status=done&style=none&width=434.5" alt="image.png"><br><a name="Bcr8P"></a></p>
+<h4 id="（2）策略看板–图表相关实现"><a href="#（2）策略看板–图表相关实现" class="headerlink" title="（2）策略看板–图表相关实现"></a>（2）策略看板–图表相关实现</h4><p>实现思路：<br /><img src="https://cdn.nlark.com/yuque/0/2020/png/676682/1599503337077-e4492628-b02d-4f93-b4c7-74afbee1260b.png#align=left&display=inline&height=296&margin=%5Bobject%20Object%5D&name=image.png&originHeight=591&originWidth=1257&size=95376&status=done&style=none&width=628.5" alt="image.png"><br /></p>
+</li>
+</ul>
+<p><a name="fqcY7"></a></p>
+<h4 id="（3）所遇难点及解决"><a href="#（3）所遇难点及解决" class="headerlink" title="（3）所遇难点及解决"></a>（3）所遇难点及解决</h4><table>
+<thead>
+<tr>
+<th align="left">难点</th>
+<th align="left">原因及解决</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">1、小数–&gt;百分比保留两位小数<br />问题：Math.floor(num * 10000) /100 不起效果</td>
+<td align="left">已解决：(num *100).toFixed(2) ;</td>
+</tr>
+<tr>
+<td align="left">2、图例显示顺序<br />要求固定图例顺序及相应颜色</td>
+<td align="left">已解决： 在series中给初始值<br />缺点：通用性不好，不易扩展</td>
+</tr>
+<tr>
+<td align="left">3、城市监听问题，二级监听中一直晚一步</td>
+<td align="left">原因：点击查询后才将城市日期发到vuex中，监听时会造成两次请求接口的参数不一样，导致一直晚一步。<br />解决：在第一个折线图中，初始化时dispatch，让vuex中有日期和城市，table中每次变化，第一个折线图就发到vuex</td>
+</tr>
+</tbody></table>
+<br />
+<a name="Uewoq"></a>
+#### （4）后续思考
+
+<ul>
+<li><p>执行效率</p>
+<p>   从接口请求数据，转为echarts所需的series格式，然后将series和chartX渲染。在柱状图中，请求数据范围一般在7天到30天，渲染时间5秒以内。<br />     若大数据量，如上百天的情况，使用datazoom为宜，datazoom是echarts自带缩放属性，可拖动x轴坐标的范围，只显示用户选择的数据，方法较好。</p>
+</li>
+<li><p>如何优化</p>
+<pre><code>一是echart渲染问题，使用datazoom；&lt;br /&gt;     二是代码复用方面，三个chart中部分代码是相似的，如chartInit，请求接口等，可进行设定方法参数进行抽取； 缺点是后期扩展不便，可能需要对数据进行其他处理，或增加功能。&lt;br /&gt;</code></pre></li>
+</ul>
+
+        </div>
+        <footer class="article-footer">
+            
+
+    <div class="bdsharebuttonbox">
+    <a href="#" class="bds_more" data-cmd="more">分享到：</a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间">QQ空间</a>
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博">新浪微博</a>
+    <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博">腾讯微博</a>
+    <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网">人人网</a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信">微信</a>
+</div>
+<script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{"bdSize":16}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+<style>
+    .bdshare_popup_box {
+        border-radius: 4px;
+        border: #e1e1e1 solid 1px;
+    }
+    .bdshare-button-style0-16 a,
+    .bdshare-button-style0-16 .bds_more {
+        padding-left: 20px;
+        margin: 6px 10px 6px 0;
+    }
+    .bdshare_dialog_list a,
+    .bdshare_popup_list a,
+    .bdshare_popup_bottom a {
+        font-family: 'Microsoft Yahei';
+    }
+    .bdshare_popup_top {
+        display: none;
+    }
+    .bdshare_popup_bottom {
+        height: auto;
+        padding: 5px;
+    }
+</style>
+
+
+
+        </footer>
+    </div>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "author": {
+            "@type": "Person",
+            "name": "He Zhaoxiang"
+        },
+        "headline": "美团实习总结一--Echarts看板总结",
+        "image": "https://hezhaoxiang.workhttps://cdn.nlark.com/yuque/0/2020/png/676682/1599503267454-095e906f-31a6-40a4-b105-db01231b2466.png#align=left&display=inline&height=116&margin=%5Bobject%20Object%5D&name=image.png&originHeight=232&originWidth=954&size=30972&status=done&style=none&width=477",
+        "keywords": "实习",
+        "genre": "美团实习 工作总结",
+        "datePublished": "2020-06-30",
+        "dateCreated": "2020-06-30",
+        "dateModified": "2020-09-08",
+        "url": "/https:/hezhaoxiang.work/2020/doform01/",
+        "description": "
+策略看板总结
+（一）基础
+js的native和prevent
+
+
+.native: 原生js的绑定系统事件，vue中绑定按键事件 @keyup.enter.native
+.prevent: @submit.native.prevent 阻止默认提交
+
+
+空对象补足，补充key：null，先拿到allkeys，key数组，在空对象中添加key和value
+
+数据格式转换，infoMap
+ 对象数组",
+        "wordCount": 324
+    }
+</script>
+
+</article>
+<!--
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+
+    
+    </section>
+
+-->
+
+
+<!--来比力评论系统，在commetn/livebe.ejs中-->
+<!-- 来必力City版安装代码 -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC80Nzg3Mi8yNDM2OQ==">
+    <script type="text/javascript">
+        (function(d, s) {
+            var j, e = d.getElementsByTagName(s)[0];
+
+            if (typeof LivereTower === 'function') { return; }
+
+            j = d.createElement(s);
+            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+            j.async = true;
+
+            e.parentNode.insertBefore(j, e);
+        })(document, 'script');
+    </script>
+    <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+</div>
+<!-- City版安装代码已完成 -->
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+<!--        <p>关注我 :</p>-->
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/ppoffice/hexo-theme-hueman" target="_blank" rel="noopener">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="weibo" href="https://weibo.com/5379927249/profile?topnav=1&wvr=6&is_all=1" target="_blank" rel="noopener">
+                        <i class="icon fa fa-weibo"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/atom.xml" target="_blank" rel="noopener">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2020/about-table/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">下一篇</strong>
+        <p class="article-nav-title">
+        
+            美团实习总结二--活动录入总结
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2020/about-git/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">上一篇</strong>
+        <p class="article-nav-title">美团实习总结零--git操作和流程</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title"> 标签 </h3>
+        <div class="widget tagcloud">
+            <a href="/tags/2019%E7%A0%94%E7%A9%B6%E7%94%9FE%E9%A2%98/" style="font-size: 10px;">2019研究生E题</a> <a href="/tags/Demo/" style="font-size: 15px;">Demo</a> <a href="/tags/ES6/" style="font-size: 12.5px;">ES6</a> <a href="/tags/HTML-CSS/" style="font-size: 17.5px;">HTML&CSS</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/Vue/" style="font-size: 12.5px;">Vue</a> <a href="/tags/Vue-router/" style="font-size: 10px;">Vue-router</a> <a href="/tags/Vuex/" style="font-size: 10px;">Vuex</a> <a href="/tags/http/" style="font-size: 10px;">http</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/%E5%AE%9E%E4%B9%A0/" style="font-size: 17.5px;">实习</a> <a href="/tags/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" style="font-size: 10px;">搭建博客</a> <a href="/tags/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/" style="font-size: 10px;">数学建模</a> <a href="/tags/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7/" style="font-size: 10px;">电脑技巧</a> <a href="/tags/%E8%B4%AD%E7%89%A9/" style="font-size: 10px;">购物</a>
+        </div>
+    </div>
+
+
+            
+                
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">归档</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">八月 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">六月 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">五月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">三月 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">二月 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">十二月 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">十月 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">九月 2019</a><span class="archive-list-count">3</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">分类</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Demo/">Demo</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Demo/2048%E5%B0%8F%E6%B8%B8%E6%88%8F/">2048小游戏</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Demo/todoList/">todoList</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Demo/%E5%B0%8F%E6%8A%80%E5%B7%A7/">小技巧</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Demo/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">搭建博客</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Demo/%E8%B4%AD%E7%89%A9-Vue/">购物-Vue</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/">web前端</a><span class="category-list-count">16</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/ES6/">ES6</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/HTML-CSS/">HTML&CSS</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/JavaScript/">JavaScript</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/Vue%E5%AD%A6%E4%B9%A0/">Vue学习</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/Vue%E5%AD%A6%E4%B9%A0/Vue/">Vue</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/Vue%E5%AD%A6%E4%B9%A0/Vuex/">Vuex</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/webpack/">webpack</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AB%9E%E8%B5%9B/">竞赛</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AB%9E%E8%B5%9B/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">数学建模</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BE%8E%E5%9B%A2%E5%AE%9E%E4%B9%A0/">美团实习</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BE%8E%E5%9B%A2%E5%AE%9E%E4%B9%A0/%E5%B7%A5%E4%BD%9C%E6%80%BB%E7%BB%93/">工作总结</a><span class="category-list-count">4</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/">计算机基础</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/http/">http</a><span class="category-list-count">1</span></li></ul></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">友情链接</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="https://www.yuque.com/books/share/935d9368-958d-4317-b44d-88a713ecbd29?#" target="_blank" rel="noopener">语雀笔记</a>
+                    </li>
+                
+                    <li>
+                        <a href="">E-Mail：hzx404@foxmail.com</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://blog.csdn.net/weixin_44105459" target="_blank" rel="noopener">CSDN</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;" target="_blank" rel="noopener"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2020 author by：贺兆祥</p>
+
+                <p>本站由hzx小朋友在hexo的大力帮助下实现</p>
+                <!--这一段是不蒜子的访问量统计脚本-->
+                <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+                <span id="busuanzi_container_site_pv">一共被访问了<span id="busuanzi_value_site_pv"></span>次 &nbsp; </span>
+                <span id="busuanzi_container_site_uv">
+                    一共有<span id="busuanzi_value_site_uv"></span>个小朋友来过
+                </span>
+            </div>
+            <div class="footer-plugins">
+              
+    
+
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!--往下是cloud的文章阅读量系统-->
+<script src="//cdn1.lncld.net/static/js/2.5.0/av-min.js"></script>
+<script>
+    var APP_ID = 'YVSE8R91f8Qc6d6FwMTnwytk-gzGzoHsz';
+    var APP_KEY = 'ajFB9Ueh08Y5pIvkDsXSOW56';
+    AV.init({
+        appId: APP_ID,
+        appKey: APP_KEY
+    });
+    // 显示次数
+    function showTime(Counter) {
+        var query = new AV.Query("Counter");
+        if($(".leancloud_visitors").length > 0){
+            var url = $(".leancloud_visitors").attr('id').trim();
+            // where field
+            query.equalTo("words", url);
+            // count
+            query.count().then(function (number) {
+                // There are number instances of MyClass where words equals url.
+                $(document.getElementById(url)).text(number?  number : '--');
+            }, function (error) {
+                // error is an instance of AVError.
+            });
+        }
+    }
+    // 追加pv
+    function addCount(Counter) {
+        var url = $(".leancloud_visitors").length > 0 ? $(".leancloud_visitors").attr('id').trim() : 'icafebolger.com';
+        var Counter = AV.Object.extend("Counter");
+        var query = new Counter;
+        query.save({
+            words: url
+        }).then(function (object) {
+        })
+    }
+    $(function () {
+        var Counter = AV.Object.extend("Counter");
+        addCount(Counter);
+        showTime(Counter);
+    });
+</script>
+        
+    
+    <script>
+    var disqus_shortname = 'hexo-theme-hueman';
+    
+    
+    var disqus_url = 'https://hezhaoxiang.work/2020/doform01/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>

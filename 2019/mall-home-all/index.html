@@ -6,22 +6,22 @@
     
 
     
-    <title>购物街0-首页开发（Vue购物，学它就对了！） | 前端小窝--&gt;小白之家</title>
+    <title>购物首页开发 | 前端小窝--&gt;小白之家</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta name="keywords" content="购物街" />
+    <meta name="keywords" content="购物" />
     
     <meta name="description" content="零、说明本demo是跟随coderwhy老师学习Vue做的，跟着视频一点点敲的，视频可以在b站上找到，仅限个人学习，侵删（应该不涉及侵权吧，就当给老师宣传了哈哈哈，视频真的讲的很细致，一点点学还是有收获的，自己码的demo在这里！博客里有github） 一、整体思路1、效果图先上整体效果图~)这是我跟着视频做的，主要分为四个功能模块“首页、分类、购物车、我的” 2、首页功能目前基本实现首页，首页中">
-<meta name="keywords" content="购物街">
+<meta name="keywords" content="购物">
 <meta property="og:type" content="article">
-<meta property="og:title" content="购物街0-首页开发（Vue购物，学它就对了！）">
+<meta property="og:title" content="购物首页开发">
 <meta property="og:url" content="https:&#x2F;&#x2F;hezhaoxiang.work&#x2F;2019&#x2F;mall-home-all&#x2F;index.html">
 <meta property="og:site_name" content="前端小窝--&gt;小白之家">
 <meta property="og:description" content="零、说明本demo是跟随coderwhy老师学习Vue做的，跟着视频一点点敲的，视频可以在b站上找到，仅限个人学习，侵删（应该不涉及侵权吧，就当给老师宣传了哈哈哈，视频真的讲的很细致，一点点学还是有收获的，自己码的demo在这里！博客里有github） 一、整体思路1、效果图先上整体效果图~)这是我跟着视频做的，主要分为四个功能模块“首页、分类、购物车、我的” 2、首页功能目前基本实现首页，首页中">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https:&#x2F;&#x2F;cdn.nlark.com&#x2F;yuque&#x2F;0&#x2F;2019&#x2F;png&#x2F;676682&#x2F;1577368803629-bb382dad-293e-45d5-8ddd-842314f1b79e.png#align&#x3D;left&amp;display&#x3D;inline&amp;height&#x3D;500&amp;name&#x3D;image.png&amp;originHeight&#x3D;610&amp;originWidth&#x3D;424&amp;size&#x3D;208891&amp;status&#x3D;done&amp;style&#x3D;none&amp;width&#x3D;347">
-<meta property="og:updated_time" content="2019-12-26T14:22:18.000Z">
+<meta property="og:updated_time" content="2020-09-07T18:58:28.636Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;cdn.nlark.com&#x2F;yuque&#x2F;0&#x2F;2019&#x2F;png&#x2F;676682&#x2F;1577368803629-bb382dad-293e-45d5-8ddd-842314f1b79e.png#align&#x3D;left&amp;display&#x3D;inline&amp;height&#x3D;500&amp;name&#x3D;image.png&amp;originHeight&#x3D;610&amp;originWidth&#x3D;424&amp;size&#x3D;208891&amp;status&#x3D;done&amp;style&#x3D;none&amp;width&#x3D;347">
     
@@ -79,7 +79,7 @@
                                     <a class="main-nav-list-link" href="/">主页</a>
                                 </li>
                             
-                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Demo/">Demo</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Demo/2048%E5%B0%8F%E6%B8%B8%E6%88%8F/">2048小游戏</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Demo/todoList/">todoList</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Demo/%E5%B0%8F%E6%8A%80%E5%B7%A7/">小技巧</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Demo/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">搭建博客</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Demo/%E8%B4%AD%E7%89%A9%E8%A1%97-Vue/">购物街-Vue</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/">web前端</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/ES6/">ES6</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/HTML-CSS/">HTML&CSS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/JavaScript/">JavaScript</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/Vue%E5%AD%A6%E4%B9%A0/">Vue学习</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/webpack/">webpack</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E7%AB%9E%E8%B5%9B/">竞赛</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E7%AB%9E%E8%B5%9B/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">数学建模</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/">计算机基础</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/http/">http</a></li></ul></li></ul>
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Demo/">Demo</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Demo/2048%E5%B0%8F%E6%B8%B8%E6%88%8F/">2048小游戏</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Demo/todoList/">todoList</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Demo/%E5%B0%8F%E6%8A%80%E5%B7%A7/">小技巧</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Demo/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">搭建博客</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Demo/%E8%B4%AD%E7%89%A9-Vue/">购物-Vue</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/">web前端</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/ES6/">ES6</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/HTML-CSS/">HTML&CSS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/JavaScript/">JavaScript</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/Vue%E5%AD%A6%E4%B9%A0/">Vue学习</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/webpack/">webpack</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E7%AB%9E%E8%B5%9B/">竞赛</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E7%AB%9E%E8%B5%9B/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">数学建模</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E7%BE%8E%E5%9B%A2%E5%AE%9E%E4%B9%A0/">美团实习</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E7%BE%8E%E5%9B%A2%E5%AE%9E%E4%B9%A0/%E5%B7%A5%E4%BD%9C%E6%80%BB%E7%BB%93/">工作总结</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/">计算机基础</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/http/">http</a></li></ul></li></ul>
                                     
                                 <li class="main-nav-list-item" >
                                     <a class="main-nav-list-link" href="/board">小秘密</a>
@@ -138,7 +138,7 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <a class="page-title-link" href="/categories/Demo/">Demo</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Demo/%E8%B4%AD%E7%89%A9%E8%A1%97-Vue/">购物街-Vue</a>
+    <a class="page-title-link" href="/categories/Demo/">Demo</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Demo/%E8%B4%AD%E7%89%A9-Vue/">购物-Vue</a>
     </h1>
 </div>
 
@@ -150,7 +150,7 @@
                 
     
         <h1 class="article-title" itemprop="name">
-        购物街0-首页开发（Vue购物，学它就对了！）
+        购物首页开发
         </h1>
     
 
@@ -172,18 +172,18 @@
                 
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/%E8%B4%AD%E7%89%A9%E8%A1%97/" rel="tag">购物街</a>
+        <a class="tag-link" href="/tags/%E8%B4%AD%E7%89%A9/" rel="tag">购物</a>
     </div>
 
                 <!---cloud阅读量统计系统-->
-                阅读数量:<span id="/2019/mall-home-all/" class="leancloud_visitors" data-flag-title="购物街0-首页开发（Vue购物，学它就对了！）"></span>次
+                阅读数量:<span id="/2019/mall-home-all/" class="leancloud_visitors" data-flag-title="购物首页开发"></span>次
                 
 
                 
    <div class="article-counter">
       <i class="fa fa-file-word-o"></i>
       <span class="post-count-item-text">本文字数: </span>
-      <span class="post-count">552</span>
+      <span class="post-count">536</span>
       <i class="fa fa-clock-o"></i>
       <span class="post-time-item-text">阅读时长: </span>
       <span class="post-count">2 分钟 </span>
@@ -199,7 +199,6 @@
 <h1 id="2、首页功能"><a href="#2、首页功能" class="headerlink" title="2、首页功能"></a>2、首页功能</h1><p>目前基本实现首页，首页中包括以下几个功能（从上到下）：</p>
 <ol>
 <li>标题栏Navbar</li>
-<li>轮播图swiper</li>
 <li>本周流行recommend</li>
 <li>商品栏tab-control</li>
 <li>商品列表goodList</li>
@@ -213,9 +212,11 @@
 <h2 id="3-顶端导航组件"><a href="#3-顶端导航组件" class="headerlink" title="3, 顶端导航组件"></a>3, 顶端导航组件</h2><p>nav-tab-bar，创建组件，使用插槽将顶部的bar分为左中右三部分，在首页中只展示center的slot内容“购物街”<br><img src="https://cdn.nlark.com/yuque/0/2019/png/676682/1577103302820-d42c43ff-0439-47e3-b6b8-3e350294d838.png#align=left&display=inline&height=460&name=image.png&originHeight=460&originWidth=731&size=45953&status=done&style=none&width=731" alt="image.png"></p>
 <h2 id="4-请求多个数据"><a href="#4-请求多个数据" class="headerlink" title="4, 请求多个数据"></a>4, 请求多个数据</h2><p><img src="https://cdn.nlark.com/yuque/0/2019/png/676682/1577102761672-aad6e418-fc7c-4122-9e4d-801c648009fa.png#align=left&display=inline&height=405&name=image.png&originHeight=405&originWidth=724&size=33264&status=done&style=none&width=724" alt="image.png"></p>
 <ul>
-<li><input disabled="" type="checkbox"> <img src="https://cdn.nlark.com/yuque/0/2019/png/676682/1577102470371-a7ceda98-d7c3-428b-b177-7aa06965b00f.png#align=left&display=inline&height=266&name=image.png&originHeight=266&originWidth=254&size=10452&status=done&style=none&width=254" alt="image.png"><h2 id="5，-轮播图（后续专门说）-首页推荐"><a href="#5，-轮播图（后续专门说）-首页推荐" class="headerlink" title="5， 轮播图（后续专门说）+首页推荐"></a>5， 轮播图（后续专门说）+首页推荐</h2><h2 id="6，-tab-control"><a href="#6，-tab-control" class="headerlink" title="6， tab-control"></a>6， tab-control</h2>流行、新款、精选<br><code>position: sticky</code><br>top: 44px //设置可随页面下滑，上滑到44处固定<h2 id="7，-商品列表数据，获取保存"><a href="#7，-商品列表数据，获取保存" class="headerlink" title="7， 商品列表数据，获取保存"></a>7， 商品列表数据，获取保存</h2>所有数据data{pop:{page:0,list:[]},<br>news:{page:0,list:[]}<br>sell :{page:0,list:[]}<br>}<h2 id="8-点击，显示相应列表数据"><a href="#8-点击，显示相应列表数据" class="headerlink" title="8, 点击，显示相应列表数据"></a>8, 点击，显示相应列表数据</h2></li>
+<li><input disabled="" type="checkbox"> <img src="https://cdn.nlark.com/yuque/0/2019/png/676682/1577102470371-a7ceda98-d7c3-428b-b177-7aa06965b00f.png#align=left&display=inline&height=266&name=image.png&originHeight=266&originWidth=254&size=10452&status=done&style=none&width=254" alt="image.png"></li>
 </ul>
-<h2 id="9，-移动端滑动效果"><a href="#9，-移动端滑动效果" class="headerlink" title="9， 移动端滑动效果"></a>9， 移动端滑动效果</h2><p>使用better-scroll框架（github）<br>安装： npm install better-scroll –save<br>局部滚动</p>
+<h2 id="6，-tab-control"><a href="#6，-tab-control" class="headerlink" title="6， tab-control"></a>6， tab-control</h2><p>流行、新款、精选<br><code>position: sticky</code><br>top: 44px //设置可随页面下滑，上滑到44处固定</p>
+<h2 id="7，-商品列表数据，获取保存"><a href="#7，-商品列表数据，获取保存" class="headerlink" title="7， 商品列表数据，获取保存"></a>7， 商品列表数据，获取保存</h2><p>所有数据data{pop:{page:0,list:[]},<br>news:{page:0,list:[]}<br>sell :{page:0,list:[]}<br>}</p>
+<h2 id="8-点击，显示相应列表数据"><a href="#8-点击，显示相应列表数据" class="headerlink" title="8, 点击，显示相应列表数据"></a>8, 点击，显示相应列表数据</h2><h2 id="9，-移动端滑动效果"><a href="#9，-移动端滑动效果" class="headerlink" title="9， 移动端滑动效果"></a>9， 移动端滑动效果</h2><p>使用better-scroll框架（github）<br>安装： npm install better-scroll –save<br>局部滚动</p>
 <p>ref如果是绑定在组件中的，那个通过t*<em>his.$refs.ref名字 *</em>获取的是一个元素对象。</p>
 <p>10，back-top实现<br>监听组件的原生事件<br><strong>方法一</strong>：使用修饰符click.native<br><img src="https://cdn.nlark.com/yuque/0/2019/png/676682/1577350858561-34b3410c-673f-4412-b0af-78ecab55cbff.png#align=left&display=inline&height=35&name=image.png&originHeight=35&originWidth=450&size=3917&status=done&style=none&width=450" alt="image.png"><br>方法二：在组件内使用this.$emit传给组件，再实现函数</p>
 
@@ -270,18 +271,18 @@ window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMin
             "@type": "Person",
             "name": "He Zhaoxiang"
         },
-        "headline": "购物街0-首页开发（Vue购物，学它就对了！）",
+        "headline": "购物首页开发",
         "image": "https://hezhaoxiang.workhttps://cdn.nlark.com/yuque/0/2019/png/676682/1577368803629-bb382dad-293e-45d5-8ddd-842314f1b79e.png#align=left&display=inline&height=500&name=image.png&originHeight=610&originWidth=424&size=208891&status=done&style=none&width=347",
-        "keywords": "购物街",
-        "genre": "Demo 购物街-Vue",
+        "keywords": "购物",
+        "genre": "Demo 购物-Vue",
         "datePublished": "2019-12-26",
         "dateCreated": "2019-12-26",
-        "dateModified": "2019-12-26",
+        "dateModified": "2020-09-08",
         "url": "/https:/hezhaoxiang.work/2019/mall-home-all/",
         "description": "零、说明本demo是跟随coderwhy老师学习Vue做的，跟着视频一点点敲的，视频可以在b站上找到，仅限个人学习，侵删（应该不涉及侵权吧，就当给老师宣传了哈哈哈，视频真的讲的很细致，一点点学还是有收获的，自己码的demo在这里！博客里有github）
 一、整体思路1、效果图先上整体效果图~)这是我跟着视频做的，主要分为四个功能模块“首页、分类、购物车、我的”
 2、首页功能目前基本实现首页，首页中",
-        "wordCount": 119
+        "wordCount": 113
     }
 </script>
 
@@ -370,9 +371,9 @@ window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMin
     </a>
     
     
-        <a href="/2019/mall-home/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2019/how-to-use-pc/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">上一篇</strong>
-        <p class="article-nav-title">购物街0-首页开发</p>
+        <p class="article-nav-title">使用电脑，你不能不知道的技巧</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -386,7 +387,7 @@ window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMin
     <div class="widget-wrap widget-float">
         <h3 class="widget-title"> 标签 </h3>
         <div class="widget tagcloud">
-            <a href="/tags/2019%E7%A0%94%E7%A9%B6%E7%94%9FE%E9%A2%98/" style="font-size: 10px;">2019研究生E题</a> <a href="/tags/Demo/" style="font-size: 15px;">Demo</a> <a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/HTML-CSS/" style="font-size: 17.5px;">HTML&CSS</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/Vue/" style="font-size: 12.5px;">Vue</a> <a href="/tags/Vue-router/" style="font-size: 10px;">Vue-router</a> <a href="/tags/Vuex/" style="font-size: 10px;">Vuex</a> <a href="/tags/http/" style="font-size: 10px;">http</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" style="font-size: 10px;">搭建博客</a> <a href="/tags/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/" style="font-size: 10px;">数学建模</a> <a href="/tags/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7/" style="font-size: 10px;">电脑技巧</a> <a href="/tags/%E8%B4%AD%E7%89%A9%E8%A1%97/" style="font-size: 12.5px;">购物街</a>
+            <a href="/tags/2019%E7%A0%94%E7%A9%B6%E7%94%9FE%E9%A2%98/" style="font-size: 10px;">2019研究生E题</a> <a href="/tags/Demo/" style="font-size: 15px;">Demo</a> <a href="/tags/ES6/" style="font-size: 12.5px;">ES6</a> <a href="/tags/HTML-CSS/" style="font-size: 17.5px;">HTML&CSS</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/Vue/" style="font-size: 12.5px;">Vue</a> <a href="/tags/Vue-router/" style="font-size: 10px;">Vue-router</a> <a href="/tags/Vuex/" style="font-size: 10px;">Vuex</a> <a href="/tags/http/" style="font-size: 10px;">http</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/%E5%AE%9E%E4%B9%A0/" style="font-size: 17.5px;">实习</a> <a href="/tags/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" style="font-size: 10px;">搭建博客</a> <a href="/tags/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/" style="font-size: 10px;">数学建模</a> <a href="/tags/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7/" style="font-size: 10px;">电脑技巧</a> <a href="/tags/%E8%B4%AD%E7%89%A9/" style="font-size: 10px;">购物</a>
         </div>
     </div>
 
@@ -399,7 +400,7 @@ window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMin
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">归档</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">三月 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">二月 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">十二月 2019</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">十月 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">九月 2019</a><span class="archive-list-count">3</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">八月 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">六月 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">五月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">三月 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">二月 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">十二月 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">十月 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">九月 2019</a><span class="archive-list-count">3</span></li></ul>
         </div>
     </div>
 
@@ -409,7 +410,7 @@ window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMin
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">分类</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Demo/">Demo</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Demo/2048%E5%B0%8F%E6%B8%B8%E6%88%8F/">2048小游戏</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Demo/todoList/">todoList</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Demo/%E5%B0%8F%E6%8A%80%E5%B7%A7/">小技巧</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Demo/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">搭建博客</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Demo/%E8%B4%AD%E7%89%A9%E8%A1%97-Vue/">购物街-Vue</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/">web前端</a><span class="category-list-count">15</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/ES6/">ES6</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/HTML-CSS/">HTML&CSS</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/JavaScript/">JavaScript</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/Vue%E5%AD%A6%E4%B9%A0/">Vue学习</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/Vue%E5%AD%A6%E4%B9%A0/Vue/">Vue</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/Vue%E5%AD%A6%E4%B9%A0/Vuex/">Vuex</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/webpack/">webpack</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AB%9E%E8%B5%9B/">竞赛</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AB%9E%E8%B5%9B/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">数学建模</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/">计算机基础</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/http/">http</a><span class="category-list-count">1</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Demo/">Demo</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Demo/2048%E5%B0%8F%E6%B8%B8%E6%88%8F/">2048小游戏</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Demo/todoList/">todoList</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Demo/%E5%B0%8F%E6%8A%80%E5%B7%A7/">小技巧</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Demo/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">搭建博客</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Demo/%E8%B4%AD%E7%89%A9-Vue/">购物-Vue</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/">web前端</a><span class="category-list-count">16</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/ES6/">ES6</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/HTML-CSS/">HTML&CSS</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/JavaScript/">JavaScript</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/Vue%E5%AD%A6%E4%B9%A0/">Vue学习</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/Vue%E5%AD%A6%E4%B9%A0/Vue/">Vue</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/Vue%E5%AD%A6%E4%B9%A0/Vuex/">Vuex</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/webpack/">webpack</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AB%9E%E8%B5%9B/">竞赛</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AB%9E%E8%B5%9B/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">数学建模</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BE%8E%E5%9B%A2%E5%AE%9E%E4%B9%A0/">美团实习</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BE%8E%E5%9B%A2%E5%AE%9E%E4%B9%A0/%E5%B7%A5%E4%BD%9C%E6%80%BB%E7%BB%93/">工作总结</a><span class="category-list-count">4</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/">计算机基础</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/http/">http</a><span class="category-list-count">1</span></li></ul></li></ul>
         </div>
     </div>
 

@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+
+    
+
+    
+    <title>web前端--ES6补充 | 前端小窝--&gt;小白之家</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="keywords" content="ES6" />
+    
+    <meta name="description" content="1、let 与const：暂时性死区• 指向内存地址而不是变量，基本数据类型变量在内存地址中的位置不变，故不变；• 引用数据类型（如对象，数组），可变化；2、声明变量的6种方法• let，const，• var function• import，class3、模板字符串• 模板字符串中嵌入变量，需要将变量名写在${}之中  this is ${user.name}.• 可以使用字符串，若变量不存">
+<meta name="keywords" content="ES6">
+<meta property="og:type" content="article">
+<meta property="og:title" content="web前端--ES6补充">
+<meta property="og:url" content="https:&#x2F;&#x2F;hezhaoxiang.work&#x2F;2020&#x2F;learnes6-02&#x2F;index.html">
+<meta property="og:site_name" content="前端小窝--&gt;小白之家">
+<meta property="og:description" content="1、let 与const：暂时性死区• 指向内存地址而不是变量，基本数据类型变量在内存地址中的位置不变，故不变；• 引用数据类型（如对象，数组），可变化；2、声明变量的6种方法• let，const，• var function• import，class3、模板字符串• 模板字符串中嵌入变量，需要将变量名写在${}之中  this is ${user.name}.• 可以使用字符串，若变量不存">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-09-07T17:55:32.694Z">
+<meta name="twitter:card" content="summary">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="前端小窝--&gt;小白之家" type="application/atom+xml" />
+    
+
+    
+        <link rel="icon" href="/css/images/favicon.ico" />
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">Do what u love,  love what u do .</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">主页</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Demo/">Demo</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Demo/2048%E5%B0%8F%E6%B8%B8%E6%88%8F/">2048小游戏</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Demo/todoList/">todoList</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Demo/%E5%B0%8F%E6%8A%80%E5%B7%A7/">小技巧</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Demo/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">搭建博客</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Demo/%E8%B4%AD%E7%89%A9-Vue/">购物-Vue</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/">web前端</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/ES6/">ES6</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/HTML-CSS/">HTML&CSS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/JavaScript/">JavaScript</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/Vue%E5%AD%A6%E4%B9%A0/">Vue学习</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/webpack/">webpack</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E7%AB%9E%E8%B5%9B/">竞赛</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E7%AB%9E%E8%B5%9B/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">数学建模</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E7%BE%8E%E5%9B%A2%E5%AE%9E%E4%B9%A0/">美团实习</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E7%BE%8E%E5%9B%A2%E5%AE%9E%E4%B9%A0/%E5%B7%A5%E4%BD%9C%E6%80%BB%E7%BB%93/">工作总结</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/">计算机基础</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/http/">http</a></li></ul></li></ul>
+                                    
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/board">小秘密</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="想要查找什么..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/web%E5%89%8D%E7%AB%AF/">web前端</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/web%E5%89%8D%E7%AB%AF/ES6/">ES6</a>
+    </h1>
+</div>
+
+                        <div class="main-body-content">
+                            <article id="post-ES6-标准入门" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        web前端--ES6补充
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+      <i class="fa fa-calendar"></i>
+      <a href="/2020/learnes6-02/" class="article-date">
+         <time datetime="2020-05-11T12:31:00.000Z" itemprop="datePublished">2020-05-11</time>
+      </a>
+    </div>
+
+
+                
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/ES6/" rel="tag">ES6</a>
+    </div>
+
+                <!---cloud阅读量统计系统-->
+                阅读数量:<span id="/2020/learnes6-02/" class="leancloud_visitors" data-flag-title="web前端--ES6补充"></span>次
+                
+
+                
+   <div class="article-counter">
+      <i class="fa fa-file-word-o"></i>
+      <span class="post-count-item-text">本文字数: </span>
+      <span class="post-count">1.4k</span>
+      <i class="fa fa-clock-o"></i>
+      <span class="post-time-item-text">阅读时长: </span>
+      <span class="post-count">5 分钟 </span>
+   </div>
+
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <hr>
+<p>1、let 与const：暂时性死区<br>• 指向内存地址而不是变量，基本数据类型变量在内存地址中的位置不变，故不变；<br>• 引用数据类型（如对象，数组），可变化；<br>2、声明变量的6种方法<br>• let，const，<br>• var function<br>• import，class<br>3、模板字符串<br>• 模板字符串中嵌入变量，需要将变量名写在${}之中  this is ${user.name}.<br>• 可以使用字符串，若变量不存在则报错<br>4、函数扩展<br>• 参数可以有默认值<br>5、ES6遍历对象得到key的5种方法<br>• for  … in<br>• Object.keys(obj)   返回数组<br>• Object.getOwnPropertyNames(obj) 返回数组，前三个都不包含symbol属性<br>• Object. getOwnPropertySymbols（obj）返回数组，包含symbol属性的key<br>6、Symbol第七种数据类型<br>• 用途：用于object对象的属性，保证属性唯一；<br>• 属性名遍历：Symbol变量作为属性，不是私有，但是for in ,Object.keys()等方式不能拿到Symbol的属性名，只能通过Object.getOwnPropertySymbols获取属性名；<br>• 第七种数据类型，相同参数的symbol值不相同 symbol（abc）===symbol(abc)  //false<br>• toString()可以转为字符串；let sym = Symbol(); sym.toStriing(); //“Symbol()”<br>• symbol值不相同，可以作为对象的属性来区分同名对象；如<br>• let obj={};<br>obj[sym1]=’hello’; //相当于key：value，即sym1：‘hello’<br>let obj2={<br>    [sym2]:’world’<br>}<br>7、WeakSet<br>• 与set作用相同，只是weakset只能用于对象（obj或数组）去重；<br>• weakset是弱引用，不能进行遍历，可以通过创建weakset，让Foo实例方法只能在实例中使用,foos对实例的引用，不会被计入内存回收机制<br>8、promise<br>• promise（）.then().catch<br>• 第一个参数是resolve，回调成功进入第一个then；<br>• rejected：失败进入catch或第二个then；<br>9、async await<br>• async表明函数中有异步操作，async返回一个prmise，<br>• 根据promise的resolve或reject执行await，reject报错则则进入catch，resolve成功则接着执行await后面；<br>• await放入try-catch，捕捉错误<br>  async function asyncPrint(ms) {<br>    try {<br>       console.log(‘start’);<br>       await timeout(ms);  //这里返回了错误<br>       console.log(‘end’);  //所以这句代码不会被执行了<br>    } catch(err) {<br>       console.log(err); //这里捕捉到错误error<br>    }<br>  }<br>  asyncPrint(1000);<br>10、class<br>• 类定义属性和方法class,constructor,method1方法<br>• get,set方法待查<br>11、数组各种方法<br>12、字符串方法<br>• includes 返回true/false  数组和字符串都支持<br>• startsWith 和endsWith： 返回是否以某字符（或某几个）开头或结尾，true/false。 str1.startsWith（‘hello’）<br>• startsWith 和endsWith（第二个参数）：str1.startsWith（‘hello’， 0）0参数是开始位置<br>• repeat ：str.repeat（3）str重复3遍<br>• 前后补全：padStart(5，ab)–用ab把字符串补全到5个字符；padEnd()<br>• 前后去除空格：trimStart()，trimEnd()   const newStr = str.trim();去除前后，返回新字符串；<br>13、数值方法Number<br>•  Number.isInteger（true/25/‘25’） false/true/false 判断整数，是数值才为true<br>• Number.parseInt() Number.parseFloat()判断<br>• let y = 0;  y = y || 100（y为空时，赋值100）;   y值为100；<br>14、BigInt第八种数据类型<br>• 大整数无位数限制，末尾加n，12n，  typeof 12n（bigint）<br>• 大整数和整数不相等：1n==1– false<br>• 通过Number可转换大整数为整数，数值过大则显示不准；<br>• BigInt构造函数思路：先转为Number，再转为BigInt； BigInt(1)  BigInt(‘1’) 都可以， BigInt(‘1n’)报错（字符串’1n’不能转为数字）；<br>15、函数扩展语法<br>（1）参数默认值<br> function(x, y = 1)   [undefined, 1]<br>（2）参数解构赋值<br>•  function({x, y = 1}) 传入参数为对象，进行解构赋值<br>• function({x, y = 1} = {} ) 未传入参数，默认为空对象，使用【undefined，1】<br>• （function({x, y = 1} = {} )）.length = 1 length值为没有默认值的参数个数；<br>• （function(…args)).length = 0;<br>（3）name属性<br>• const fun1 = function add(){}   fun1.name // add<br>• function add(){}   add.name // add<br>（4）箭头函数<br>• 省略写法：var sum = (num1,num2) =&gt; num1+ num2;  只有一行语句时省略{}和return；<br>• var sum  = function(num1, num2) { return num1 + num2};<br>• rest剩余参数：const Number = (…num) =&gt; num;    Number(1,2,3)  //[1,2,3]<br>• this指向：一直指向定义时的this，即在参数中使用的this；箭头函数创建一个新的内存，指向新内存，即指向定义；<br>• function foo(){ setTimeout(()=&gt;)}<br>• 柯里化currying：将多参数变为单参数形式；<br>• catch在ES2019中：try{} catch(err){}  或catch{}都可以；<br>16、 数组方法<br>find、findIndex<br>• find返回符合条件的第一个值，arr.find(i =&gt; i &lt;0); 不存在符合条件的-&gt; undefined<br>• findIndex返回第一个index，没有则-1；<br>• includes方法返回true/false,相比indexOf（返回第一个位置或-1）优势：语义明显，不用和-1 比较<br>（1）改变原数组<br>• pop()：删除数组最后一个元素，并返回该元素<br>• push()：在数组尾部添加元素，并返回更新后的数组长度<br>• shift()：删除数组的第一个元素，并返回该元素<br>• unshift()：在数组第一位添加元素，并返回更新后的数组长度<br>• sort()：对数组排序（按字符ASCII进行排序），也可添加回调函数按照想要的规则排序<br>• reverse()：数组反转<br>• splice(index, 个数, 新数据)：返回被删除元素所组成的数组。<br>（2）不改变原数组<br>map，reduce，foreach，indexof  findindex，some，every，concat<br>• map返回一个新数组<br>• reduce<br>let res = args.reduce((sum,i)=&gt;{<br>    return sum += i;<br>},0);<br>//或者<br>结果：<br>四个参数：<br>累计值：必需<br>当前值：必需<br>当前索引：可选<br>当前值所在数组：可选<br> 作用：<br>1、数组求和：return args.reduce((a,b)=&gt; a+b);<br>2、扁平化flat：arr.reduce((res,i)=&gt; res.concat(i), []);<br>• concat：返回新数组<br>let newArr = [].concat(1,[2,3],[4]);// 是否有扩展符…不影响<br>• 其他<br>17、对象<br>（1）对象简写<br>let num =’1’;<br>let obj1 = {num};  //定义对象，属性名就是num，值是1<br>等价于: let obj1 = {<br>  num:num,<br>    method(){…},}<br>（2）5种方法对象遍历 Object.getOwnPropertyNames（obj1）</p>
+
+        </div>
+        <footer class="article-footer">
+            
+
+    <div class="bdsharebuttonbox">
+    <a href="#" class="bds_more" data-cmd="more">分享到：</a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间">QQ空间</a>
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博">新浪微博</a>
+    <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博">腾讯微博</a>
+    <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网">人人网</a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信">微信</a>
+</div>
+<script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{"bdSize":16}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+<style>
+    .bdshare_popup_box {
+        border-radius: 4px;
+        border: #e1e1e1 solid 1px;
+    }
+    .bdshare-button-style0-16 a,
+    .bdshare-button-style0-16 .bds_more {
+        padding-left: 20px;
+        margin: 6px 10px 6px 0;
+    }
+    .bdshare_dialog_list a,
+    .bdshare_popup_list a,
+    .bdshare_popup_bottom a {
+        font-family: 'Microsoft Yahei';
+    }
+    .bdshare_popup_top {
+        display: none;
+    }
+    .bdshare_popup_bottom {
+        height: auto;
+        padding: 5px;
+    }
+</style>
+
+
+
+        </footer>
+    </div>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "author": {
+            "@type": "Person",
+            "name": "He Zhaoxiang"
+        },
+        "headline": "web前端--ES6补充",
+        "image": "/https:/hezhaoxiang.work",
+        "keywords": "ES6",
+        "genre": "web前端 ES6",
+        "datePublished": "2020-05-11",
+        "dateCreated": "2020-05-11",
+        "dateModified": "2020-09-08",
+        "url": "/https:/hezhaoxiang.work/2020/learnes6-02/",
+        "description": "
+1、let 与const：暂时性死区• 指向内存地址而不是变量，基本数据类型变量在内存地址中的位置不变，故不变；• 引用数据类型（如对象，数组），可变化；2、声明变量的6种方法• let，const，• var function• import，class3、模板字符串• 模板字符串中嵌入变量，需要将变量名写在${}之中  this is ${user.name}.• 可以使用字符串，若变量不存",
+        "wordCount": 327
+    }
+</script>
+
+</article>
+<!--
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+
+    
+    </section>
+
+-->
+
+
+<!--来比力评论系统，在commetn/livebe.ejs中-->
+<!-- 来必力City版安装代码 -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC80Nzg3Mi8yNDM2OQ==">
+    <script type="text/javascript">
+        (function(d, s) {
+            var j, e = d.getElementsByTagName(s)[0];
+
+            if (typeof LivereTower === 'function') { return; }
+
+            j = d.createElement(s);
+            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+            j.async = true;
+
+            e.parentNode.insertBefore(j, e);
+        })(document, 'script');
+    </script>
+    <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+</div>
+<!-- City版安装代码已完成 -->
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+<!--        <p>关注我 :</p>-->
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/ppoffice/hexo-theme-hueman" target="_blank" rel="noopener">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="weibo" href="https://weibo.com/5379927249/profile?topnav=1&wvr=6&is_all=1" target="_blank" rel="noopener">
+                        <i class="icon fa fa-weibo"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/atom.xml" target="_blank" rel="noopener">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2020/about-git/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">下一篇</strong>
+        <p class="article-nav-title">
+        
+            美团实习总结零--git操作和流程
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2020/http/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">上一篇</strong>
+        <p class="article-nav-title">不能不知道的HTTP</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title"> 标签 </h3>
+        <div class="widget tagcloud">
+            <a href="/tags/2019%E7%A0%94%E7%A9%B6%E7%94%9FE%E9%A2%98/" style="font-size: 10px;">2019研究生E题</a> <a href="/tags/Demo/" style="font-size: 15px;">Demo</a> <a href="/tags/ES6/" style="font-size: 12.5px;">ES6</a> <a href="/tags/HTML-CSS/" style="font-size: 17.5px;">HTML&CSS</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/Vue/" style="font-size: 12.5px;">Vue</a> <a href="/tags/Vue-router/" style="font-size: 10px;">Vue-router</a> <a href="/tags/Vuex/" style="font-size: 10px;">Vuex</a> <a href="/tags/http/" style="font-size: 10px;">http</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/%E5%AE%9E%E4%B9%A0/" style="font-size: 17.5px;">实习</a> <a href="/tags/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" style="font-size: 10px;">搭建博客</a> <a href="/tags/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/" style="font-size: 10px;">数学建模</a> <a href="/tags/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7/" style="font-size: 10px;">电脑技巧</a> <a href="/tags/%E8%B4%AD%E7%89%A9/" style="font-size: 10px;">购物</a>
+        </div>
+    </div>
+
+
+            
+                
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">归档</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">八月 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">六月 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">五月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">三月 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">二月 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">十二月 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">十月 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">九月 2019</a><span class="archive-list-count">3</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">分类</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Demo/">Demo</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Demo/2048%E5%B0%8F%E6%B8%B8%E6%88%8F/">2048小游戏</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Demo/todoList/">todoList</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Demo/%E5%B0%8F%E6%8A%80%E5%B7%A7/">小技巧</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Demo/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">搭建博客</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Demo/%E8%B4%AD%E7%89%A9-Vue/">购物-Vue</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/">web前端</a><span class="category-list-count">16</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/ES6/">ES6</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/HTML-CSS/">HTML&CSS</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/JavaScript/">JavaScript</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/Vue%E5%AD%A6%E4%B9%A0/">Vue学习</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/Vue%E5%AD%A6%E4%B9%A0/Vue/">Vue</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/Vue%E5%AD%A6%E4%B9%A0/Vuex/">Vuex</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/webpack/">webpack</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AB%9E%E8%B5%9B/">竞赛</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AB%9E%E8%B5%9B/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">数学建模</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BE%8E%E5%9B%A2%E5%AE%9E%E4%B9%A0/">美团实习</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BE%8E%E5%9B%A2%E5%AE%9E%E4%B9%A0/%E5%B7%A5%E4%BD%9C%E6%80%BB%E7%BB%93/">工作总结</a><span class="category-list-count">4</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/">计算机基础</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/http/">http</a><span class="category-list-count">1</span></li></ul></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">友情链接</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="https://www.yuque.com/books/share/935d9368-958d-4317-b44d-88a713ecbd29?#" target="_blank" rel="noopener">语雀笔记</a>
+                    </li>
+                
+                    <li>
+                        <a href="">E-Mail：hzx404@foxmail.com</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://blog.csdn.net/weixin_44105459" target="_blank" rel="noopener">CSDN</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;" target="_blank" rel="noopener"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2020 author by：贺兆祥</p>
+
+                <p>本站由hzx小朋友在hexo的大力帮助下实现</p>
+                <!--这一段是不蒜子的访问量统计脚本-->
+                <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+                <span id="busuanzi_container_site_pv">一共被访问了<span id="busuanzi_value_site_pv"></span>次 &nbsp; </span>
+                <span id="busuanzi_container_site_uv">
+                    一共有<span id="busuanzi_value_site_uv"></span>个小朋友来过
+                </span>
+            </div>
+            <div class="footer-plugins">
+              
+    
+
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!--往下是cloud的文章阅读量系统-->
+<script src="//cdn1.lncld.net/static/js/2.5.0/av-min.js"></script>
+<script>
+    var APP_ID = 'YVSE8R91f8Qc6d6FwMTnwytk-gzGzoHsz';
+    var APP_KEY = 'ajFB9Ueh08Y5pIvkDsXSOW56';
+    AV.init({
+        appId: APP_ID,
+        appKey: APP_KEY
+    });
+    // 显示次数
+    function showTime(Counter) {
+        var query = new AV.Query("Counter");
+        if($(".leancloud_visitors").length > 0){
+            var url = $(".leancloud_visitors").attr('id').trim();
+            // where field
+            query.equalTo("words", url);
+            // count
+            query.count().then(function (number) {
+                // There are number instances of MyClass where words equals url.
+                $(document.getElementById(url)).text(number?  number : '--');
+            }, function (error) {
+                // error is an instance of AVError.
+            });
+        }
+    }
+    // 追加pv
+    function addCount(Counter) {
+        var url = $(".leancloud_visitors").length > 0 ? $(".leancloud_visitors").attr('id').trim() : 'icafebolger.com';
+        var Counter = AV.Object.extend("Counter");
+        var query = new Counter;
+        query.save({
+            words: url
+        }).then(function (object) {
+        })
+    }
+    $(function () {
+        var Counter = AV.Object.extend("Counter");
+        addCount(Counter);
+        showTime(Counter);
+    });
+</script>
+        
+    
+    <script>
+    var disqus_shortname = 'hexo-theme-hueman';
+    
+    
+    var disqus_url = 'https://hezhaoxiang.work/2020/learnes6-02/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>

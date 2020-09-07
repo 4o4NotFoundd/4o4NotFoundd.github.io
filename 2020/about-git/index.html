@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+
+    
+
+    
+    <title>美团实习总结零--git操作和流程 | 前端小窝--&gt;小白之家</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="keywords" content="实习" />
+    
+    <meta name="description" content="常用命令 Git相关git init 新建一个空的仓库git status 查看状态git add . 添加文件git commit -m ‘注释’ 提交添加的文件并备注说明git remote add origin git@github.com:jinzhaogit&#x2F;git.git 连接远程仓库git push -u origin master 将本地仓库文件推送到远程仓库 1、推到自己的远程">
+<meta name="keywords" content="实习">
+<meta property="og:type" content="article">
+<meta property="og:title" content="美团实习总结零--git操作和流程">
+<meta property="og:url" content="https:&#x2F;&#x2F;hezhaoxiang.work&#x2F;2020&#x2F;about-git&#x2F;index.html">
+<meta property="og:site_name" content="前端小窝--&gt;小白之家">
+<meta property="og:description" content="常用命令 Git相关git init 新建一个空的仓库git status 查看状态git add . 添加文件git commit -m ‘注释’ 提交添加的文件并备注说明git remote add origin git@github.com:jinzhaogit&#x2F;git.git 连接远程仓库git push -u origin master 将本地仓库文件推送到远程仓库 1、推到自己的远程">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-09-07T18:38:14.713Z">
+<meta name="twitter:card" content="summary">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="前端小窝--&gt;小白之家" type="application/atom+xml" />
+    
+
+    
+        <link rel="icon" href="/css/images/favicon.ico" />
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">Do what u love,  love what u do .</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">主页</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Demo/">Demo</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Demo/2048%E5%B0%8F%E6%B8%B8%E6%88%8F/">2048小游戏</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Demo/todoList/">todoList</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Demo/%E5%B0%8F%E6%8A%80%E5%B7%A7/">小技巧</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Demo/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">搭建博客</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Demo/%E8%B4%AD%E7%89%A9-Vue/">购物-Vue</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/">web前端</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/ES6/">ES6</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/HTML-CSS/">HTML&CSS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/JavaScript/">JavaScript</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/Vue%E5%AD%A6%E4%B9%A0/">Vue学习</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/webpack/">webpack</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E7%AB%9E%E8%B5%9B/">竞赛</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E7%AB%9E%E8%B5%9B/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">数学建模</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E7%BE%8E%E5%9B%A2%E5%AE%9E%E4%B9%A0/">美团实习</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E7%BE%8E%E5%9B%A2%E5%AE%9E%E4%B9%A0/%E5%B7%A5%E4%BD%9C%E6%80%BB%E7%BB%93/">工作总结</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/">计算机基础</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/http/">http</a></li></ul></li></ul>
+                                    
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/board">小秘密</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="想要查找什么..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/%E7%BE%8E%E5%9B%A2%E5%AE%9E%E4%B9%A0/">美团实习</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/%E7%BE%8E%E5%9B%A2%E5%AE%9E%E4%B9%A0/%E5%B7%A5%E4%BD%9C%E6%80%BB%E7%BB%93/">工作总结</a>
+    </h1>
+</div>
+
+                        <div class="main-body-content">
+                            <article id="post-实习总结零-git" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        美团实习总结零--git操作和流程
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+      <i class="fa fa-calendar"></i>
+      <a href="/2020/about-git/" class="article-date">
+         <time datetime="2020-06-10T13:41:00.000Z" itemprop="datePublished">2020-06-10</time>
+      </a>
+    </div>
+
+
+                
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/%E5%AE%9E%E4%B9%A0/" rel="tag">实习</a>
+    </div>
+
+                <!---cloud阅读量统计系统-->
+                阅读数量:<span id="/2020/about-git/" class="leancloud_visitors" data-flag-title="美团实习总结零--git操作和流程"></span>次
+                
+
+                
+   <div class="article-counter">
+      <i class="fa fa-file-word-o"></i>
+      <span class="post-count-item-text">本文字数: </span>
+      <span class="post-count">971</span>
+      <i class="fa fa-clock-o"></i>
+      <span class="post-time-item-text">阅读时长: </span>
+      <span class="post-count">4 分钟 </span>
+   </div>
+
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <hr>
+<h1 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h1><p><a name="arM7X"></a></p>
+<h1 id="Git相关"><a href="#Git相关" class="headerlink" title="Git相关"></a>Git相关</h1><p>git init 新建一个空的仓库<br />git status 查看状态<br />git add . 添加文件<br />git commit -m ‘注释’ 提交添加的文件并备注说明<br />git remote add origin <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:jinzhaogit/git.git 连接远程仓库<br />git push -u origin master 将本地仓库文件推送到远程仓库<br><a name="e437e2f3"></a></p>
+<h2 id="1、推到自己的远程分支"><a href="#1、推到自己的远程分支" class="headerlink" title="1、推到自己的远程分支"></a>1、推到自己的远程分支</h2><p>git add .<br />git commit -m “注释说明”<br />git push //默认全部<br />git pull  //如果失败，先pull再push，vs中解决冲突<br><a name="de41519e"></a></p>
+<h2 id="2、分支管理"><a href="#2、分支管理" class="headerlink" title="2、分支管理"></a>2、分支管理</h2><ul>
+<li>git checkout -b fileName ，创建并切换到fileName分支，等价于git branch fName–&gt;（切换）git checkout fName<br /></li>
+<li>git branch： 查看分支<br /></li>
+<li>git switch fName/master ===git checkout fName 都是切换分支<br /></li>
+<li>git merge fName： 合并分支到master<br /></li>
+<li>git branch -d fName： 删除分支<br /></li>
+<li>git push origin feature/hzxx 推送到远仓库的分支上<br /><br><a name="59dff9e7"></a><h3 id="创建新分支并拉代码"><a href="#创建新分支并拉代码" class="headerlink" title="创建新分支并拉代码"></a>创建新分支并拉代码</h3>git checkout -b feature/cityDecision-hzx origin/feature<br />git pull<br />git merge feature/hzx<br />git commit -m “merge”<br />git push origin feature/hzx:feature/hzx     创建后，推到自己远程分支<br />git branch –set-upstream-to=origin/feature/cityDecision-hzx   feature/cityDecision-hzx 代码合并到远程自己的分支<br><a name="cc59dd27"></a><h2 id="3、thrift发布"><a href="#3、thrift发布" class="headerlink" title="3、thrift发布"></a>3、thrift发布</h2><table>
+<thead>
+<tr>
+<th>（1）thrift网址-&gt;owl API -&gt; snapshots / 1.x-SNAPSHOT-&gt;<a href="https://thrift-qcs.sankuai.com/devtool" target="_blank" rel="noopener">https://thrift-qcs.sankuai.com/devtool</a><br />（2）首次：安装rimraf（作用：删除编译好的文件）-&gt;删除编译好的资源-&gt; package.json修改mtfe-&gt; 重新运行<br />      后续使用：修改SNAPSHOT版本–&gt;yarn</th>
+</tr>
+</thead>
+</table>
+</li>
+</ul>
+<p>（3）相关命令<br /><del>npm install rimraf -g</del><br /><del>rimraf node_modules</del><br /><del>修改package.json  “@mtfe/thrift-api-qcs-data-owl” : 1.0.9-SNAPSHOT</del><br /><del>yarn</del><br />yarn add xxx@new_version<br />yarn add [package]@[version] // 安装指定版本，添加到package.json，如果需要精确到小版本，使用-E参数;<br />yarn add rimraf<br />npm run dev<br />npm run node-dev<br><a name="782da30d"></a></p>
+<h2 id="4、发布到dev"><a href="#4、发布到dev" class="headerlink" title="4、发布到dev"></a>4、发布到dev</h2><ol>
+<li>先发布到feature/hzx 上<br /></li>
+<li>切换到dev分支git checkout -b dev origin/dev<br /></li>
+<li>查看分支 git branch<br /></li>
+<li>git pull 拉取<br /></li>
+<li>git merge feature/hzx 把hzx合并到dev上，如果有冲突，上半部分HEAD是dev，下半部分是feature/hzx, 解决冲突，二者留一或修改其中一部分<br /></li>
+<li>git commit -m ‘merge’<br /></li>
+<li>git push origin dev<br /></li>
+<li>在cargo上构建dev，启动镜像<br /></li>
+</ol>
+<p>另外：pull request到master<br />强制提交：git comit -m “发到master” –add-notify<br><a name="d71effba"></a></p>
+<h2 id="5、发布到st"><a href="#5、发布到st" class="headerlink" title="5、发布到st"></a>5、发布到st</h2><p>方法一：</p>
+<ul>
+<li>推到自己的远程分支 git add . git commit -m “ziji” git push origin feature/hzxx<br /></li>
+<li>界面操作 pull request:  feature/hzxx –&gt; release <br /></li>
+<li>同意后在plus部署stage<br /></li>
+</ul>
+<p>方法二：<br />git checkout -b release origin/release （git checkout release）切换到release分支，自己merge<br />git pull<br />git merge feature/hzx<br />git commit -m “merge”  如果报错，先解决冲突，再git commit -m ‘merge’ –no-verify<br />git push<br><a name="e3f46e23"></a></p>
+<h2 id="6、发布上线master"><a href="#6、发布上线master" class="headerlink" title="6、发布上线master"></a>6、发布上线master</h2><ul>
+<li><p>推到远程自己的分支 git add . git commit -m “备注” git pull origin master<br /></p>
+</li>
+<li><p>解决冲突，主要是yarn.lock,  git push origin feature/hzxx<br /></p>
+</li>
+<li><p>界面pull request<br /><br><a name="47615855"></a></p>
+<h2 id="7、git版本回滚"><a href="#7、git版本回滚" class="headerlink" title="7、git版本回滚"></a>7、git版本回滚</h2></li>
+<li><p>git refolg 查看版本<br /></p>
+</li>
+<li><p>git reset –hard abjdkfbaf版本号（或 git reset –hard HEAD@ {3} 数字为序号）<br /></p>
+</li>
+<li><p>git push -f origin feature/hzxx 版本覆盖<br /></p>
+</li>
+<li><p>git pull origin feature/hzxx 本地回到之前的版本<br /><br><a name="5e72862b"></a></p>
+<h1 id="开发流程"><a href="#开发流程" class="headerlink" title="开发流程"></a>开发流程</h1></li>
+</ul>
+<ol>
+<li>接到需求，进行前端开发。<br />2. 配置功能菜单<br />2. 更新接口snapshot，<br />新版本的接口，在 Thrift 上编译新版本。<br />然后将版本号替换到package.json里面去。<br />3. 前后端联调。<br />4. Merge代码到Dev分支（如上，4、发布到dev）<br />5. 在 Cargo 上构建并部署Dev环境<a href="http://cargo.sankuai.com/stack/detail?stack_uuid=5a82826d-10cb-466e-b010-c0a49c39b5e4" target="_blank" rel="noopener">http://cargo.sankuai.com/stack/detail?stack_uuid=5a82826d-10cb-466e-b010-c0a49c39b5e4</a><br />6. 访问 开发环境 并验证  <a href="https://plus.mws.sankuai.com/#/release/job/list?releaseId=25017" target="_blank" rel="noopener">https://plus.mws.sankuai.com/#/release/job/list?releaseId=25017</a><br />7. 如果通过，Merge代码到Release分支。 git merge feature/hzxx界面操作<br />8. 在 Plus 上构建并部署Stage环境  plus-&gt;”部署任务“ -&gt;”staging”<br />9. 访问 Stage环境 进行验证或者回归测试。<br />10. 如果没有问题，Merge代码到Master分支。<br />11. 在 Plus 上构建并部署Production环境 –&gt;发到master之后stash自动构建，等它构建完，自己点部署即可。<br />代码提交流程：<br />Dev(dev) - Staging (release) - Production (master)<br />在Plus上部署staging时，先进行构建，在进行部署。<br /><br><br />代码提交流程：<br />Dev(dev) - Staging (release) - Production (master)<br />在Plus上部署staging时，先进行构建，在进行部署。</li>
+</ol>
+
+        </div>
+        <footer class="article-footer">
+            
+
+    <div class="bdsharebuttonbox">
+    <a href="#" class="bds_more" data-cmd="more">分享到：</a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间">QQ空间</a>
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博">新浪微博</a>
+    <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博">腾讯微博</a>
+    <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网">人人网</a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信">微信</a>
+</div>
+<script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{"bdSize":16}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+<style>
+    .bdshare_popup_box {
+        border-radius: 4px;
+        border: #e1e1e1 solid 1px;
+    }
+    .bdshare-button-style0-16 a,
+    .bdshare-button-style0-16 .bds_more {
+        padding-left: 20px;
+        margin: 6px 10px 6px 0;
+    }
+    .bdshare_dialog_list a,
+    .bdshare_popup_list a,
+    .bdshare_popup_bottom a {
+        font-family: 'Microsoft Yahei';
+    }
+    .bdshare_popup_top {
+        display: none;
+    }
+    .bdshare_popup_bottom {
+        height: auto;
+        padding: 5px;
+    }
+</style>
+
+
+
+        </footer>
+    </div>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "author": {
+            "@type": "Person",
+            "name": "He Zhaoxiang"
+        },
+        "headline": "美团实习总结零--git操作和流程",
+        "image": "/https:/hezhaoxiang.work",
+        "keywords": "实习",
+        "genre": "美团实习 工作总结",
+        "datePublished": "2020-06-10",
+        "dateCreated": "2020-06-10",
+        "dateModified": "2020-09-08",
+        "url": "/https:/hezhaoxiang.work/2020/about-git/",
+        "description": "
+常用命令
+Git相关git init 新建一个空的仓库git status 查看状态git add . 添加文件git commit -m ‘注释’ 提交添加的文件并备注说明git remote add origin git@github.com:jinzhaogit/git.git 连接远程仓库git push -u origin master 将本地仓库文件推送到远程仓库
+1、推到自己的远程",
+        "wordCount": 399
+    }
+</script>
+
+</article>
+<!--
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+
+    
+    </section>
+
+-->
+
+
+<!--来比力评论系统，在commetn/livebe.ejs中-->
+<!-- 来必力City版安装代码 -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC80Nzg3Mi8yNDM2OQ==">
+    <script type="text/javascript">
+        (function(d, s) {
+            var j, e = d.getElementsByTagName(s)[0];
+
+            if (typeof LivereTower === 'function') { return; }
+
+            j = d.createElement(s);
+            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+            j.async = true;
+
+            e.parentNode.insertBefore(j, e);
+        })(document, 'script');
+    </script>
+    <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+</div>
+<!-- City版安装代码已完成 -->
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+<!--        <p>关注我 :</p>-->
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/ppoffice/hexo-theme-hueman" target="_blank" rel="noopener">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="weibo" href="https://weibo.com/5379927249/profile?topnav=1&wvr=6&is_all=1" target="_blank" rel="noopener">
+                        <i class="icon fa fa-weibo"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/atom.xml" target="_blank" rel="noopener">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2020/doform01/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">下一篇</strong>
+        <p class="article-nav-title">
+        
+            美团实习总结一--Echarts看板总结
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2020/learnes6-02/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">上一篇</strong>
+        <p class="article-nav-title">web前端--ES6补充</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title"> 标签 </h3>
+        <div class="widget tagcloud">
+            <a href="/tags/2019%E7%A0%94%E7%A9%B6%E7%94%9FE%E9%A2%98/" style="font-size: 10px;">2019研究生E题</a> <a href="/tags/Demo/" style="font-size: 15px;">Demo</a> <a href="/tags/ES6/" style="font-size: 12.5px;">ES6</a> <a href="/tags/HTML-CSS/" style="font-size: 17.5px;">HTML&CSS</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/Vue/" style="font-size: 12.5px;">Vue</a> <a href="/tags/Vue-router/" style="font-size: 10px;">Vue-router</a> <a href="/tags/Vuex/" style="font-size: 10px;">Vuex</a> <a href="/tags/http/" style="font-size: 10px;">http</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/%E5%AE%9E%E4%B9%A0/" style="font-size: 17.5px;">实习</a> <a href="/tags/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" style="font-size: 10px;">搭建博客</a> <a href="/tags/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/" style="font-size: 10px;">数学建模</a> <a href="/tags/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7/" style="font-size: 10px;">电脑技巧</a> <a href="/tags/%E8%B4%AD%E7%89%A9/" style="font-size: 10px;">购物</a>
+        </div>
+    </div>
+
+
+            
+                
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">归档</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">八月 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">六月 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">五月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">三月 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">二月 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">十二月 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">十月 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">九月 2019</a><span class="archive-list-count">3</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">分类</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Demo/">Demo</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Demo/2048%E5%B0%8F%E6%B8%B8%E6%88%8F/">2048小游戏</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Demo/todoList/">todoList</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Demo/%E5%B0%8F%E6%8A%80%E5%B7%A7/">小技巧</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Demo/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">搭建博客</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Demo/%E8%B4%AD%E7%89%A9-Vue/">购物-Vue</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/">web前端</a><span class="category-list-count">16</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/ES6/">ES6</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/HTML-CSS/">HTML&CSS</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/JavaScript/">JavaScript</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/Vue%E5%AD%A6%E4%B9%A0/">Vue学习</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/Vue%E5%AD%A6%E4%B9%A0/Vue/">Vue</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/Vue%E5%AD%A6%E4%B9%A0/Vuex/">Vuex</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/webpack/">webpack</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AB%9E%E8%B5%9B/">竞赛</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AB%9E%E8%B5%9B/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">数学建模</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BE%8E%E5%9B%A2%E5%AE%9E%E4%B9%A0/">美团实习</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BE%8E%E5%9B%A2%E5%AE%9E%E4%B9%A0/%E5%B7%A5%E4%BD%9C%E6%80%BB%E7%BB%93/">工作总结</a><span class="category-list-count">4</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/">计算机基础</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/http/">http</a><span class="category-list-count">1</span></li></ul></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">友情链接</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="https://www.yuque.com/books/share/935d9368-958d-4317-b44d-88a713ecbd29?#" target="_blank" rel="noopener">语雀笔记</a>
+                    </li>
+                
+                    <li>
+                        <a href="">E-Mail：hzx404@foxmail.com</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://blog.csdn.net/weixin_44105459" target="_blank" rel="noopener">CSDN</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;" target="_blank" rel="noopener"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2020 author by：贺兆祥</p>
+
+                <p>本站由hzx小朋友在hexo的大力帮助下实现</p>
+                <!--这一段是不蒜子的访问量统计脚本-->
+                <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+                <span id="busuanzi_container_site_pv">一共被访问了<span id="busuanzi_value_site_pv"></span>次 &nbsp; </span>
+                <span id="busuanzi_container_site_uv">
+                    一共有<span id="busuanzi_value_site_uv"></span>个小朋友来过
+                </span>
+            </div>
+            <div class="footer-plugins">
+              
+    
+
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!--往下是cloud的文章阅读量系统-->
+<script src="//cdn1.lncld.net/static/js/2.5.0/av-min.js"></script>
+<script>
+    var APP_ID = 'YVSE8R91f8Qc6d6FwMTnwytk-gzGzoHsz';
+    var APP_KEY = 'ajFB9Ueh08Y5pIvkDsXSOW56';
+    AV.init({
+        appId: APP_ID,
+        appKey: APP_KEY
+    });
+    // 显示次数
+    function showTime(Counter) {
+        var query = new AV.Query("Counter");
+        if($(".leancloud_visitors").length > 0){
+            var url = $(".leancloud_visitors").attr('id').trim();
+            // where field
+            query.equalTo("words", url);
+            // count
+            query.count().then(function (number) {
+                // There are number instances of MyClass where words equals url.
+                $(document.getElementById(url)).text(number?  number : '--');
+            }, function (error) {
+                // error is an instance of AVError.
+            });
+        }
+    }
+    // 追加pv
+    function addCount(Counter) {
+        var url = $(".leancloud_visitors").length > 0 ? $(".leancloud_visitors").attr('id').trim() : 'icafebolger.com';
+        var Counter = AV.Object.extend("Counter");
+        var query = new Counter;
+        query.save({
+            words: url
+        }).then(function (object) {
+        })
+    }
+    $(function () {
+        var Counter = AV.Object.extend("Counter");
+        addCount(Counter);
+        showTime(Counter);
+    });
+</script>
+        
+    
+    <script>
+    var disqus_shortname = 'hexo-theme-hueman';
+    
+    
+    var disqus_url = 'https://hezhaoxiang.work/2020/about-git/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>
